@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Download Your IEP Toolkit</title>
+<style>
+body {font-family: Arial; text-align:center; padding:40px 20px; background:#f0fdf4;}
+.box {background:white; padding:40px; border-radius:16px; max-width:600px; margin:auto; box-shadow:0 6px 20px rgba(0,0,0,0.1);}
+.btn {background:#16a34a; color:white; padding:18px 36px; border-radius:10px; text-decoration:none; font-size:18px; font-weight:bold; display:inline-block; margin-top:20px;}
+h1 {color:#16a34a;}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>Payment Successful! 🎉</h1>
+  <p>Thank you for purchasing: <b><span id="plan"></span></b></p>
+  <p style="font-size:14px; color:#666;">Reference: <span id="ref"></span></p>
+  <h2>Your Download is Ready:</h2>
+  <a href="https://drive.google.com/uc?export=download&id=12wQlmcyJSrcbQjwJRLmzlxsQozQGqwvF" class="btn">📥 Download IEP Toolkit PDF</a>
+  <p style="margin-top:25px;"><a href="https://wa.me/2347035749180">Need Help? Chat on WhatsApp</a></p>
+</div>
+<script>
+const urlParams = new URLSearchParams(window.location.search);
+document.getElementById('plan').innerText = urlParams.get('plan');
+document.getElementById('ref').innerText = urlParams.get('ref');
+</script>
+</body>
+</html>
