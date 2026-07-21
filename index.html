@@ -12,6 +12,8 @@
   header h1 { margin:0 0 10px; font-size:2.5rem; }
   .btn { background:#D4AF37; color:#0A2342; padding:14px 28px; border:none; border-radius:8px; font-weight:bold; text-decoration:none; display:inline-block; margin:10px 8px; cursor:pointer; font-size:1rem; transition:0.3s; }
   .btn:hover { background:#c49b2a; transform:translateY(-2px); }
+  .btn-cancel { background:#ccc; color:#000; }
+  .btn-cancel:hover { background:#bbb; transform:none; }
   .btn-paypal { background:#0070ba; color:white; }
   .btn-paypal:hover { background:#005ea6; }
   section { padding:70px 20px; max-width:1100px; margin:auto; }
@@ -32,7 +34,7 @@
   .module li { padding:6px 0; border-bottom:1px dashed #ddd; }
   .module li:before { content: "▶ "; color:#D4AF37; font-weight:bold; }
   .badge { background:#D4AF37; color:#0A2342; padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:bold; }
-  .hidden { display:none; }
+  .hidden { display:none !important; }
 </style>
 </head>
 <body>
@@ -60,7 +62,6 @@
 <section><h2>Service Packages</h2>
 <div class="grid">
   
-  <!-- IEP TOOLKIT - FIXED PRICE -->
   <div class="card">
     <h3>IEP Toolkit</h3>
     <p class="price">₦5,000</p>
@@ -68,7 +69,6 @@
     <p class="note">Assessment Guide PDF. Instant download after payment.</p>
   </div>
   
-  <!-- SUBSCRIPTION - FIXED PRICE -->
   <div class="card">
     <h3>Premium Toolkit Subscription <span class="badge">+ Training Videos</span></h3>
     <p class="price">₦25,000 / month</p>
@@ -93,12 +93,11 @@
     <p class="note">Custom data collection and community surveys across Nigeria.</p>
   </div>
   
-</div>
-</section>
+</div></section>
 
 <!-- HIDDEN ORDER FORM POPUP -->
-<div id="order-popup" class="hidden" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; display:flex; align-items:center; justify-content:center;">
-  <div style="background:white; padding:30px; border-radius:12px; max-width:500px; width:90%;">
+<div id="order-popup" class="hidden" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; display:flex; align-items:center; justify-content:center;" onclick="closePopupOnOverlay(event)">
+  <div style="background:white; padding:30px; border-radius:12px; max-width:500px; width:90%;" onclick="event.stopPropagation()">
     <h3 id="popup-title">Complete Your Order</h3>
     <form id="iep-form">
       <input type="text" name="parent_name" placeholder="Parent Full Name" required>
@@ -107,7 +106,7 @@
       <input type="text" name="phone" placeholder="WhatsApp Number" required>
       <input type="hidden" name="plan" id="plan-input">
       <button class="btn" type="submit" style="width:100%;">Continue to Payment</button>
-      <button type="button" onclick="closePopup()" style="width:100%; margin-top:10px; background:#ccc; color:#000;">Cancel</button>
+      <button type="button" onclick="closePopup()" class="btn btn-cancel" style="width:100%; margin-top:10px;">Cancel</button>
     </form>
   </div>
 </div>
@@ -147,10 +146,20 @@ function showOrderForm(plan, amount){
   document.getElementById('plan-input').value = plan;
   document.getElementById('popup-title').innerText = 'Order: ' + plan;
   document.getElementById('order-popup').classList.remove('hidden');
+  document.body.style.overflow = 'hidden'; // lock scroll
 }
 
 function closePopup(){
   document.getElementById('order-popup').classList.add('hidden');
+  document.body.style.overflow = 'auto'; // unlock scroll
+  document.getElementById('iep-form').reset(); // clear form
+}
+
+// Click outside to close
+function closePopupOnOverlay(event){
+  if(event.target.id === 'order-popup'){
+    closePopup();
+  }
 }
 
 const form = document.getElementById('iep-form');
@@ -174,11 +183,13 @@ form.addEventListener('submit', function(e) {
     currency: "NGN",
     ref: 'IEP_'+Math.floor((Math.random() * 1000000) + 1),
     callback: function(response){
+      closePopup(); // close popup first
       window.location = "success.html?ref="+response.reference+"&plan="+encodeURIComponent(currentPlan);
     },
-    onClose: function(){ alert('Payment window closed'); }
+    onClose: function(){ 
+      alert('Payment window closed'); 
+    }
   }).openIframe();
-  closePopup();
 });
 
 function payDonation(amount){
