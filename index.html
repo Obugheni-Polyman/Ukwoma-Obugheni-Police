@@ -181,13 +181,22 @@ form.addEventListener('submit', function(e) {
 });
 
 function payDonation(amount){
+  let donorEmail = prompt("Enter your email to get donation receipt:");
+  
+  if(!donorEmail){ 
+    alert("Email is required to continue"); 
+    return; 
+  }
+
   PaystackPop.setup({
     key: 'pk_live_3ec00393f90225339fb9091cec29dd650c9abeb7',
-    email: 'donor@example.com',
+    email: donorEmail,
     amount: amount * 100,
     currency: "NGN",
     ref: 'DONATE_'+Math.floor((Math.random() * 1000000) + 1),
-    callback: function(response){ alert('Thank you for donating! Ref: ' + response.reference); },
+    callback: function(response){ 
+      alert('Thank you for donating! Ref: ' + response.reference + '. Receipt sent to ' + donorEmail); 
+    },
     onClose: function(){ alert('Transaction cancelled'); }
   }).openIframe();
 }
