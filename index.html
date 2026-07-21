@@ -33,7 +33,7 @@
   .module li:before { content: "▶ "; color:#D4AF37; font-weight:bold; }
   .badge { background:#D4AF37; color:#0A2342; padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:bold; }
   
-  /* POPUP STYLES - FIXED */
+  /* POPUP STYLES */
   #order-popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; display:none; align-items:center; justify-content:center; }
   #order-popup.active { display:flex; }
 </style>
@@ -154,7 +154,7 @@ form.addEventListener('submit', function(e) {
   e.preventDefault();
   const formData = new FormData(form);
   const email = formData.get('email');
-  const amount = parseInt(formData.get('amount')); // GET AMOUNT DIRECTLY FROM FORM
+  const amount = parseInt(formData.get('amount'));
 
   // 1. Send to Formspree
   fetch('https://formspree.io/f/xbdnyvpb', {
@@ -163,11 +163,11 @@ form.addEventListener('submit', function(e) {
     headers: {'Accept': 'application/json'}
   });
 
-  // 2. Open Paystack with amount from form
+  // 2. Open Paystack
   PaystackPop.setup({
     key: 'pk_live_3ec00393f90225339fb9091cec29dd650c9abeb7',
     email: email,
-    amount: amount * 100, // THIS IS THE FIX
+    amount: amount * 100,
     currency: "NGN",
     ref: 'IEP_'+Math.floor((Math.random() * 1000000) + 1),
     callback: function(response){
@@ -180,6 +180,7 @@ form.addEventListener('submit', function(e) {
   }).openIframe();
 });
 
+// FIXED DONATION FUNCTION
 function payDonation(amount){
   let donorEmail = prompt("Enter your email to get donation receipt:");
   
