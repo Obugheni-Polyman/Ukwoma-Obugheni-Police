@@ -24,8 +24,15 @@
   .progress { background:#ddd; border-radius:20px; overflow:hidden; height:28px; margin:25px auto; max-width:550px; }
   .progress-bar { background:#D4AF37; height:100%; width:24%; text-align:center; color:#0A2342; font-weight:bold; line-height:28px; }
   footer { background:#0A2342; color:white; text-align:center; padding:40px 20px; }
-  input, textarea { width:100%; padding:14px; margin:12px 0; border:1px solid #ccc; border-radius:8px; font-size:1rem; }
+  input, textarea, select { width:100%; padding:14px; margin:12px 0; border:1px solid #ccc; border-radius:8px; font-size:1rem; }
   .note { font-size:0.9rem; color:#555; margin-top:10px; }
+  .module { background:#F5F7FA; padding:20px; border-radius:10px; margin:15px 0; text-align:left; }
+  .module h4 { color:#0A2342; margin-bottom:10px; }
+  .module ul { list-style:none; padding-left:0; }
+  .module li { padding:6px 0; border-bottom:1px dashed #ddd; }
+  .module li:before { content: "▶ "; color:#D4AF37; font-weight:bold; }
+  .badge { background:#D4AF37; color:#0A2342; padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:bold; }
+  .hidden { display:none; }
 </style>
 </head>
 <body>
@@ -53,52 +60,70 @@
 <section><h2>Service Packages</h2>
 <div class="grid">
   
+  <!-- IEP TOOLKIT - FIXED PRICE -->
   <div class="card">
     <h3>IEP Toolkit</h3>
-    <p class="price">₦25,000 / $25</p>
-    <button class="btn" onclick="payWithPaystack(25000)">Pay with Paystack ₦</button>
-    <a href="https://www.paypal.com/ncp/payment/V42DPJ37TE58Y" target="_blank" class="btn btn-paypal">Pay with PayPal $</a>
-    <p class="note">Assessment Guide for Research, Children with Learning Differences. Practical PDF. Instant download after payment.</p>
+    <p class="price">₦5,000</p>
+    <button class="btn" onclick="showOrderForm('IEP Toolkit - ₦5,000', 5000)">Get Toolkit Now</button>
+    <p class="note">Assessment Guide PDF. Instant download after payment.</p>
   </div>
   
+  <!-- SUBSCRIPTION - FIXED PRICE -->
   <div class="card">
-    <h3>HSE Video Library</h3>
-    <p class="price">₦50,000 / $45</p>
-    <button class="btn" onclick="payWithPaystack(50000)">Pay with Paystack ₦</button>
-    <a href="https://www.paypal.com/ncp/payment/4K4LXX3UY7S5E" target="_blank" class="btn btn-paypal">Pay with PayPal $</a>
-    <p class="note">Monthly access to IEP Templates, Grant Proposal Samples, Research Tools, and Training Videos. Cancel anytime.</p>
+    <h3>Premium Toolkit Subscription <span class="badge">+ Training Videos</span></h3>
+    <p class="price">₦25,000 / month</p>
+    <button class="btn" onclick="showOrderForm('Monthly Video Subscription - ₦25,000', 25000)">Subscribe Now</button>
+    <p class="note"><b>What's Inside: Training Videos Library</b><br>Get step-by-step video training. New videos added every month.</p>
+    
+    <div class="module">
+      <h4>Module 1: IEP Mastery</h4>
+      <ul>
+        <li>How to Write an IEP in 30 Minutes - Nigerian Context</li>
+        <li>5 Common Assessment Mistakes & How to Avoid Them</li>
+        <li>Parent Meeting Script Template Walkthrough</li>
+      </ul>
+    </div>
+    <p class="note"><b>Delivery:</b> Google Drive access + WhatsApp Members Group after payment.</p>
   </div>
   
   <div class="card">
     <h3>Field Survey</h3>
     <p class="price">From ₦150,000</p>
     <a href="https://wa.me/2347035749180" class="btn">Get Quote on WhatsApp</a>
-    <p class="note">Custom data collection and community surveys across Nigeria. Price depends on scope.</p>
+    <p class="note">Custom data collection and community surveys across Nigeria.</p>
   </div>
   
-</div></section>
+</div>
+</section>
+
+<!-- HIDDEN ORDER FORM POPUP -->
+<div id="order-popup" class="hidden" style="position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; display:flex; align-items:center; justify-content:center;">
+  <div style="background:white; padding:30px; border-radius:12px; max-width:500px; width:90%;">
+    <h3 id="popup-title">Complete Your Order</h3>
+    <form id="iep-form">
+      <input type="text" name="parent_name" placeholder="Parent Full Name" required>
+      <input type="text" name="child_name" placeholder="Child Name" required>
+      <input type="email" name="email" placeholder="Email for Download" required>
+      <input type="text" name="phone" placeholder="WhatsApp Number" required>
+      <input type="hidden" name="plan" id="plan-input">
+      <button class="btn" type="submit" style="width:100%;">Continue to Payment</button>
+      <button type="button" onclick="closePopup()" style="width:100%; margin-top:10px; background:#ccc; color:#000;">Cancel</button>
+    </form>
+  </div>
+</div>
 
 <section id="payments" class="donate"><h2>Educate One Child Campaign</h2>
 <div class="progress"><div class="progress-bar">24%</div></div>
 <p style="text-align:center;"><b>Goal: ₦500,000</b> | Raised: ₦120,000</p>
 <div style="text-align:center;">
-  <button class="btn" onclick="payWithPaystack(5000)">Donate ₦5,000</button>
-  <button class="btn" onclick="payWithPaystack(10000)">Donate ₦10,000</button>
-  <button class="btn" onclick="payWithPaystack(20000)">Donate ₦20,000</button>
-</div>
-
-<h3 style="margin-top:60px; text-align:center;">Or Support with PayPal</h3>
-<div class="grid">
-  <div class="card">
-    <h4>General Support</h4>
-    <a href="https://www.paypal.com/ncp/payment/78J4SMWMCSNFC" target="_blank" class="btn btn-paypal">Donate with PayPal</a>
-    <p class="note">Your donation helps provide free assessments, learning plans, and teacher training for children with learning differences in Rivers State, Nigeria.</p>
-  </div>
+  <button class="btn" onclick="payDonation(5000)">Donate ₦5,000</button>
+  <button class="btn" onclick="payDonation(10000)">Donate ₦10,000</button>
+  <button class="btn" onclick="payDonation(20000)">Donate ₦20,000</button>
 </div>
 </section>
 
 <section><h2>Get In Touch</h2>
-<form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" style="max-width:600px; margin:auto;">
+<form action="https://formspree.io/f/xbdnyvpb" method="POST" style="max-width:600px; margin:auto;">
   <input type="text" name="name" placeholder="Your Name" required>
   <input type="email" name="email" placeholder="Your Email" required>
   <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
@@ -113,19 +138,60 @@
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script>
-  // ONLY PAYSTACK LEFT - NO PAYPAL SCRIPT
-  function payWithPaystack(amount){
-    var handler = PaystackPop.setup({
-      key: 'YOUR_PUBLIC_KEY', // REPLACE THIS
-      email: 'customer@example.com',
-      amount: amount * 100,
-      currency: "NGN",
-      ref: ''+Math.floor((Math.random() * 1000000000) + 1),
-      callback: function(response){ alert('Payment Successful! Ref: ' + response.reference); },
-      onClose: function(){ alert('Transaction cancelled'); }
-    });
-    handler.openIframe();
-  }
+let currentAmount = 0;
+let currentPlan = '';
+
+function showOrderForm(plan, amount){
+  currentPlan = plan;
+  currentAmount = amount;
+  document.getElementById('plan-input').value = plan;
+  document.getElementById('popup-title').innerText = 'Order: ' + plan;
+  document.getElementById('order-popup').classList.remove('hidden');
+}
+
+function closePopup(){
+  document.getElementById('order-popup').classList.add('hidden');
+}
+
+const form = document.getElementById('iep-form');
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const email = formData.get('email');
+
+  // 1. Send to Formspree
+  fetch('https://formspree.io/f/xbdnyvpb', {
+    method: 'POST',
+    body: formData,
+    headers: {'Accept': 'application/json'}
+  });
+
+  // 2. Open Paystack
+  PaystackPop.setup({
+    key: 'pk_live_3ec00393f90225339fb9091cec29dd650c9abeb7',
+    email: email,
+    amount: currentAmount * 100,
+    currency: "NGN",
+    ref: 'IEP_'+Math.floor((Math.random() * 1000000) + 1),
+    callback: function(response){
+      window.location = "success.html?ref="+response.reference+"&plan="+encodeURIComponent(currentPlan);
+    },
+    onClose: function(){ alert('Payment window closed'); }
+  }).openIframe();
+  closePopup();
+});
+
+function payDonation(amount){
+  PaystackPop.setup({
+    key: 'pk_live_3ec00393f90225339fb9091cec29dd650c9abeb7',
+    email: 'donor@example.com',
+    amount: amount * 100,
+    currency: "NGN",
+    ref: 'DONATE_'+Math.floor((Math.random() * 1000000) + 1),
+    callback: function(response){ alert('Thank you for donating! Ref: ' + response.reference); },
+    onClose: function(){ alert('Transaction cancelled'); }
+  }).openIframe();
+}
 </script>
 </body>
 </html>
