@@ -27,6 +27,7 @@
   input, textarea, select { width:100%; padding:14px; margin:12px 0; border:1px solid #ccc; border-radius:8px; font-size:1rem; }
   .note { font-size:0.9rem; color:#555; margin-top:10px; }
   .badge { background:#D4AF37; color:#0A2342; padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:bold; }
+  .bank-box { background:#F5F7FA; padding:25px; border-radius:12px; text-align:center; margin-top:30px; }
   
   /* POPUP STYLES */
   #order-popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; display:none; align-items:center; justify-content:center; }
@@ -41,7 +42,7 @@
   <p>Consulting | Research | Special Education</p>
   <p><b>Evidence-Based Solutions. Real Impact.</b></p>
   <a href="https://wa.me/2347035749180" class="btn">Book a Consultation</a>
-  <a href="#payments" class="btn">Support Our Work</a>
+  <a href="#products" class="btn">Shop Resources</a>
 </header>
 
 <section><h2>About Us</h2>
@@ -55,21 +56,42 @@
   <div class="card"><h3>Special Education</h3><p>Assessment, Individualized Education Plans, Educator & Parent Training.</p></div>
 </div></section>
 
-<section><h2>Service Packages</h2>
+<section id="products"><h2>Digital Resources & Toolkits</h2>
 <div class="grid">
   
   <div class="card">
-    <h3>IEP Toolkit <span class="badge">One-Time</span></h3>
+    <h3>IEP 101 Video Course <span class="badge">Video</span></h3>
+    <p class="price">₦7,000</p>
+    <button class="btn" onclick="showOrderForm('IEP 101 Video Course - ₦7,000', 7000, 'https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_VIDEO_FOLDER_LINK')">Buy & Download</button>
+    <p class="note">8 Videos + Workbook PDF. Covers 3 Signs, Goal Writing, Parent Rights. Instant access.</p>
+  </div>
+
+  <div class="card">
+    <h3>IEP Toolkit <span class="badge">PDF</span></h3>
     <p class="price">₦5,000</p>
-    <button class="btn" onclick="showOrderForm('IEP Toolkit - ₦5,000', 5000, 'https://drive.google.com/drive/folders/1PDderXHbzFpfFUWLvaDtcZNP9ktj_P7S')">Get Toolkit Now</button>
-    <p class="note">5 IEP Templates + Assessment Guide. Instant download after payment.</p>
+    <button class="btn" onclick="showOrderForm('IEP Toolkit - ₦5,000', 5000, 'https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_TOOLKIT_FOLDER_LINK')">Get Toolkit Now</button>
+    <p class="note">5 IEP Templates + Assessment Guide + Request Letter Samples. Instant download.</p>
+  </div>
+
+  <div class="card">
+    <h3>Parent Advocacy Audio <span class="badge">Audio</span></h3>
+    <p class="price">₦3,000</p>
+    <button class="btn" onclick="showOrderForm('Parent Advocacy Audio - ₦3,000', 3000, 'https://drive.google.com/file/d/REPLACE_WITH_YOUR_AUDIO_FILE_LINK/view')">Buy & Listen</button>
+    <p class="note">45min audio guide. "How to Speak Up in IEP Meetings". Download after payment.</p>
+  </div>
+
+  <div class="card">
+    <h3>IEP Goals E-book <span class="badge">E-book</span></h3>
+    <p class="price">₦2,500</p>
+    <button class="btn" onclick="showOrderForm('IEP Goals E-book - ₦2,500', 2500, 'https://drive.google.com/file/d/REPLACE_WITH_YOUR_EBOOK_FILE_LINK/view')">Buy & Download</button>
+    <p class="note">50 SMART Goal Examples PDF. Copy-paste templates for teachers and parents.</p>
   </div>
   
   <div class="card">
     <h3>Premium Toolkit Subscription <span class="badge">Monthly</span></h3>
     <p class="price">₦25,000 / month</p>
-    <button class="btn" onclick="showOrderForm('Premium Toolkit Subscription - ₦25,000', 25000, 'https://drive.google.com/drive/folders/1PDderXHbzFpfFUWLvaDtcZNP9ktj_P7S')">Subscribe Now</button>
-    <p class="note"><b>What's Inside:</b> All Templates + 9 Videos + Grant Samples. New content monthly.</p>
+    <button class="btn" onclick="showOrderForm('Premium Toolkit Subscription - ₦25,000', 25000, 'https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_PREMIUM_FOLDER_LINK')">Subscribe Now</button>
+    <p class="note"><b>What's Inside:</b> All Videos + All Templates + Grant Samples. New content monthly.</p>
   </div>
   
   <div class="card">
@@ -78,7 +100,18 @@
     <a href="https://wa.me/2347035749180" class="btn">Get Quote on WhatsApp</a>
   </div>
   
-</div></section>
+</div>
+
+<!-- BANK TRANSFER OPTION -->
+<div class="bank-box">
+  <h3>Prefer Bank Transfer?</h3>
+  <p><b>Account Name:</b> Ukwoma Obugheni Police</p>
+  <p><b>Account No:</b> 2057359672</p>
+  <p><b>Bank:</b> UBA</p>
+  <p class="note">After payment, send proof to WhatsApp +2347035749180 and we’ll send your download link within 10 minutes</p>
+</div>
+
+</section>
 
 <!-- HIDDEN ORDER FORM POPUP -->
 <div id="order-popup" onclick="closePopupOnOverlay(event)">
@@ -123,9 +156,6 @@
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script>
-
-// GLOBAL DRIVE LINK
-const OPC_DRIVE_LINK = "https://drive.google.com/drive/folders/1PDderXHbzFpfFUWLvaDtcZNP9ktj_P7S";
 
 function showOrderForm(plan, amount, driveLink){
   document.getElementById('plan-input').value = plan;
@@ -177,9 +207,9 @@ form.addEventListener('submit', function(e) {
     },
     callback: function(response){
       closePopup();
-      alert('Payment Successful! Ref: ' + response.reference + '\n\nRedirecting you to your Drive now...');
+      alert('Payment Successful! Ref: ' + response.reference + '\n\nRedirecting you to your download now...');
       // 3. AUTO REDIRECT TO YOUR DRIVE
-      window.location.href = driveLink;
+      window.open(driveLink, '_blank');
     },
     onClose: function(){ 
       alert('Payment window closed. Try again.'); 
