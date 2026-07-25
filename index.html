@@ -1,50 +1,193 @@
-<div style="border:1px solid #ddd; padding:20px; border-radius:12px; text-align:center; margin:20px 0;">
-  <h3>Professional Field Survey Services</h3>
-  <p>Starting from ₦150,000. Pay ₦50,000 deposit to book your site visit.</p>
-  <a href="https://paystack.shop/pay/obugheni-survey" target="_blank" 
-     style="display:inline-block; padding:16px 32px; background:#198754; color:white; 
-            text-decoration:none; border-radius:10px; font-weight:700; font-size:17px;">
-     Pay ₦50,000 Deposit Now
-  </a>
-  <p style="font-size:12px; color:#666; margin-top:10px;">Secure payment powered by Paystack</p>
-</div>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Obugheni-Polyman Consulting — Consulting, Research and Special Education services in Rivers State, Nigeria. IEP resources, field surveys, and evidence-based training.">
 <title>Obugheni-Polyman Consulting | Consulting, Research & Special Education</title>
 <style>
-    * { box-sizing: border-box; margin:0; padding:0; }
-  body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#222; line-height:1.7; background:#fff; }
-  header { background: linear-gradient(135deg, #0A2342 0%, #1a3a6e 100%); color:white; padding:90px 20px; text-align:center; }
-  .logo { width:100px; height:100px; border-radius:50%; margin:0 auto 20px; background:#D4AF37; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:1.8rem; color:#0A2342; }
-  header h1 { margin:0 0 10px; font-size:2.5rem; }
-  .btn { background:#D4AF37; color:#0A2342; padding:14px 28px; border:none; border-radius:8px; font-weight:bold; text-decoration:none; display:inline-block; margin:10px 8px; cursor:pointer; font-size:1rem; transition:0.3s; }
-  .btn:hover { background:#c49b2a; transform:translateY(-2px); }
-  .btn-cancel { background:#ccc; color:#000; }
-  .btn-cancel:hover { background:#bbb; transform:none; }
-  section { padding:70px 20px; max-width:1100px; margin:auto; }
-  h2 { text-align:center; color:#0A2342; margin-bottom:40px; font-size:2.2rem; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:30px; }
-  .card { border:1px solid #e0e0e0; padding:30px; border-radius:12px; text-align:center; background:white; box-shadow:0 4px 12px rgba(0,0,0,0.06); }
-  .card h3 { color:#0A2342; margin-bottom:12px; font-size:1.4rem; }
-  .price { font-size:1.6rem; color:#0A2342; font-weight:bold; margin:15px 0; }
-  .donate { background:#F5F7FA; }
-  .progress { background:#ddd; border-radius:20px; overflow:hidden; height:28px; margin:25px auto; max-width:550px; }
-  .progress-bar { background:#D4AF37; height:100%; width:24%; text-align:center; color:#0A2342; font-weight:bold; line-height:28px; }
-  footer { background:#0A2342; color:white; text-align:center; padding:40px 20px; }
-  input, textarea, select { width:100%; padding:14px; margin:12px 0; border:1px solid #ccc; border-radius:8px; font-size:1rem; }
-  .note { font-size:0.9rem; color:#555; margin-top:10px; }
-  .badge { background:#D4AF37; color:#0A2342; padding:4px 10px; border-radius:20px; font-size:0.8rem; font-weight:bold; }
-  .bank-box { background:#F5F7FA; padding:25px; border-radius:12px; text-align:center; margin-top:30px; }
-  
-  /* POPUP STYLES */
-  #order-popup { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:999; display:none; align-items:center; justify-content:center; }
-  #order-popup.active { display:flex; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    line-height: 1.7;
+    background: #fff;
+  }
+
+  /* Sticky nav */
+  nav.site-nav {
+    position: sticky; top: 0; z-index: 500;
+    background: #0A2342; padding: 14px 20px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 6px; flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+  nav.site-nav a {
+    color: #fff; text-decoration: none; font-size: 0.95rem;
+    padding: 8px 14px; border-radius: 6px; font-weight: 600;
+  }
+  nav.site-nav a:hover { background: rgba(255,255,255,0.1); }
+  nav.site-nav a:focus-visible { outline: 2px solid #D4AF37; outline-offset: 2px; }
+  nav.site-nav a.nav-cta { background: #D4AF37; color: #0A2342; }
+  nav.site-nav a.nav-cta:hover { background: #c49b2a; }
+
+  section[id] { scroll-margin-top: 70px; }
+
+  header {
+    background: linear-gradient(135deg, #0A2342 0%, #1a3a6e 100%);
+    color: white;
+    padding: 90px 20px;
+    text-align: center;
+  }
+ .logo {
+    width: 100px; height: 100px; border-radius: 50%;
+    margin: 0 auto 20px; background: #D4AF37;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: bold; font-size: 1.8rem; color: #0A2342;
+  }
+  header h1 { margin: 0 0 10px; font-size: 2.5rem; }
+
+ .btn {
+    background: #D4AF37; color: #0A2342;
+    padding: 14px 28px; border: none; border-radius: 8px;
+    font-weight: bold; text-decoration: none; display: inline-block;
+    margin: 10px 8px; cursor: pointer; font-size: 1rem;
+    transition: background 0.3s, transform 0.3s;
+  }
+ .btn:hover { background: #c49b2a; transform: translateY(-2px); }
+ .btn:focus-visible { outline: 3px solid #0A2342; outline-offset: 2px; }
+ .btn-cancel { background: #ccc; color: #000; }
+ .btn-cancel:hover { background: #bbb; transform: none; }
+ .btn-whatsapp { background: #25D366; color: #fff; }
+ .btn-whatsapp:hover { background: #1fb958; }
+
+  @media (prefers-reduced-motion: reduce) {
+   .btn { transition: none; }
+   .btn:hover { transform: none; }
+  }
+
+  section { padding: 70px 20px; max-width: 1100px; margin: auto; }
+  section h2 { text-align: center; color: #0A2342; margin-bottom: 40px; font-size: 2.2rem; }
+  section > p.section-intro { text-align: center; max-width: 700px; margin: -20px auto 40px; color: #555; }
+
+ .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+ .card {
+    border: 1px solid #e0e0e0; padding: 30px; border-radius: 12px;
+    text-align: center; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    display: flex; flex-direction: column;
+  }
+ .card h3 { color: #0A2342; margin-bottom: 12px; font-size: 1.4rem; }
+ .card p { flex-grow: 0; }
+ .price { font-size: 1.6rem; color: #0A2342; font-weight: bold; margin: 15px 0; }
+
+ .donate { background: #F5F7FA; }
+ .progress { background: #ddd; border-radius: 20px; overflow: hidden; height: 28px; margin: 25px auto; max-width: 550px; }
+ .progress-bar { background: #D4AF37; height: 100%; text-align: center; color: #0A2342; font-weight: bold; line-height: 28px; }
+
+  input, textarea, select {
+    width: 100%; padding: 14px; margin: 12px 0;
+    border: 1px solid #ccc; border-radius: 8px; font-size: 1rem;
+  }
+  input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid #0A2342;
+  }
+
+ .note { font-size: 0.9rem; color: #555; margin-top: 10px; }
+ .badge { background: #D4AF37; color: #0A2342; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
+ .bank-box { background: #F5F7FA; padding: 25px; border-radius: 12px; text-align: center; margin-top: 40px; }
+
+  /* Why Choose Us */
+ .why-us { background: #F5F7FA; }
+ .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px; }
+ .why-item { text-align: center; padding: 10px; }
+ .why-icon {
+    width: 56px; height: 56px; border-radius: 50%;
+    background: #0A2342; color: #D4AF37;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; font-weight: bold; margin: 0 auto 14px;
+  }
+ .why-item h4 { color: #0A2342; margin-bottom: 8px; }
+ .why-item p { color: #555; font-size: 0.95rem; }
+
+  /* FAQ accordion */
+ .faq-item { border-bottom: 1px solid #e0e0e0; }
+ .faq-item:first-child { border-top: 1px solid #e0e0e0; }
+ .faq-question {
+    width: 100%; text-align: left; background: none; border: none;
+    padding: 18px 4px; font-size: 1.05rem; font-weight: 600; color: #0A2342;
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    font-family: inherit;
+  }
+ .faq-question:focus-visible { outline: 2px solid #0A2342; }
+ .faq-question.plus { font-size: 1.4rem; color: #D4AF37; transition: transform 0.2s; }
+ .faq-question[aria-expanded="true"].plus { transform: rotate(45deg); }
+ .faq-answer {
+    max-height: 0; overflow: hidden; transition: max-height 0.25s ease;
+    color: #555; font-size: 0.95rem;
+  }
+ .faq-answer p { padding: 0 4px 18px; }
+
+  /* Footer */
+  footer { background: #0A2342; color: white; text-align: left; padding: 50px 20px 20px; }
+ .footer-grid {
+    max-width: 1100px; margin: 0 auto 30px; display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;
+  }
+ .footer-grid h4 { color: #D4AF37; margin-bottom: 14px; font-size: 1rem; }
+ .footer-grid ul { list-style: none; }
+ .footer-grid li { margin-bottom: 8px; }
+ .footer-grid a { color: #cfd7e6; text-decoration: none; font-size: 0.92rem; }
+ .footer-grid a:hover { color: #D4AF37; }
+ .footer-bottom {
+    max-width: 1100px; margin: 0 auto; padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center; font-size: 0.85rem; color: #b9c2d4;
+  }
+
+  /* Modal */
+ .modal-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.7); z-index: 999;
+    display: none; align-items: center; justify-content: center;
+    padding: 20px;
+  }
+ .modal-overlay.active { display: flex; }
+ .modal-box {
+    background: white; padding: 30px; border-radius: 12px;
+    max-width: 500px; width: 100%;
+  }
+ .modal-box h3 { color: #0A2342; margin-bottom: 10px; }
+
+  /* Toast notifications */
+  #toast-container {
+    position: fixed; bottom: 20px; right: 20px; z-index: 1100;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+ .toast {
+    background: #0A2342; color: white; padding: 14px 20px;
+    border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    max-width: 320px; font-size: 0.95rem;
+    animation: toast-in 0.25s ease-out;
+  }
+ .toast.error { background: #a12525; }
+ .toast.success { background: #198754; }
+  @keyframes toast-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 </head>
 <body>
+
+<nav class="site-nav" aria-label="Primary">
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#products">Resources</a>
+  <a href="#faq">FAQ</a>
+  <a href="#payments">Donate</a>
+  <a href="#contact">Contact</a>
+  <a href="https://wa.me/2347035749180" class="nav-cta">Book Now</a>
+</nav>
 
 <header>
   <div class="logo">OPC</div>
@@ -55,223 +198,391 @@
   <a href="#products" class="btn">Shop Resources</a>
 </header>
 
-<section><h2>About Us</h2>
-<p style="text-align:center; max-width:800px; margin:auto;">At <b>Obugheni-Polyman Consulting</b>, we deliver practical solutions backed by data and tailored to your context. <br><br> <b>Based in Rivers State, Nigeria.</b></p>
+<section id="about">
+  <h2>About Us</h2>
+  <p style="text-align:center; max-width:800px; margin:auto;">
+    At <b>Obugheni-Polyman Consulting</b>, we deliver practical solutions backed by data and tailored to your context.
+    <br><br>
+    <b>Based in Rivers State, Nigeria.</b>
+  </p>
 </section>
 
-<section><h2>Our Services</h2>
-  <section style="padding:40px 20px; text-align:center;">
-  <h2>Digital Resources for Educators</h2>
-  <p>Instant download after payment. Secure checkout by Paystack</p>
+<section id="why-us" class="why-us">
+  <h2>Why Work With Us</h2>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-icon">✓</div>
+      <h4>Evidence-Based</h4>
+      <p>Every recommendation is grounded in data, assessment, and proven frameworks — not guesswork.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">⚡</div>
+      <h4>Fast, Practical Turnaround</h4>
+      <p>Instant digital downloads and clear, usable templates you can apply the same day.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🎯</div>
+      <h4>Tailored to Context</h4>
+      <p>Solutions built around your specific school, family, or organizational setting — not one-size-fits-all.</p>
+    </div>
+    <div class="why-item">
+      <div class="why-icon">🤝</div>
+      <h4>Direct Support</h4>
+      <p>Reach us directly on WhatsApp for questions before or after you purchase — no ticket queues.</p>
+    </div>
+  </div>
+</section>
 
-  <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin-top:30px;">
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Consulting</h3>
+      <p>Strategic Planning, Operational Improvement, Policy Advisory, and Program Evaluation.</p>
+    </div>
+    <div class="card">
+      <h3>Research</h3>
+      <p>Data Collection, Statistical Analysis, Impact Evaluation, and Report Writing.</p>
+    </div>
+    <div class="card">
+      <h3>Special Education</h3>
+      <p>Assessment, Individualized Education Plans, Educator & Parent Training.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Product 1 -->
-    <div style="border:1px solid #e0e0e0; padding:24px; border-radius:12px; width:300px;">
-      <h3>IEP Goals Ebook</h3>
-      <p>50+ Ready-to-use IEP goals for teachers, therapists & parents</p>
-      <p style="font-size:28px; font-weight:700; color:#0d6efd;">₦2,500</p>
-      <a href="https://paystack.shop/pay/iep-goals-ebook" target="_blank" 
-         style="display:block; padding:14px; background:#0d6efd; color:white; 
-                text-decoration:none; border-radius:8px; font-weight:600;">Buy & Download</a>
+<section id="products">
+  <h2>Digital Resources & Toolkits</h2>
+  <p class="section-intro">Instant download after payment. Secure checkout powered by Paystack.</p>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>IEP 101 Video Course <span class="badge">Video</span></h3>
+      <p class="price">₦7,000</p>
+      <p class="note">8 videos + workbook PDF. Covers the 3 signs a child may need an IEP, goal writing, and parent rights. Instant access.</p>
+      <button class="btn" onclick="showOrderForm('IEP 101 Video Course', 7000, 'https://drive.google.com/drive/folders/1Pcv1acKZHLlzBWP9naLr3kNfk-SIwfbO')">Buy & Download</button>
     </div>
 
-    <!-- Product 2 -->
-    <div style="border:1px solid #e0e0e0; padding:24px; border-radius:12px; width:300px;">
-      <h3>IEP Toolkit</h3>
-      <p>Complete toolkit with templates, trackers & resources</p>
-      <p style="font-size:28px; font-weight:700; color:#198754;">₦5,000</p>
-      <a href="https://paystack.shop/pay/iep-toolkit" target="_blank" 
-         style="display:block; padding:14px; background:#198754; color:white; 
-                text-decoration:none; border-radius:8px; font-weight:600;">Buy & Download</a>
+    <div class="card">
+      <h3>IEP Toolkit <span class="badge">PDF</span></h3>
+      <p class="price">₦5,000</p>
+      <p class="note">5 IEP templates + assessment guide + request letter samples. Instant download.</p>
+      <button class="btn" onclick="showOrderForm('IEP Toolkit', 5000, 'https://drive.google.com/drive/folders/1Pcv1acKZHLlzBWP9naLr3kNfk-SIwfbO')">Get Toolkit Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Parent Advocacy Audio <span class="badge">Audio</span></h3>
+      <p class="price">₦3,000</p>
+      <p class="note">45-minute audio guide: "How to Speak Up in IEP Meetings." Download after payment.</p>
+      <button class="btn" onclick="showOrderForm('Parent Advocacy Audio', 3000, 'https://drive.google.com/drive/folders/1Pcv1acKZHLlzBWP9naLr3kNfk-SIwfbO')">Buy & Listen</button>
+    </div>
+
+    <div class="card">
+      <h3>IEP Goals E-book <span class="badge">E-book</span></h3>
+      <p class="price">₦2,500</p>
+      <p class="note">50 SMART goal examples. Copy-paste templates for teachers and parents.</p>
+      <button class="btn" onclick="showOrderForm('IEP Goals E-book', 2500, 'https://drive.google.com/drive/folders/1Pcv1acKZHLlzBWP9naLr3kNfk-SIwfbO')">Buy & Download</button>
+    </div>
+
+    <div class="card">
+      <h3>Premium Toolkit Subscription <span class="badge">Monthly</span></h3>
+      <p class="price">₦25,000 / month</p>
+      <p class="note"><b>What's inside:</b> all videos + all templates + grant samples. New content monthly.</p>
+      <button class="btn" onclick="showOrderForm('Premium Toolkit Subscription', 25000, 'https://drive.google.com/drive/folders/1Pcv1acKZHLlzBWP9naLr3kNfk-SIwfbO')">Subscribe Now</button>
+    </div>
+
+    <div class="card">
+      <h3>Field Survey <span class="badge">On-site</span></h3>
+      <p class="price">From ₦150,000</p>
+      <p class="note">Professional field survey services. Pay a ₦50,000 deposit to book your site visit, or request a custom quote first.</p>
+      <a href="https://paystack.shop/pay/obugheni-survey" target="_blank" class="btn">Pay ₦50,000 Deposit</a>
+      <a href="https://wa.me/2347035749180" class="btn btn-whatsapp">Get Quote on WhatsApp</a>
     </div>
 
   </div>
-</section>
-<div class="grid">
-  <div class="card"><h3>Consulting</h3><p>Strategic Planning, Operational Improvement, Policy Advisory, and Program Evaluation.</p></div>
-  <div class="card"><h3>Research</h3><p>Data Collection, Statistical Analysis, Impact Evaluation, and Report Writing.</p></div>
-  <div class="card"><h3>Special Education</h3><p>Assessment, Individualized Education Plans, Educator & Parent Training.</p></div>
-</div></section>
 
-<section id="products"><h2>Digital Resources & Toolkits</h2>
-<div class="grid">
-  
-  <div class="card">
-    <h3>IEP 101 Video Course <span class="badge">Video</span></h3>
-    <p class="price">₦7,000</p>
-    <button class="btn" onclick="showOrderForm('IEP 101 Video Course - ₦7,000', 7000, 'https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_VIDEO_FOLDER_LINK')">Buy & Download</button>
-    <p class="note">8 Videos + Workbook PDF. Covers 3 Signs, Goal Writing, Parent Rights. Instant access.</p>
+  <div class="bank-box">
+    <h3>Prefer Bank Transfer?</h3>
+    <p><b>Account Name:</b> Ukwoma Obugheni Police</p>
+    <p><b>Account No:</b> 2057359672</p>
+    <p><b>Bank:</b> UBA</p>
+    <p class="note">After payment, send proof to WhatsApp +234 703 574 9180 and we'll send your download link within 10 minutes.</p>
   </div>
-
-  <div class="card">
-    <h3>IEP Toolkit <span class="badge">PDF</span></h3>
-    <p class="price">₦5,000</p>
-    <button class="btn" onclick="showOrderForm('IEP Toolkit - ₦5,000', 5000, 'https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_TOOLKIT_FOLDER_LINK')">Get Toolkit Now</button>
-    <p class="note">5 IEP Templates + Assessment Guide + Request Letter Samples. Instant download.</p>
-  </div>
-
-  <div class="card">
-    <h3>Parent Advocacy Audio <span class="badge">Audio</span></h3>
-    <p class="price">₦3,000</p>
-    <button class="btn" onclick="showOrderForm('Parent Advocacy Audio - ₦3,000', 3000, 'https://drive.google.com/file/d/REPLACE_WITH_YOUR_AUDIO_FILE_LINK/view')">Buy & Listen</button>
-    <p class="note">45min audio guide. "How to Speak Up in IEP Meetings". Download after payment.</p>
-  </div>
-
-  <div class="card">
-    <h3>IEP Goals E-book <span class="badge">E-book</span></h3>
-    <p class="price">₦2,500</p>
-    <button class="btn" onclick="showOrderForm('IEP Goals E-book - ₦2,500', 2500, 'https://drive.google.com/file/d/REPLACE_WITH_YOUR_EBOOK_FILE_LINK/view')">Buy & Download</button>
-    <p class="note">50 SMART Goal Examples PDF. Copy-paste templates for teachers and parents.</p>
-  </div>
-  
-  <div class="card">
-    <h3>Premium Toolkit Subscription <span class="badge">Monthly</span></h3>
-    <p class="price">₦25,000 / month</p>
-    <button class="btn" onclick="showOrderForm('Premium Toolkit Subscription - ₦25,000', 25000, 'https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_PREMIUM_FOLDER_LINK')">Subscribe Now</button>
-    <p class="note"><b>What's Inside:</b> All Videos + All Templates + Grant Samples. New content monthly.</p>
-  </div>
-  
-  <div class="card">
-    <h3>Field Survey</h3>
-    <p class="price">From ₦150,000</p>
-    <a href="https://wa.me/2347035749180" class="btn">Get Quote on WhatsApp</a>
-  </div>
-  
-</div>
-
-<!-- BANK TRANSFER OPTION -->
-<div class="bank-box">
-  <h3>Prefer Bank Transfer?</h3>
-  <p><b>Account Name:</b> Ukwoma Obugheni Police</p>
-  <p><b>Account No:</b> 2057359672</p>
-  <p><b>Bank:</b> UBA</p>
-  <p class="note">After payment, send proof to WhatsApp +2347035749180 and we’ll send your download link within 10 minutes</p>
-</div>
-
 </section>
 
-<!-- HIDDEN ORDER FORM POPUP -->
-<div id="order-popup" onclick="closePopupOnOverlay(event)">
-  <div style="background:white; padding:30px; border-radius:12px; max-width:500px; width:90%;" onclick="event.stopPropagation()">
+<!-- ORDER FORM MODAL -->
+<div id="order-popup" class="modal-overlay" onclick="closeOverlayClick(event, 'order-popup')">
+  <div class="modal-box" onclick="event.stopPropagation()">
     <h3 id="popup-title">Complete Your Order</h3>
-    <form id="iep-form">
+    <form id="iep-form" novalidate>
       <input type="text" name="parent_name" placeholder="Full Name" required>
       <input type="email" name="email" placeholder="Email for Download Link" required>
-      <input type="text" name="phone" placeholder="WhatsApp Number" required>
+      <input type="tel" name="phone" placeholder="WhatsApp Number" required>
       <input type="hidden" name="plan" id="plan-input">
       <input type="hidden" name="amount" id="amount-input">
       <input type="hidden" name="drive_link" id="drive-link-input">
       <button class="btn" type="submit" style="width:100%;">Pay & Get Instant Access</button>
-      <button type="button" onclick="closePopup()" class="btn btn-cancel" style="width:100%; margin-top:10px;">Cancel</button>
+      <button type="button" onclick="closePopup('order-popup')" class="btn btn-cancel" style="width:100%; margin-top:10px;">Cancel</button>
     </form>
   </div>
 </div>
 
-<section id="payments" class="donate"><h2>Educate One Child Campaign</h2>
-<div class="progress"><div class="progress-bar">24%</div></div>
-<p style="text-align:center;"><b>Goal: ₦500,000</b> | Raised: ₦120,000</p>
-<div style="text-align:center;">
-  <button class="btn" onclick="payDonation(5000)">Donate ₦5,000</button>
-  <button class="btn" onclick="payDonation(10000)">Donate ₦10,000</button>
-  <button class="btn" onclick="payDonation(20000)">Donate ₦20,000</button>
+<!-- DONATION EMAIL MODAL -->
+<div id="donate-popup" class="modal-overlay" onclick="closeOverlayClick(event, 'donate-popup')">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <h3>Confirm Your Donation</h3>
+    <p class="note" id="donate-amount-label"></p>
+    <form id="donate-form" novalidate>
+      <input type="email" name="donor_email" id="donor-email-input" placeholder="Email for receipt" required>
+      <button class="btn" type="submit" style="width:100%;">Continue to Payment</button>
+      <button type="button" onclick="closePopup('donate-popup')" class="btn btn-cancel" style="width:100%; margin-top:10px;">Cancel</button>
+    </form>
+  </div>
 </div>
+
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div id="faq-list">
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        How fast will I get my download after paying?
+        <span class="plus">+</span>
+      </button>
+      <div class="faq-answer"><p>Card and bank transfer payments through the site unlock your download link immediately. If you pay by direct bank transfer, send proof to WhatsApp and we'll send your link within 10 minutes during business hours.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Is my payment secure?
+        <span class="plus">+</span>
+      </button>
+      <div class="faq-answer"><p>Yes. All card payments are processed directly by Paystack, a licensed payment processor — we never see or store your card details.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        What if I'm not satisfied with a digital resource?
+        <span class="plus">+</span>
+      </button>
+      <div class="faq-answer"><p>Message us on WhatsApp within 48 hours of purchase describing the issue, and we'll work with you to make it right.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        How does a field survey deposit work?
+        <span class="plus">+</span>
+      </button>
+      <div class="faq-answer"><p>The ₦50,000 deposit books and confirms your site visit date; it's deducted from your final invoice. Not sure about scope or pricing yet? Message us on WhatsApp for a free quote first.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question" aria-expanded="false">
+        Can I get a custom IEP or consulting engagement, not just a template?
+        <span class="plus">+</span>
+      </button>
+      <div class="faq-answer"><p>Yes — the digital resources are self-serve templates, but we also offer one-on-one consulting and training. Book a consultation via WhatsApp to discuss your specific situation.</p></div>
+    </div>
+  </div>
 </section>
 
-<section><h2>Get In Touch</h2>
-<form action="https://formspree.io/f/xbdnyvpb" method="POST" style="max-width:600px; margin:auto;">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
-  <button class="btn" type="submit" style="width:100%;">Send Message</button>
-</form>
-<p style="text-align:center; margin-top:30px;"><b>Email:</b> ukwomao@gmail.com | <b>WhatsApp:</b> +234 7035749180</p>
+<section id="payments" class="donate">
+  <h2>Educate One Child Campaign</h2>
+  <div class="progress"><div class="progress-bar" style="width:24%;">24%</div></div>
+  <p style="text-align:center;"><b>Goal: ₦500,000</b> | Raised: ₦120,000</p>
+  <div style="text-align:center;">
+    <button class="btn" onclick="openDonateForm(5000)">Donate ₦5,000</button>
+    <button class="btn" onclick="openDonateForm(10000)">Donate ₦10,000</button>
+    <button class="btn" onclick="openDonateForm(20000)">Donate ₦20,000</button>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Get In Touch</h2>
+  <form action="https://formspree.io/f/xbdnyvpb" method="POST" style="max-width:600px; margin:auto;" id="contact-form">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
+    <button class="btn" type="submit" style="width:100%;">Send Message</button>
+  </form>
+  <p style="text-align:center; margin-top:30px;">
+    <b>Email:</b> ukwomao@gmail.com | <b>WhatsApp:</b> +234 703 574 9180
+  </p>
 </section>
 
 <footer>
-  <p>© 2026 Obugheni-Polyman Consulting. All Rights Reserved.</p>
+  <div class="footer-grid">
+    <div>
+      <h4>Obugheni-Polyman Consulting</h4>
+      <p style="color:#cfd7e6; font-size:0.92rem;">Consulting, Research & Special Education services based in Rivers State, Nigeria.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#products">Digital Resources</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Get Involved</h4>
+      <ul>
+        <li><a href="#payments">Educate One Child Campaign</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Reach Us</h4>
+      <ul>
+        <li><a href="mailto:ukwomao@gmail.com">ukwomao@gmail.com</a></li>
+        <li><a href="https://wa.me/2347035749180">WhatsApp: +234 703 574 9180</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Obugheni-Polyman Consulting. All Rights Reserved.</p>
+  </div>
 </footer>
+
+<div id="toast-container" aria-live="polite"></div>
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script>
+  // ---- Config ----
+  const PAYSTACK_PUBLIC_KEY = 'pk_live_3ec00393f90225339fb9091cec29dd650c9abeb7';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xbdnyvpb';
 
-function showOrderForm(plan, amount, driveLink){
-  document.getElementById('plan-input').value = plan;
-  document.getElementById('amount-input').value = amount;
-  document.getElementById('drive-link-input').value = driveLink;
-  document.getElementById('popup-title').innerText = 'Order: ' + plan;
-  document.getElementById('order-popup').classList.add('active');
-  document.body.style.overflow = 'hidden';
-}
-
-function closePopup(){
-  document.getElementById('order-popup').classList.remove('active');
-  document.body.style.overflow = 'auto';
-  document.getElementById('iep-form').reset();
-}
-
-function closePopupOnOverlay(event){
-  if(event.target.id === 'order-popup'){
-    closePopup();
+  // ---- Toast helper ----
+  function showToast(message, type) {
+    const container = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = 'toast' + (type? ' ' + type : '');
+    toast.textContent = message;
+    container.appendChild(toast);
+    setTimeout(() => toast.remove(), 5000);
   }
-}
 
-const form = document.getElementById('iep-form');
-form.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(form);
-  const email = formData.get('email');
-  const amount = parseInt(formData.get('amount'));
-  const driveLink = formData.get('drive_link');
+  // ---- FAQ accordion ----
+  document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const isOpen = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      answer.style.maxHeight = isOpen? null : answer.scrollHeight + 'px';
+    });
+  });
 
-  // 1. Send to Formspree to capture leads
-  fetch('https://formspree.io/f/xbdnyvpb', {
-    method: 'POST',
-    body: formData,
-    headers: {'Accept': 'application/json'}
-  }).catch(err => console.log("Formspree error", err));
-
-  // 2. Open Paystack
-  PaystackPop.setup({
-    key: 'pk_live_3ec00393f90225339fb9091cec29dd650c9abeb7', // Your live key
-    email: email,
-    amount: amount * 100, // to kobo
-    currency: "NGN",
-    ref: 'OPC_'+Date.now(),
-    metadata: {
-        custom_fields: [
-            {display_name: "Plan", variable_name: "plan", value: formData.get('plan')}
-        ]
-    },
-    callback: function(response){
-      closePopup();
-      alert('Payment Successful! Ref: ' + response.reference + '\n\nRedirecting you to your download now...');
-      // 3. AUTO REDIRECT TO YOUR DRIVE
-      window.open(driveLink, '_blank');
-    },
-    onClose: function(){ 
-      alert('Payment window closed. Try again.'); 
+  // ---- Modal helpers ----
+  function closePopup(id) {
+    const el = document.getElementById(id);
+    el.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    const form = el.querySelector('form');
+    if (form) form.reset();
+  }
+  function closeOverlayClick(event, id) {
+    if (event.target.id === id) closePopup(id);
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(el => closePopup(el.id));
     }
-  }).openIframe();
-});
+  });
 
-// DONATION FUNCTION
-function payDonation(amount){
-  let donorEmail = prompt("Enter your email to get donation receipt:");
-  if(!donorEmail){ alert("Email is required to continue"); return; }
+  // ---- Product order flow ----
+  function showOrderForm(plan, amount, driveLink) {
+    document.getElementById('plan-input').value = plan;
+    document.getElementById('amount-input').value = amount;
+    document.getElementById('drive-link-input').value = driveLink;
+    document.getElementById('popup-title').innerText = 'Order: ' + plan + ' — ₦' + amount.toLocaleString();
+    document.getElementById('order-popup').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
 
-  PaystackPop.setup({
-    key: 'pk_live_3ec00393f90225339fb9091cec29dd650c9abeb7',
-    email: donorEmail,
-    amount: amount * 100,
-    currency: "NGN",
-    ref: 'DONATE_'+Date.now(),
-    callback: function(response){ 
-      alert('Thank you for donating! Ref: ' + response.reference + '. Receipt sent to ' + donorEmail); 
-    },
-    onClose: function(){ alert('Transaction cancelled'); }
-  }).openIframe();
-}
+  document.getElementById('iep-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const email = formData.get('email');
+    const amount = parseInt(formData.get('amount'), 10);
+    const driveLink = formData.get('drive_link');
+    const plan = formData.get('plan');
+
+    fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).catch(() => {});
+
+    PaystackPop.setup({
+      key: PAYSTACK_PUBLIC_KEY,
+      email: email,
+      amount: amount * 100,
+      currency: 'NGN',
+      ref: 'OPC_' + Date.now(),
+      metadata: {
+        custom_fields: [
+          { display_name: 'Plan', variable_name: 'plan', value: plan }
+        ]
+      },
+      callback: function (response) {
+        closePopup('order-popup');
+        showToast('Payment successful (Ref: ' + response.reference + '). Opening your download...', 'success');
+        window.open(driveLink, '_blank');
+      },
+      onClose: function () {
+        showToast('Payment window closed. You can try again anytime.', 'error');
+      }
+    }).openIframe();
+  });
+
+  // ---- Donation flow ----
+  let pendingDonationAmount = 0;
+
+  function openDonateForm(amount) {
+    pendingDonationAmount = amount;
+    document.getElementById('donate-amount-label').textContent =
+      'You are donating ₦' + amount.toLocaleString() + '. Enter your email to receive a receipt.';
+    document.getElementById('donate-popup').classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.getElementById('donate-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const donorEmail = document.getElementById('donor-email-input').value;
+
+    PaystackPop.setup({
+      key: PAYSTACK_PUBLIC_KEY,
+      email: donorEmail,
+      amount: pendingDonationAmount * 100,
+      currency: 'NGN',
+      ref: 'DONATE_' + Date.now(),
+      callback: function (response) {
+        closePopup('donate-popup');
+        showToast('Thank you for donating! Ref: ' + response.reference + '. Receipt sent to ' + donorEmail, 'success');
+      },
+      onClose: function () {
+        showToast('Donation cancelled.', 'error');
+      }
+    }).openIframe();
+  });
+
+  // ---- Contact form ----
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const form = this;
+    const formData = new FormData(form);
+    fetch(FORMSPREE_ENDPOINT, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    }).then(res => {
+      if (res.ok) {
+        showToast('Message sent! We will get back to you shortly.', 'success');
+        form.reset();
+      } else {
+        showToast('Something went wrong sending your message. Please try WhatsApp instead.', 'error');
+      }
+    }).catch(() => {
+      showToast('Network error. Please try WhatsApp instead.', 'error');
+    });
+  });
 </script>
 </body>
 </html>
