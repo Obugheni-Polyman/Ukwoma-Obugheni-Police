@@ -55,7 +55,7 @@ Faith, skill and green jobs. Online theory, supervised in-person practicals, and
 - Premium Toolkit (monthly access)
 - Field Survey (on-site service)
 
-Payments are processed securely by Paystack, and the amount is shown at checkout. Download links are emailed after payment is verified. For bank transfer, contact us on WhatsApp to confirm the amount and account details before paying.
+Digital resources are sold on Selar and delivered automatically after payment. Training, survey and other payments are made on Paystack. The amount is shown on the payment page before you pay. For bank transfer, contact us on WhatsApp to confirm the amount and account details first. See the Terms and Refunds on the website.
 
 ## Contact
 
@@ -67,7 +67,7 @@ Payments are processed securely by Paystack, and the amount is shown at checkout
 
 ## Privacy
 
-We collect names, emails and phone numbers only to process orders and enrollments, send access and reply to messages. We do not sell personal data. The website uses these third-party services: Paystack (payments), Formspree (forms), Google Analytics, Google Translate, UserWay (accessibility) and WhatsApp (Meta). See the privacy notice on the website, or email us to ask about, correct or delete your information.
+We collect names, emails and phone numbers only to process orders and enrollments, send access and reply to messages. We do not sell personal data. The website uses these third-party services: Paystack and Selar (payments), Formspree (forms), Google Analytics, Google Translate, UserWay (accessibility) and WhatsApp (Meta). See the privacy notice on the website, or email us to ask about, correct or delete your information.
 
 ## Repository Contents
 
@@ -76,6 +76,9 @@ We collect names, emails and phone numbers only to process orders and enrollment
 | `index.html` | The website, served with GitHub Pages |
 | `PHD_Thesis_PSIBBCE_OUP_Buguma_City_Rivers_State_e.pdf` | Full PhD thesis |
 | `qr.png` | QR code linking to the website |
+| `gallery-poster.jpg`, `gallery-training.jpg`, `gallery-youth.jpg`, `gallery-women.jpg` | Gallery photos |
+| `og-image.jpg` | Preview image shown when the link is shared on WhatsApp and social media |
+| `favicon.ico`, `icon-192.png`, `apple-touch-icon.png` | Browser tab and home-screen icons |
 
 ---
 
