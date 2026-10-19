@@ -21,12 +21,13 @@ Evidence-based consulting, research, special education and green mobility traini
 | **Consulting** | Educational needs assessment, and professional development and training for schools, NGOs and private organizations |
 | **Research** | Research design, data analysis, academic writing and evidence synthesis |
 | **Special Education** | Inclusive education and learning support, assessment, Individualized Education Plans (IEPs), and educator and parent training |
+| **Website and Domain Setup** | Professional websites and custom domain setup for schools, churches, NGOs and small businesses (Basic, Standard and Premium packages) |
 | **Green Mobility Training** | EV charging station business, EV battery and tyre service, and a Train-the-Trainers academy |
 
 ## Featured Research
 
 **A Psychological Study of the Impact of Cultural Barriers on Pastoral Counseling Effectiveness in Buguma City, Nigeria**
-Ukwoma Obugheni Police · EIBCS2526P012 · June 2026 · El-Elyon International Bible College
+Obugheni Police Ukwoma · EIBCS2526P012 · June 2026 · El-Elyon International Bible College
 
 - **Setting:** the 39 Polo of Buguma City, Asari-Toru LGA, Rivers State
 - **Method:** descriptive survey of 407 respondents (53.1% female, 46.9% male) in PFN and CAN churches, sampled with the Taro Yamane formula
@@ -36,7 +37,7 @@ Ukwoma Obugheni Police · EIBCS2526P012 · June 2026 · El-Elyon International B
 **Full thesis (PDF):** [PHD_Thesis_PSIBBCE_OUP_Buguma_City_Rivers_State_e.pdf](./PHD_Thesis_PSIBBCE_OUP_Buguma_City_Rivers_State_e.pdf)
 
 **Suggested citation:**
-Police, U. O. (2026). *A Psychological Study of the Impact of Cultural Barriers on Pastoral Counseling Effectiveness in Buguma City, Nigeria*. PhD thesis, El-Elyon International Bible College.
+Ukwoma, O. P. (2026). *A Psychological Study of the Impact of Cultural Barriers on Pastoral Counseling Effectiveness in Buguma City, Nigeria*. PhD thesis, El-Elyon International Bible College.
 
 ## OPC Green Mobility Training Academy
 
@@ -52,10 +53,12 @@ Faith, skill and green jobs. Online theory, supervised in-person practicals, and
 
 - IEP Toolkit (PDF)
 - IEP Goals E-book
+- Special Education and IEP Premium Toolkit (32-page handbook and templates)
+- Faith and Growth Resources (e-book)
 - Premium Toolkit (monthly access)
 - Field Survey (on-site service)
 
-Digital resources are sold on Selar and delivered automatically after payment. Training, survey and other payments are made on Paystack. The amount is shown on the payment page before you pay. For bank transfer, contact us on WhatsApp to confirm the amount and account details first. See the Terms and Refunds on the website.
+Digital resources are delivered automatically after payment on Selar or Paystack. Training, survey, website and other service payments are made on Paystack. The amount is shown on the payment page before you pay. For bank transfer, contact us on WhatsApp to confirm the amount and account details first. See the Terms and Refunds on the website.
 
 ## Contact
 
