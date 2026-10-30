@@ -138,9 +138,6 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
 .s-research{background:#fff6dc}
 .s-gallery{background:#17203a}
 .s-sdgs{background:linear-gradient(135deg,#dff1f6,#f1e8fa)}
-.s-resources{background:#e4f4ea}
-.s-training{background:#0b3d3a}
-.s-websites{background:#ece6fa}
 .s-faq{background:#e3f1fc}
 .s-support{background:linear-gradient(135deg,#D4AF37,#f3d97d)}
 .s-contact{background:linear-gradient(135deg,#0A2342,#1a3a6e)}
@@ -151,8 +148,6 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
 .dark .intro a{color:var(--g)}
 .dark .note{color:#c5d0e6}
 .card .note,.row .note,.bank .note,.box .note,.buy .note,.tip .note{color:var(--m)}
-.s-training .step{color:#fff}
-.s-training .step .note{color:#c9e3df}
 .s-support h2{color:var(--n)}
 .s-support .intro{color:#2b2400}
 .s-support .btn{background:var(--n);color:#fff}
@@ -162,6 +157,58 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
 .s-contact a{color:var(--g)}
 .s-terms h2,.s-privacy h2{display:flex;align-items:center;gap:10px}
 .s-terms h2 .ic,.s-privacy h2 .ic{font-size:1.5rem}
+
+/* Redesigned white sections: Resources, Training, Websites */
+.s-white{background:#fff}
+.s-white + .s-white{border-top:1px solid #e7ebf2}
+.kicker{display:block;text-align:center;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8a6d00;margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.chip{display:inline-flex;align-items:center;gap:6px;background:#f1f4f9;color:#33415c;border-radius:999px;padding:4px 12px;font-size:.82rem;font-weight:600}
+.filters{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 26px}
+.filters button{border:1px solid #cfd6e3;background:#fff;color:var(--n);padding:9px 18px;border-radius:999px;font:600 .92rem 'Segoe UI',Tahoma,sans-serif;cursor:pointer}
+.filters button:hover{background:#f1f4f9}
+.filters button[aria-pressed=true]{background:var(--n);color:#fff;border-color:var(--n)}
+.res{display:grid;grid-template-columns:76px 1fr auto;gap:20px;align-items:center;background:#fff;border:1px solid #e1e6ef;border-radius:16px;padding:20px 22px;box-shadow:0 6px 18px rgba(10,35,66,.07)}
+.res h3{font-size:1.15rem;line-height:1.35}
+.res .d{font-size:.92rem;color:var(--m);margin-top:4px}
+.res .acts{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.res .acts .btn{margin:0}
+.tile{width:76px;height:76px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:2.1rem;flex:none}
+.t1{background:#fdf3d0}.t2{background:#e3eefb}.t3{background:#e3f4e8}.t4{background:#f1e8fa}.t5{background:#fde6e3}
+@media(max-width:700px){.res{grid-template-columns:60px 1fr}.tile{width:60px;height:60px;font-size:1.7rem}.res .acts{grid-column:1/-1;justify-content:stretch}.res .acts .btn{flex:1;text-align:center}}
+.steps .step{border:1px solid #e1e6ef;border-radius:14px;background:#fff}
+.cc{border:1px solid #e1e6ef;border-radius:16px;padding:24px;background:#fff;box-shadow:0 6px 18px rgba(10,35,66,.07)}
+.cc-head{display:flex;gap:18px;align-items:flex-start}
+.cc-head .tile{width:60px;height:60px;font-size:1.7rem}
+.cc h3{font-size:1.3rem;line-height:1.3;margin:6px 0 4px}
+.lvl{display:inline-block;padding:3px 14px;border-radius:999px;font-size:.74rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase}
+.lvl.b{background:#e3f4e8;color:#14623a}.lvl.t{background:#e3eefb;color:#174a8b}.lvl.a{background:#fbefc9;color:#7a5c00}
+.cc .d{color:var(--m);font-size:.95rem}
+details.outline{margin-top:14px;border-top:1px solid #e7ebf2}
+details.outline summary{cursor:pointer;font-weight:700;color:var(--n);padding:12px 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+details.outline summary::-webkit-details-marker{display:none}
+details.outline summary::after{content:"+";font-size:1.4rem;color:#8a6d00;transition:transform .2s}
+details.outline[open] summary::after{transform:rotate(45deg)}
+.cc .acts{margin-top:14px}
+.cc .acts .btn{margin:4px 8px 4px 0}
+.plans{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:22px;align-items:stretch}
+.plan{display:flex;flex-direction:column;border:1px solid #e1e6ef;border-radius:18px;background:#fff;box-shadow:0 8px 22px rgba(10,35,66,.08);overflow:hidden;padding-bottom:24px}
+.plan::before{content:"";display:block;height:6px;background:linear-gradient(90deg,var(--n),var(--g))}
+.plan .in{padding:24px 24px 8px;flex:1}
+.plan h3{font-size:1.4rem}
+.plan .pgs{display:block;font-size:1.9rem;font-weight:800;color:var(--n);line-height:1.2;margin:6px 0 2px}
+.plan .sub{font-size:.9rem;color:var(--m)}
+.plan ul{list-style:none;padding:0;margin:16px 0 0}
+.plan li{display:flex;gap:10px;padding:6px 0;font-size:.95rem;line-height:1.5}
+.plan li::before{content:"\2713";color:#1c7a3e;font-weight:700;flex:none}
+.plan .btns{padding:0 24px;display:flex;flex-direction:column;gap:4px}
+.plan .btns .btn{margin:4px 0;text-align:center}
+.plan.mid{border:2px solid var(--g);box-shadow:0 12px 30px rgba(212,175,55,.25)}
+.need{background:#f7f9fc;border:1px solid #e1e6ef;border-radius:16px;padding:24px;margin-top:28px}
+.need ul{columns:2;column-gap:32px;list-style:none;padding:0}
+.need li{padding:3px 0 3px 26px;position:relative;break-inside:avoid;font-size:.95rem}
+.need li::before{content:"\2713";position:absolute;left:0;color:#1c7a3e;font-weight:700}
+@media(max-width:560px){.need ul{columns:1}}
 
 /* Cookie notice */
 #cookie{position:fixed;left:16px;bottom:16px;right:16px;max-width:560px;z-index:1050;background:#fff;color:#222;border:2px solid var(--g);border-radius:12px;padding:16px 18px;box-shadow:0 8px 28px rgba(0,0,0,.3);font-size:.92rem;line-height:1.5}
@@ -323,26 +370,71 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
   </div>
 </div></section>
 
-<section id="resources" class="s-resources"><div class="wrap">
+<section id="resources" class="s-white"><div class="wrap">
+  <span class="kicker">Shop</span>
   <h2>Digital Resources and Services</h2>
-  <p class="intro">Pay securely on Selar or Paystack. The amount is shown on the payment page before you confirm. By paying you agree to our <a href="#terms">Terms and Refunds</a>.</p>
+  <p class="intro">Templates, e-books, research and services. Pay securely on Selar or Paystack. The amount is shown on the payment page before you confirm. By paying you agree to our <a href="#terms">Terms and Refunds</a>.</p>
 
-  <div class="stack">
-    <div class="row"><div class="info"><h3>PhD Thesis: Cultural Barriers and Pastoral Counseling in Buguma City <span class="badge">Full PDF</span></h3><p class="note">The complete thesis (six chapters, references and appendices) by Ukwoma Obugheni Police. Free preview available in the <a href="#research">Research</a> section. Access is sent after payment.</p></div>
-      <div class="acts"><a class="btn pay" data-key="thesis" data-live="Buy and download full PDF" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20full%20thesis%20PDF">Order on WhatsApp</a></div></div>
-    <div class="row"><div class="info"><h3>IEP Toolkit <span class="badge">PDF</span></h3><p class="note">Five IEP templates, an assessment guide and sample request letters. Instant download after payment.</p></div>
-      <div class="acts"><a class="btn pay" data-key="toolkit" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20IEP%20Toolkit">Order on WhatsApp</a></div></div>
-    <div class="row"><div class="info"><h3>IEP Goals E-book <span class="badge">E-book</span></h3><p class="note">Fifty SMART goal examples with copy-and-paste templates for teachers and parents. Instant download after payment.</p></div>
-      <div class="acts"><a class="btn pay" data-key="goals" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20IEP%20Goals%20E-book">Order on WhatsApp</a></div></div>
-    <div class="row"><div class="info"><h3>Special Education and IEP Premium Toolkit <span class="badge">Premium</span></h3><p class="note">A 32-page handbook adapted for Nigerian schools, with templates, request letters, meeting preparation and tracking sheets, a funding request sample, a bank of 50 SMART goals and a glossary. Includes a school licence to copy the templates for learners. Instant download after payment.</p></div>
-      <div class="acts"><a class="btn pay" data-key="handbook" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20Special%20Education%20and%20IEP%20Premium%20Toolkit">Order on WhatsApp</a></div></div>
-    <div class="row"><div class="info"><h3>Faith and Growth Resources <span class="badge">E-book</span></h3><p class="note">A practical guide to purposeful living in eight chapters, each anchored in King James Version Scripture, with 32 backup Scriptures, an eight-week journey and printable worksheets for personal use, teaching and counseling. Delivered by Selar straight after payment.</p></div>
-      <div class="acts"><a class="btn pay" data-key="faith" data-live="Buy on Selar" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20Faith%20and%20Growth%20Resources">Order on WhatsApp</a></div></div>
-    <div class="row"><div class="info"><h3>Premium Toolkit <span class="badge">Monthly</span></h3><p class="note">Ongoing access to our IEP templates and resources, plus grant samples, with new content added monthly. Paid month by month with no auto-renewal; we remind you before it ends.</p></div>
-      <div class="acts"><a class="btn pay" data-key="premium" data-live="Buy on Selar" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20Premium%20Toolkit">Order on WhatsApp</a></div></div>
-    <div class="row"><div class="info"><h3>Field Survey <span class="badge">On-site</span></h3><p class="note">Professional field survey services. Request a quote first, or book your site visit with a deposit on the Paystack page.</p></div>
-      <div class="acts"><a class="btn" href="https://paystack.shop/pay/obugheni-survey" target="_blank" rel="noopener">Pay deposit on Paystack</a><a class="btn wa" href="https://wa.me/2347035749180">Request a quote</a></div></div>
+  <div class="filters" role="group" aria-label="Filter resources">
+    <button type="button" data-f="all" aria-pressed="true">All</button>
+    <button type="button" data-f="research" aria-pressed="false">Research</button>
+    <button type="button" data-f="sped" aria-pressed="false">Special Education</button>
+    <button type="button" data-f="faith" aria-pressed="false">Faith</button>
+    <button type="button" data-f="services" aria-pressed="false">Services</button>
   </div>
+
+  <div class="stack" id="res-list">
+    <article class="res" data-cat="research">
+      <div class="tile t1" aria-hidden="true">🎓</div>
+      <div><h3>PhD Thesis: Cultural Barriers and Pastoral Counseling in Buguma City <span class="badge">Full PDF</span></h3>
+        <p class="d">The complete thesis (six chapters, references and appendices) by Ukwoma Obugheni Police. Free preview available in the <a href="#research">Research</a> section.</p>
+        <div class="chips"><span class="chip">📄 PDF</span><span class="chip">📑 6 chapters</span><span class="chip">🔓 Free preview</span><span class="chip">✉️ Access sent after payment</span></div></div>
+      <div class="acts"><a class="btn pay" data-key="thesis" data-live="Buy and download full PDF" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20full%20thesis%20PDF">Order on WhatsApp</a></div>
+    </article>
+    <article class="res" data-cat="sped">
+      <div class="tile t2" aria-hidden="true">📋</div>
+      <div><h3>IEP Toolkit <span class="badge">PDF</span></h3>
+        <p class="d">Five IEP templates, an assessment guide and sample request letters.</p>
+        <div class="chips"><span class="chip">📄 PDF</span><span class="chip">5 IEP templates</span><span class="chip">⚡ Instant download</span></div></div>
+      <div class="acts"><a class="btn pay" data-key="toolkit" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20IEP%20Toolkit">Order on WhatsApp</a></div>
+    </article>
+    <article class="res" data-cat="sped">
+      <div class="tile t3" aria-hidden="true">🎯</div>
+      <div><h3>IEP Goals E-book <span class="badge">E-book</span></h3>
+        <p class="d">Fifty SMART goal examples with copy-and-paste templates for teachers and parents.</p>
+        <div class="chips"><span class="chip">📘 E-book</span><span class="chip">50 SMART goals</span><span class="chip">⚡ Instant download</span></div></div>
+      <div class="acts"><a class="btn pay" data-key="goals" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20IEP%20Goals%20E-book">Order on WhatsApp</a></div>
+    </article>
+    <article class="res" data-cat="sped">
+      <div class="tile t4" aria-hidden="true">📚</div>
+      <div><h3>Special Education and IEP Premium Toolkit <span class="badge">Premium</span></h3>
+        <p class="d">A handbook adapted for Nigerian schools, with templates, request letters, meeting preparation and tracking sheets, a funding request sample, a bank of 50 SMART goals and a glossary.</p>
+        <div class="chips"><span class="chip">32 pages</span><span class="chip">🏫 School licence to copy templates</span><span class="chip">⚡ Instant download</span></div></div>
+      <div class="acts"><a class="btn pay" data-key="handbook" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20Special%20Education%20and%20IEP%20Premium%20Toolkit">Order on WhatsApp</a></div>
+    </article>
+    <article class="res" data-cat="faith">
+      <div class="tile t5" aria-hidden="true">📖</div>
+      <div><h3>Faith and Growth Resources <span class="badge">E-book</span></h3>
+        <p class="d">A practical guide to purposeful living in eight chapters, each anchored in King James Version Scripture, with 32 backup Scriptures, an eight-week journey and printable worksheets for personal use, teaching and counseling.</p>
+        <div class="chips"><span class="chip">8 chapters</span><span class="chip">🖨️ Printable worksheets</span><span class="chip">✉️ Delivered by Selar</span></div></div>
+      <div class="acts"><a class="btn pay" data-key="faith" data-live="Buy on Selar" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20Faith%20and%20Growth%20Resources">Order on WhatsApp</a></div>
+    </article>
+    <article class="res" data-cat="sped">
+      <div class="tile t1" aria-hidden="true">🔑</div>
+      <div><h3>Premium Toolkit <span class="badge">Monthly</span></h3>
+        <p class="d">Ongoing access to our IEP templates and resources, plus grant samples, with new content added monthly.</p>
+        <div class="chips"><span class="chip">📅 Paid month by month</span><span class="chip">No auto-renewal</span><span class="chip">We remind you before it ends</span></div></div>
+      <div class="acts"><a class="btn pay" data-key="premium" data-live="Buy on Selar" href="https://wa.me/2347035749180?text=I%20would%20like%20to%20buy%20the%20Premium%20Toolkit">Order on WhatsApp</a></div>
+    </article>
+    <article class="res" data-cat="services">
+      <div class="tile t2" aria-hidden="true">📍</div>
+      <div><h3>Field Survey <span class="badge">On-site</span></h3>
+        <p class="d">Professional field survey services. Request a quote first, or book your site visit with a deposit on the Paystack page.</p>
+        <div class="chips"><span class="chip">🧭 On-site</span><span class="chip">Quote first</span><span class="chip">Deposit on Paystack</span></div></div>
+      <div class="acts"><a class="btn" href="https://paystack.shop/pay/obugheni-survey" target="_blank" rel="noopener">Pay deposit on Paystack</a><a class="btn wa" href="https://wa.me/2347035749180">Request a quote</a></div>
+    </article>
+  </div>
+
   <div class="bank">
     <h3>Prefer bank transfer?</h3>
     <p class="note" style="margin-bottom:12px">Account details stay hidden until you ask for them.</p>
@@ -355,8 +447,9 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
   </div>
 </div></section>
 
-<section id="training" class="s-training dark"><div class="wrap">
-  <h2>OPC Green Mobility Training Academy</h2>
+<section id="training" class="s-white"><div class="wrap">
+  <span class="kicker">OPC Green Mobility Training Academy</span>
+  <h2>EV Training Courses</h2>
   <p class="intro">Faith, skill and green jobs. Learn EV charging, battery care and tyre services, with online theory, supervised practicals in Buguma and Port Harcourt, and a certificate from Obugheni-Polyman Consulting.</p>
   <div class="steps">
     <div class="step"><b>1</b><strong>Enroll</strong><p class="note">Choose a course and pay securely on Paystack.</p></div>
@@ -366,65 +459,96 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
   </div>
 
   <div class="stack">
-    <article class="card course">
-      <h3>Course 1: EV Charging Station Business <span class="badge">Beginner · 2 weeks</span></h3>
-      <p class="note">Locations where vehicles stay parked for a while, such as churches, schools and markets, can suit charging services as electric vehicles become more common. This course shows you how to plan and run one responsibly.</p>
-      <div class="cols">
-        <div><h4>Module A: Site selection</h4><ul class="l"><li>Space requirements and access</li><li>Grid power availability (PHED)</li><li>Security and CCTV</li></ul>
-          <h4>Module B: Equipment and power</h4><ul class="l"><li>AC chargers and solar with inverter and battery backup</li><li>Signage, payments and CAC registration</li></ul></div>
-        <div><h4>Module C: Income models</h4><ul class="l"><li>Charging fees</li><li>Waiting-time services such as water and snacks</li><li>Secure parking with charging</li></ul>
-          <h4>Module D: Operations and team</h4><ul class="l"><li>Training youth attendants</li><li>Safety, record keeping and customer care</li></ul></div>
+    <article class="cc">
+      <div class="cc-head"><div class="tile t3" aria-hidden="true">🔌</div>
+        <div><span class="lvl b">Beginner</span>
+          <h3>Course 1: EV Charging Station Business</h3>
+          <p class="d">Locations where vehicles stay parked for a while, such as churches, schools and markets, can suit charging services as electric vehicles become more common. This course shows you how to plan and run one responsibly.</p>
+          <div class="chips"><span class="chip">⏱️ 2 weeks</span><span class="chip">🏅 Certificate of completion</span><span class="chip">⚠️ High-voltage safety required</span></div></div></div>
+      <details class="outline"><summary>View course outline</summary>
+        <div class="course"><div class="cols">
+          <div><h4>Module A: Site selection</h4><ul class="l"><li>Space requirements and access</li><li>Grid power availability (PHED)</li><li>Security and CCTV</li></ul>
+            <h4>Module B: Equipment and power</h4><ul class="l"><li>AC chargers and solar with inverter and battery backup</li><li>Signage, payments and CAC registration</li></ul></div>
+          <div><h4>Module C: Income models</h4><ul class="l"><li>Charging fees</li><li>Waiting-time services such as water and snacks</li><li>Secure parking with charging</li></ul>
+            <h4>Module D: Operations and team</h4><ul class="l"><li>Training youth attendants</li><li>Safety, record keeping and customer care</li></ul></div>
+        </div></div>
+        <p class="note">Startup budget templates are provided in class. Figures are estimates that vary by supplier and location, and no income is guaranteed. High-voltage safety training is required.</p>
+      </details>
+      <div class="acts">
+        <a class="btn pay" data-key="course1" data-live="Enroll on Paystack" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Charging%20Station%20Business%20course">Enroll via WhatsApp</a>
+        <a class="btn wa" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Charging%20Station%20Business%20course">Ask on WhatsApp</a>
       </div>
-      <p class="note">Startup budget templates are provided in class. Figures are estimates that vary by supplier and location, and no income is guaranteed. High-voltage safety training is required.</p>
-      <a class="btn pay" data-key="course1" data-live="Enroll on Paystack" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Charging%20Station%20Business%20course" style="margin-left:0">Enroll via WhatsApp</a>
-      <a class="btn wa" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Charging%20Station%20Business%20course">Ask on WhatsApp</a>
     </article>
 
-    <article class="card course">
-      <h3>Course 2: EV Battery and Tyre Service <span class="badge">Technician · 2 weeks</span></h3>
-      <p class="note">Electric vehicles skip engine oil, fuel filters, spark plugs and exhausts, but they need regular battery health checks, cooling system checks and EV-rated tyres. Learn to offer these services safely.</p>
-      <div class="cols">
-        <div><h4>Technical skills</h4><ul class="l"><li>Battery health diagnostics and cell balancing basics</li><li>Cooling system checks</li><li>EV tyre selection, sales and fitting</li></ul></div>
-        <div><h4>Business and safety</h4><ul class="l"><li>Setting up a service workshop and sourcing tools from verified suppliers</li><li>Recurring maintenance plans for fleet operators</li><li>High-voltage safety: insulated tools, PPE and lockout procedures</li></ul></div>
+    <article class="cc">
+      <div class="cc-head"><div class="tile t2" aria-hidden="true">🔋</div>
+        <div><span class="lvl t">Technician</span>
+          <h3>Course 2: EV Battery and Tyre Service</h3>
+          <p class="d">Electric vehicles skip engine oil, fuel filters, spark plugs and exhausts, but they need regular battery health checks, cooling system checks and EV-rated tyres. Learn to offer these services safely.</p>
+          <div class="chips"><span class="chip">⏱️ 2 weeks</span><span class="chip">🏅 Certificate of completion</span><span class="chip">⚠️ High-voltage safety required</span></div></div></div>
+      <details class="outline"><summary>View course outline</summary>
+        <div class="course"><div class="cols">
+          <div><h4>Technical skills</h4><ul class="l"><li>Battery health diagnostics and cell balancing basics</li><li>Cooling system checks</li><li>EV tyre selection, sales and fitting</li></ul></div>
+          <div><h4>Business and safety</h4><ul class="l"><li>Setting up a service workshop and sourcing tools from verified suppliers</li><li>Recurring maintenance plans for fleet operators</li><li>High-voltage safety: insulated tools, PPE and lockout procedures</li></ul></div>
+        </div></div>
+        <p class="note">Tool lists and service fees discussed are examples only. Verify suppliers yourself. No job or income is guaranteed.</p>
+      </details>
+      <div class="acts">
+        <a class="btn pay" data-key="course2" data-live="Enroll on Paystack" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Battery%20and%20Tyre%20Service%20course">Enroll via WhatsApp</a>
+        <a class="btn wa" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Battery%20and%20Tyre%20Service%20course">Ask on WhatsApp</a>
       </div>
-      <p class="note">Tool lists and service fees discussed are examples only. Verify suppliers yourself. No job or income is guaranteed.</p>
-      <a class="btn pay" data-key="course2" data-live="Enroll on Paystack" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Battery%20and%20Tyre%20Service%20course" style="margin-left:0">Enroll via WhatsApp</a>
-      <a class="btn wa" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20EV%20Battery%20and%20Tyre%20Service%20course">Ask on WhatsApp</a>
     </article>
 
-    <article class="card course">
-      <h3>Course 3: Train the Trainers, OPC EV Academy <span class="badge">Advanced · 2 weeks + certificate</span></h3>
-      <p class="note">For technicians, educators and entrepreneurs who want to teach EV skills in their own communities.</p>
-      <div class="cols">
-        <div><h4>Week 1: Theory (online, private group)</h4><ul class="l"><li>Day 1: EV and high-voltage safety</li><li>Day 2: Battery packs, lithium and BMS basics</li><li>Day 3: Motors and controllers</li><li>Day 4: Wiring and charging systems</li><li>Day 5: Diagnostic tools</li></ul></div>
-        <div><h4>Week 2: Practical (in person, supervised)</h4><ul class="l"><li>Days 8 to 10: Supervised EV conversion demonstration</li><li>Days 11 and 12: Test drive and range test</li><li>Day 13: Teaching methods, CAC registration and service pricing</li><li>Day 14: Graduation, certificate and alumni group</li></ul></div>
+    <article class="cc">
+      <div class="cc-head"><div class="tile t1" aria-hidden="true">🎓</div>
+        <div><span class="lvl a">Advanced</span>
+          <h3>Course 3: Train the Trainers, OPC EV Academy</h3>
+          <p class="d">For technicians, educators and entrepreneurs who want to teach EV skills in their own communities.</p>
+          <div class="chips"><span class="chip">⏱️ 2 weeks</span><span class="chip">💻 Week 1 online</span><span class="chip">🛠️ Week 2 in person</span><span class="chip">🏅 Certificate</span></div></div></div>
+      <details class="outline"><summary>View course outline</summary>
+        <div class="course"><div class="cols">
+          <div><h4>Week 1: Theory (online, private group)</h4><ul class="l"><li>Day 1: EV and high-voltage safety</li><li>Day 2: Battery packs, lithium and BMS basics</li><li>Day 3: Motors and controllers</li><li>Day 4: Wiring and charging systems</li><li>Day 5: Diagnostic tools</li></ul></div>
+          <div><h4>Week 2: Practical (in person, supervised)</h4><ul class="l"><li>Days 8 to 10: Supervised EV conversion demonstration</li><li>Days 11 and 12: Test drive and range test</li><li>Day 13: Teaching methods, CAC registration and service pricing</li><li>Day 14: Graduation, certificate and alumni group</li></ul></div>
+        </div></div>
+        <p class="note">Practical sessions are held at a partner venue under qualified supervision. Any vehicle modification must comply with applicable road-safety and vehicle regulations, which we cover in class. We point you to possible funding sources, but we cannot guarantee any grant.</p>
+      </details>
+      <div class="acts">
+        <a class="btn pay" data-key="course3" data-live="Enroll on Paystack" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20Train%20the%20Trainers%20Academy%20course">Enroll via WhatsApp</a>
+        <a class="btn wa" href="https://wa.me/2347035749180?text=I%20want%20to%20join%20the%20OPC%20EV%20Academy%20and%20receive%20the%20lesson%20notes">Get lesson notes on WhatsApp</a>
       </div>
-      <p class="note">Practical sessions are held at a partner venue under qualified supervision. Any vehicle modification must comply with applicable road-safety and vehicle regulations, which we cover in class. We point you to possible funding sources, but we cannot guarantee any grant.</p>
-      <a class="btn pay" data-key="course3" data-live="Enroll on Paystack" href="https://wa.me/2347035749180?text=I%20want%20to%20enroll%20for%20the%20Train%20the%20Trainers%20Academy%20course" style="margin-left:0">Enroll via WhatsApp</a>
-      <a class="btn wa" href="https://wa.me/2347035749180?text=I%20want%20to%20join%20the%20OPC%20EV%20Academy%20and%20receive%20the%20lesson%20notes">Get lesson notes on WhatsApp</a>
     </article>
   </div>
 
-  <div class="bank" style="text-align:left">
+  <div class="need" style="margin-top:28px">
     <h3>Included in every course</h3>
-    <ul class="l"><li>Business foundation: CAC registration, pricing, record keeping and customer care</li><li>Safety and compliance guidance</li><li>Certificate of completion from Obugheni-Polyman Consulting (not a government licence)</li><li>WhatsApp alumni community</li></ul>
+    <ul><li>Business foundation: CAC registration, pricing, record keeping and customer care</li><li>Safety and compliance guidance</li><li>Certificate of completion from Obugheni-Polyman Consulting (not a government licence)</li><li>WhatsApp alumni community</li></ul>
   </div>
 </div></section>
 
-<section id="websites" class="s-websites"><div class="wrap">
+<section id="websites" class="s-white"><div class="wrap">
+  <span class="kicker">For schools, churches, NGOs and small businesses</span>
   <h2>Professional Website and Custom Domain Setup</h2>
-  <p class="intro">For schools, churches, NGOs and small businesses. Get a professional website on your own domain name, with a WhatsApp chat button and a secure (HTTPS) connection. Each package price is shown on its payment page before you confirm.</p>
-  <div class="stack">
-    <div class="row"><div class="info"><h3>Basic <span class="badge">1 page</span></h3><p class="note">A one-page professional website, a .com.ng domain registered in your name (first year included), a WhatsApp chat button and free SSL security. A good start for a small business.</p></div>
-      <div class="acts"><a class="btn pay" data-key="web1" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=Hello%2C%20I%20want%20the%20Basic%20website%20package">Order on WhatsApp</a><a class="btn wa" href="https://wa.me/2347035749180?text=Hello%2C%20I%20have%20a%20question%20about%20the%20Basic%20website%20package">Ask a question</a></div></div>
-    <div class="row"><div class="info"><h3>Standard <span class="badge">4 pages</span></h3><p class="note">A four-page website (Home, About, Services, Contact), a .com domain registered in your name (first year included), a contact form, WhatsApp button, basic SEO setup and free SSL security.</p></div>
-      <div class="acts"><a class="btn pay" data-key="web2" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=Hello%2C%20I%20want%20the%20Standard%20website%20package">Order on WhatsApp</a><a class="btn wa" href="https://wa.me/2347035749180?text=Hello%2C%20I%20have%20a%20question%20about%20the%20Standard%20website%20package">Ask a question</a></div></div>
-    <div class="row"><div class="info"><h3>Premium <span class="badge">Store</span></h3><p class="note">A six to eight page website with an online store, Paystack payment integration, a premium .com domain registered in your name (first year included), SEO and Google Business Profile setup, and free SSL security.</p></div>
-      <div class="acts"><a class="btn pay" data-key="web3" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=Hello%2C%20I%20want%20the%20Premium%20website%20package">Order on WhatsApp</a><a class="btn wa" href="https://wa.me/2347035749180?text=Hello%2C%20I%20have%20a%20question%20about%20the%20Premium%20website%20package">Ask a question</a></div></div>
+  <p class="intro">Get a professional website on your own domain name, with a WhatsApp chat button and a secure (HTTPS) connection. Each package price is shown on its payment page before you confirm.</p>
+  <div class="plans">
+    <article class="plan">
+      <div class="in"><h3>Basic</h3><span class="pgs">1 page</span><p class="sub">A good start for a small business.</p>
+        <ul><li>One-page professional website</li><li>.com.ng domain registered in your name (first year included)</li><li>WhatsApp chat button</li><li>Free SSL security</li></ul></div>
+      <div class="btns"><a class="btn pay" data-key="web1" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=Hello%2C%20I%20want%20the%20Basic%20website%20package">Order on WhatsApp</a><a class="btn wa" href="https://wa.me/2347035749180?text=Hello%2C%20I%20have%20a%20question%20about%20the%20Basic%20website%20package">Ask a question</a></div>
+    </article>
+    <article class="plan mid">
+      <div class="in"><h3>Standard</h3><span class="pgs">4 pages</span><p class="sub">Home, About, Services and Contact.</p>
+        <ul><li>Four-page website</li><li>.com domain registered in your name (first year included)</li><li>Contact form</li><li>WhatsApp button</li><li>Basic SEO setup</li><li>Free SSL security</li></ul></div>
+      <div class="btns"><a class="btn pay" data-key="web2" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=Hello%2C%20I%20want%20the%20Standard%20website%20package">Order on WhatsApp</a><a class="btn wa" href="https://wa.me/2347035749180?text=Hello%2C%20I%20have%20a%20question%20about%20the%20Standard%20website%20package">Ask a question</a></div>
+    </article>
+    <article class="plan">
+      <div class="in"><h3>Premium</h3><span class="pgs">6 to 8 pages + store</span><p class="sub">Sell online with Paystack.</p>
+        <ul><li>Six to eight page website with an online store</li><li>Paystack payment integration</li><li>Premium .com domain registered in your name (first year included)</li><li>SEO and Google Business Profile setup</li><li>Free SSL security</li></ul></div>
+      <div class="btns"><a class="btn pay" data-key="web3" data-live="Pay on Paystack" href="https://wa.me/2347035749180?text=Hello%2C%20I%20want%20the%20Premium%20website%20package">Order on WhatsApp</a><a class="btn wa" href="https://wa.me/2347035749180?text=Hello%2C%20I%20have%20a%20question%20about%20the%20Premium%20website%20package">Ask a question</a></div>
+    </article>
   </div>
-  <div class="bank" style="text-align:left">
+  <div class="need">
     <h3>What we need from you</h3>
-    <ul class="l"><li>Business or organization name</li><li>A short description (5 to 10 sentences)</li><li>Your list of services</li><li>Three to five clear photos</li><li>Your logo, if you have one</li><li>Your WhatsApp number</li><li>An email address for domain ownership</li><li>CAC or BN number (optional)</li></ul>
+    <ul><li>Business or organization name</li><li>A short description (5 to 10 sentences)</li><li>Your list of services</li><li>Three to five clear photos</li><li>Your logo, if you have one</li><li>Your WhatsApp number</li><li>An email address for domain ownership</li><li>CAC or BN number (optional)</li></ul>
     <p class="note">We aim to deliver within 48 hours after we receive your payment and all the content above. You own your domain. The first year is included, and renewals from the second year are paid by you directly to the domain registrar. See the <a href="#terms">Terms and Refunds</a>.</p>
   </div>
 </div></section>
@@ -584,6 +708,15 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
     menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => set(false)));
     document.addEventListener('click', e => { if (!menu.contains(e.target) && e.target !== btn) set(false); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('on')) { set(false); btn.focus(); } });
+  })();
+
+  // Resource filter
+  (function () {
+    const btns = document.querySelectorAll('.filters button');
+    btns.forEach(b => b.addEventListener('click', () => {
+      btns.forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+      document.querySelectorAll('#res-list .res').forEach(r => { r.hidden = !(b.dataset.f === 'all' || r.dataset.cat === b.dataset.f); });
+    }));
   })();
 
   // Tips
