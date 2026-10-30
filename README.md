@@ -27,17 +27,20 @@ Evidence-based consulting, research, special education and green mobility traini
 ## Featured Research
 
 **A Psychological Study of the Impact of Cultural Barriers on Pastoral Counseling Effectiveness in Buguma City, Nigeria**
-Obugheni Police Ukwoma · EIBCS2526P012 · June 2026 · El-Elyon International Bible College
+Ukwoma Obugheni Police · EIBCS2526P012 · October 2026
+PhD in Psychology and Biblical Counseling, El-Elyon International Bible College and Seminary, Abuja
 
-- **Setting:** the 39 Polo of Buguma City, Asari-Toru LGA, Rivers State
-- **Method:** descriptive survey of 407 respondents (53.1% female, 46.9% male) in PFN and CAN churches, sampled with the Taro Yamane formula
-- **Frameworks:** Multicultural Counseling Theory and African Psychology
-- **Findings:** cultural beliefs (including riverine water-deity worship), stigma and respect for elders, preference for tradition, and language differences (Kalabari and English) affect help-seeking and perceived counseling effectiveness. The study measured perceptions and help-seeking, not church attendance or clinical outcomes.
+- **Setting:** the 39 Polo of Buguma City, Asari-Toru LGA, Rivers State, a Kalabari cultural setting
+- **Method:** descriptive cross-sectional correlational survey of 407 pastors and adult church members (53.1% female, 46.9% male) across 51 PFN- and CAN-affiliated churches, with the sample size set by the Taro Yamane formula
+- **Frameworks:** Multicultural Counseling Theory, African Psychology, Social Cognitive Theory and Stigma Theory
+- **Findings:** respondents endorsed all four cultural barriers, most strongly language differences and cultural stigma. Pastoral counseling was rated effective overall. Only language differences and strategies to mitigate the barriers were significant independent predictors of perceived effectiveness, and the relationships were small and positive. Two scales had low reliability, so findings on them are less secure. The study measured perceptions, not church attendance or clinical outcomes.
 
-**Full thesis (PDF):** [PHD_Thesis_PSIBBCE_OUP_Buguma_City_Rivers_State_e.pdf](./PHD_Thesis_PSIBBCE_OUP_Buguma_City_Rivers_State_e.pdf)
+**Free preview (title page, abstract and contents):** [thesis-preview.pdf](./thesis-preview.pdf)
+
+**Full thesis (PDF):** available for purchase on the [website](https://obugheni-polyman.com.ng/#research). For personal and academic use and citation only.
 
 **Suggested citation:**
-Ukwoma, O. P. (2026). *A Psychological Study of the Impact of Cultural Barriers on Pastoral Counseling Effectiveness in Buguma City, Nigeria*. PhD thesis, El-Elyon International Bible College.
+Ukwoma, O. P. (2026). *A Psychological Study of the Impact of Cultural Barriers on Pastoral Counseling Effectiveness in Buguma City, Nigeria*. PhD thesis, El-Elyon International Bible College and Seminary, Abuja.
 
 ## OPC Green Mobility Training Academy
 
@@ -51,6 +54,7 @@ Faith, skill and green jobs. Online theory, supervised in-person practicals, and
 
 ## Digital Resources
 
+- Full PhD thesis (PDF)
 - IEP Toolkit (PDF)
 - IEP Goals E-book
 - Special Education and IEP Premium Toolkit (32-page handbook and templates)
@@ -58,7 +62,11 @@ Faith, skill and green jobs. Online theory, supervised in-person practicals, and
 - Premium Toolkit (monthly access)
 - Field Survey (on-site service)
 
-Digital resources are delivered automatically after payment on Selar or Paystack. Training, survey, website and other service payments are made on Paystack. The amount is shown on the payment page before you pay. For bank transfer, contact us on WhatsApp to confirm the amount and account details first. See the Terms and Refunds on the website.
+Payments are made on Selar or Paystack, or by WhatsApp order where a payment link is not yet available. The amount is shown on the payment page before you pay. For bank transfer, contact us on WhatsApp to confirm the amount and account details first. See the Terms and Refunds on the website.
+
+## Support Our Church Projects
+
+Gifts for the church project campaigns (solar power for worship and the general fund for projects) are made through Donorbox on the [website](https://obugheni-polyman.com.ng/#support). Gifts are in US dollars.
 
 ## Contact
 
@@ -66,23 +74,26 @@ Digital resources are delivered automatically after payment on Selar or Paystack
 - **WhatsApp:** [+234 703 574 9180](https://wa.me/2347035749180)
 - **Facebook:** <https://www.facebook.com/share/1CDrdcnAJz/>
 - **LinkedIn:** <https://www.linkedin.com/in/ukwoma-obugheni-7a7434150>
-- **Solar for worship project:** <https://donorbox.org/lfc-buguma-2-solar-for-uninterrupted-worship-944614>
 
 ## Privacy
 
-We collect names, emails and phone numbers only to process orders and enrollments, send access and reply to messages. We do not sell personal data. The website uses these third-party services: Paystack and Selar (payments), Formspree (forms), Google Analytics, Google Translate, UserWay (accessibility) and WhatsApp (Meta). See the privacy notice on the website, or email us to ask about, correct or delete your information.
+We collect names, emails and phone numbers only to process orders and enrollments, send access and reply to messages. We do not sell personal data. The website uses these third-party services: Paystack and Selar (payments), Formspree (forms), Google Analytics, Google AdSense (advertising), Google Translate, UserWay (accessibility), Donorbox (donations) and WhatsApp (Meta). Google advertising and analytics cookies stay off until you accept them in the cookie notice, and you can change your choice at any time with "Cookie settings" in the website footer. See the privacy notice on the website, or email us to ask about, correct or delete your information.
 
 ## Repository Contents
 
 | File | Purpose |
 |---|---|
 | `index.html` | The website, served with GitHub Pages |
-| `PHD_Thesis_PSIBBCE_OUP_Buguma_City_Rivers_State_e.pdf` | Full PhD thesis |
+| `thesis-preview.pdf` | Free preview of the thesis (title page, abstract and contents) |
+| `ads.txt` | Google AdSense authorisation file |
+| `CNAME` | Custom domain for GitHub Pages |
 | `qr.png` | QR code linking to the website |
 | `gallery-poster.jpg`, `gallery-training.jpg`, `gallery-youth.jpg`, `gallery-women.jpg` | Gallery photos |
 | `og-image.jpg` | Preview image shown when the link is shared on WhatsApp and social media |
 | `favicon.ico`, `icon-192.png`, `apple-touch-icon.png` | Browser tab and home-screen icons |
 
+The full thesis PDF is not stored in this repository. It is sold through the website.
+
 ---
 
-© 2026 Obugheni-Polyman Consulting Services (BN 9903940). All rights reserved.
+© 2026 Obugheni-Polyman Consulting Services (BN 9903940). All rights reserved. The thesis is for personal and academic use and citation only; please do not copy, resell or share it without written permission.
