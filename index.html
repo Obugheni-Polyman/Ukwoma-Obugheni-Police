@@ -34,6 +34,9 @@
   gtag('js', new Date());
   gtag('config', 'G-8JMWCWRPES');
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Obugheni-Polyman Consulting Services","url":"https://obugheni-polyman.com.ng/","telephone":"+2347035749180","email":"InfoOPCww@obugheni-polyman.com.ng","identifier":"CAC BN 9903940","description":"Consulting, research, special education and green mobility training in Rivers State, Nigeria.","address":{"@type":"PostalAddress","addressLocality":"Abua/Odual","addressRegion":"Rivers State","addressCountry":"NG"},"areaServed":["Buguma City","Port Harcourt","Rivers State"],"sameAs":["https://www.facebook.com/share/1CDrdcnAJz/","https://www.linkedin.com/in/ukwoma-obugheni-7a7434150"]}
+</script>
 <style>
 :root{--n:#0A2342;--g:#D4AF37;--m:#555;--bg:#F5F7FA;--l:#e0e0e0}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -60,16 +63,27 @@ nav{position:sticky;top:0;z-index:500;background:var(--n);box-shadow:0 2px 8px r
 #menu a:hover{background:rgba(255,255,255,.12)}
 #menu a.cta{background:var(--g);color:var(--n)}
 section[id]{scroll-margin-top:70px}
-header{background:linear-gradient(135deg,var(--n),#1a3a6e);color:#fff;padding:80px 20px;text-align:center}
+header{background:radial-gradient(900px 400px at 85% -10%,rgba(212,175,55,.22),transparent 60%),linear-gradient(135deg,var(--n),#1a3a6e);color:#fff;padding:72px 20px 56px;text-align:center;border-bottom:4px solid var(--g)}
+header p{max-width:680px;margin-left:auto;margin-right:auto;line-height:1.6}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;max-width:900px;margin:40px auto 0}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:16px 10px}
+.stat b{display:block;font-size:1.6rem;color:var(--g);line-height:1.2}
+.stat span{font-size:.85rem;color:#d6deee}
 .logo{width:96px;height:96px;border-radius:50%;margin:0 auto 18px;background:var(--g);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.7rem;color:var(--n)}
-header h1{font-size:2.4rem;margin-bottom:8px}
+header h1{font-size:clamp(1.9rem,6.2vw,2.8rem);line-height:1.15;margin-bottom:10px;letter-spacing:-.01em}
 .btn{background:var(--g);color:var(--n);padding:13px 26px;border:none;border-radius:8px;font-weight:700;text-decoration:none;display:inline-block;margin:8px 6px;cursor:pointer;font-size:1rem;font-family:inherit;transition:background .2s}
-.btn:hover{background:#c49b2a}
+.btn{box-shadow:0 2px 6px rgba(10,35,66,.15);transition:background .2s,transform .15s,box-shadow .2s}
+.btn:hover{background:#c49b2a;transform:translateY(-2px);box-shadow:0 8px 18px rgba(10,35,66,.22)}
+.btn:active{transform:translateY(0)}
+.card,.res,.cc,.plan,.step{transition:transform .2s,box-shadow .2s}
+.res:hover,.cc:hover,.plan:hover,.card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(10,35,66,.14)}
 .btn.alt{background:#fff;color:var(--n);border:2px solid var(--n)}
 .btn.wa{background:#25D366;color:#000}
 .btn.cancel{background:#ddd;color:#000}
 .wrap{max-width:1100px;margin:auto;padding:64px 20px}
-h2{text-align:center;color:var(--n);font-size:2rem;margin-bottom:12px}
+h2{text-align:center;color:var(--n);font-size:clamp(1.6rem,4.6vw,2.1rem);line-height:1.25;margin-bottom:14px}
+h2::after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:var(--g);margin:12px auto 0}
+.s-terms h2::after,.s-privacy h2::after{display:none}
 .intro{text-align:center;max-width:720px;margin:0 auto 36px;color:var(--m)}
 h3{color:var(--n)}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
@@ -105,7 +119,7 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:999;display:none;align-items:center;justify-content:center;padding:20px}
 .modal.on{display:flex}
 .box{background:#fff;padding:28px;border-radius:12px;max-width:480px;width:100%;max-height:92vh;overflow:auto}
-#toasts{position:fixed;bottom:20px;right:20px;z-index:1100;display:flex;flex-direction:column;gap:10px}
+#toasts{position:fixed;bottom:150px;right:16px;z-index:1100;display:flex;flex-direction:column;gap:10px}
 .toast{background:var(--n);color:#fff;padding:14px 20px;border-radius:8px;max-width:340px;font-size:.95rem}
 .toast.success{background:#198754}.toast.error{background:#a12525}
 .gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
@@ -130,6 +144,7 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
 .buy{border:2px solid var(--g);border-radius:14px;padding:22px;background:#fffdf5;margin-top:22px}
 .buy h4{color:var(--n);margin-bottom:6px}
 .adbox{margin:40px 0;text-align:center}
+.adbox:not(:has(ins[data-ad-status="filled"])){display:none}
 .adlabel{font-size:11px;color:#767676;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
 
 /* Each section has its own background */
@@ -159,8 +174,9 @@ footer{background:var(--n);color:#fff;padding:44px 20px 18px}
 .s-terms h2 .ic,.s-privacy h2 .ic{font-size:1.5rem}
 
 /* Redesigned white sections: Resources, Training, Websites */
-.s-white{background:#fff}
-.s-white + .s-white{border-top:1px solid #e7ebf2}
+.s-res{background:linear-gradient(180deg,#d8f3ea,#ecf9f4)}
+.s-train{background:linear-gradient(180deg,#ffe8cc,#fff6ea)}
+.s-web{background:linear-gradient(180deg,#e0e3fb,#f0f1fd)}
 .kicker{display:block;text-align:center;font-size:.8rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#8a6d00;margin-bottom:6px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
 .chip{display:inline-flex;align-items:center;gap:6px;background:#f1f4f9;color:#33415c;border-radius:999px;padding:4px 12px;font-size:.82rem;font-weight:600}
@@ -204,17 +220,24 @@ details.outline[open] summary::after{transform:rotate(45deg)}
 .plan .btns{padding:0 24px;display:flex;flex-direction:column;gap:4px}
 .plan .btns .btn{margin:4px 0;text-align:center}
 .plan.mid{border:2px solid var(--g);box-shadow:0 12px 30px rgba(212,175,55,.25)}
-.need{background:#f7f9fc;border:1px solid #e1e6ef;border-radius:16px;padding:24px;margin-top:28px}
+.need{background:#fff;border:1px solid #e1e6ef;border-radius:16px;padding:24px;margin-top:28px}
 .need ul{columns:2;column-gap:32px;list-style:none;padding:0}
 .need li{padding:3px 0 3px 26px;position:relative;break-inside:avoid;font-size:.95rem}
 .need li::before{content:"\2713";position:absolute;left:0;color:#1c7a3e;font-weight:700}
 @media(max-width:560px){.need ul{columns:1}}
 
+.fab{position:fixed;right:16px;z-index:1040;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:0;cursor:pointer;text-decoration:none;box-shadow:0 8px 20px rgba(0,0,0,.3);font-size:1.6rem;transition:transform .15s}
+.fab:hover{transform:scale(1.07)}
+#fab-wa{bottom:16px;background:#25D366;color:#fff}
+#fab-top{bottom:82px;background:var(--n);color:#fff;font-size:1.3rem;opacity:0;pointer-events:none;transition:opacity .2s,transform .15s}
+#fab-top.on{opacity:1;pointer-events:auto}
+html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+html.js .rv.in{opacity:1;transform:none}
 /* Cookie notice */
-#cookie{position:fixed;left:16px;bottom:16px;right:16px;max-width:560px;z-index:1050;background:#fff;color:#222;border:2px solid var(--g);border-radius:12px;padding:16px 18px;box-shadow:0 8px 28px rgba(0,0,0,.3);font-size:.92rem;line-height:1.5}
+#cookie{position:fixed;left:12px;bottom:12px;right:84px;max-width:520px;z-index:1050;background:#fff;color:#222;border:2px solid var(--g);border-radius:12px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.3);font-size:.85rem;line-height:1.45}
 #cookie .acts{margin-top:10px;display:flex;flex-wrap:wrap;gap:4px}
-#cookie .btn{margin:4px 6px 0 0;padding:10px 18px}
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+#cookie .btn{margin:2px 6px 0 0;padding:8px 16px;font-size:.9rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}html.js .rv{opacity:1!important;transform:none!important}}
 </style>
 </head>
 <body>
@@ -249,6 +272,13 @@ details.outline[open] summary::after{transform:rotate(45deg)}
   <p><b>Evidence-Based Solutions. Real Impact.</b></p>
   <a href="https://wa.me/2347035749180" class="btn">Book a Consultation</a>
   <a href="#training" class="btn alt">Explore Training</a>
+  <a href="#research" class="btn alt">Read Our Research</a>
+  <div class="stats" aria-label="Key facts">
+    <div class="stat"><b>BN 9903940</b><span>CAC registered</span></div>
+    <div class="stat"><b>407</b><span>respondents in our PhD study</span></div>
+    <div class="stat"><b>3</b><span>EV training courses</span></div>
+    <div class="stat"><b>48 hrs</b><span>website delivery target</span></div>
+  </div>
 </header>
 
 <main id="main">
@@ -370,7 +400,7 @@ details.outline[open] summary::after{transform:rotate(45deg)}
   </div>
 </div></section>
 
-<section id="resources" class="s-white"><div class="wrap">
+<section id="resources" class="s-res"><div class="wrap">
   <span class="kicker">Shop</span>
   <h2>Digital Resources and Services</h2>
   <p class="intro">Templates, e-books, research and services. Pay securely on Selar or Paystack. The amount is shown on the payment page before you confirm. By paying you agree to our <a href="#terms">Terms and Refunds</a>.</p>
@@ -447,7 +477,7 @@ details.outline[open] summary::after{transform:rotate(45deg)}
   </div>
 </div></section>
 
-<section id="training" class="s-white"><div class="wrap">
+<section id="training" class="s-train"><div class="wrap">
   <span class="kicker">OPC Green Mobility Training Academy</span>
   <h2>EV Training Courses</h2>
   <p class="intro">Faith, skill and green jobs. Learn EV charging, battery care and tyre services, with online theory, supervised practicals in Buguma and Port Harcourt, and a certificate from Obugheni-Polyman Consulting.</p>
@@ -525,7 +555,7 @@ details.outline[open] summary::after{transform:rotate(45deg)}
   </div>
 </div></section>
 
-<section id="websites" class="s-white"><div class="wrap">
+<section id="websites" class="s-web"><div class="wrap">
   <span class="kicker">For schools, churches, NGOs and small businesses</span>
   <h2>Professional Website and Custom Domain Setup</h2>
   <p class="intro">Get a professional website on your own domain name, with a WhatsApp chat button and a secure (HTTPS) connection. Each package price is shown on its payment page before you confirm.</p>
@@ -631,8 +661,11 @@ details.outline[open] summary::after{transform:rotate(45deg)}
   <div class="fb">&copy; 2026 Obugheni-Polyman Consulting Services (BN 9903940). All rights reserved.</div>
 </footer>
 
+<a class="fab" id="fab-wa" href="https://wa.me/2347035749180" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp"><span aria-hidden="true">💬</span></a>
+<button class="fab" id="fab-top" type="button" aria-label="Back to top"><span aria-hidden="true">↑</span></button>
+
 <div id="cookie" role="region" aria-label="Cookie notice" hidden>
-  <p><b><span aria-hidden="true">🍪</span> Cookies.</b> We use Google cookies for ads and visit counts. Accept to allow them, or decline to keep them off. See the <a href="#privacy">Privacy Notice</a>.</p>
+  <p><b><span aria-hidden="true">🍪</span> Cookies.</b> Google cookies for ads and visit counts stay off unless you accept. <a href="#privacy">Privacy Notice</a></p>
   <div class="acts"><button class="btn" id="cookie-accept" type="button">Accept</button><button class="btn alt" id="cookie-decline" type="button">Decline</button></div>
 </div>
 
@@ -695,6 +728,20 @@ details.outline[open] summary::after{transform:rotate(45deg)}
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({pageLanguage:'en',includedLanguages:'en,fr,ig,yo,ha,es',layout:google.translate.TranslateElement.InlineLayout.SIMPLE},'google_translate_element');
   }
+
+  // Back to top and scroll reveal
+  (function () {
+    const top = $('fab-top');
+    addEventListener('scroll', () => top.classList.toggle('on', scrollY > 700), {passive: true});
+    top.addEventListener('click', () => scrollTo({top: 0, behavior: 'smooth'}));
+    if (!('IntersectionObserver' in window)) return;
+    const els = document.querySelectorAll('.card,.res,.cc,.plan,.step,.goal,.stat,.buy,.need,.shot');
+    document.documentElement.classList.add('js');
+    els.forEach(e => e.classList.add('rv'));
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {rootMargin: '0px 0px -8% 0px'});
+    els.forEach(e => io.observe(e));
+    setTimeout(() => els.forEach(e => e.classList.add('in')), 4000);
+  })();
 
   // Menu dropdown
   (function () {
