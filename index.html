@@ -234,6 +234,38 @@ details.outline[open] summary::after{transform:rotate(45deg)}
 #fab-top.on{opacity:1;pointer-events:auto}
 html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 html.js .rv.in{opacity:1;transform:none}
+/* Free tools section */
+.s-tools{background:linear-gradient(135deg,#1c1a47,#2c2f78)}
+.s-tools .kicker{color:var(--g)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:0 0 22px}
+.tabs button{border:1px solid rgba(255,255,255,.35);background:rgba(255,255,255,.08);color:#fff;padding:9px 14px;border-radius:999px;font:600 .88rem 'Segoe UI',Tahoma,sans-serif;cursor:pointer;transition:background .2s}
+.tabs button:hover{background:rgba(255,255,255,.18)}
+.tabs button[aria-selected=true]{background:var(--g);color:var(--n);border-color:var(--g)}
+.tool{background:#fff;color:#222;border-radius:18px;padding:28px;box-shadow:0 14px 36px rgba(0,0,0,.28);max-width:860px;margin:0 auto}
+.tool h3{font-size:1.4rem;margin-bottom:4px}
+.tool .lead{color:var(--m);font-size:.95rem;margin-bottom:14px}
+.tool label{display:block;font-weight:600;margin-top:10px;color:var(--n);font-size:.95rem}
+.tool select{width:100%;padding:14px;margin:6px 0 4px;border:1px solid #767676;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff}
+.tool input,.tool textarea{margin:6px 0 4px}
+.f2{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:0 18px}
+.tool .btn{margin:8px 8px 0 0}
+.out{background:#f7f9fc;border-left:5px solid var(--g);border-radius:10px;padding:16px 18px;margin-top:16px}
+.out p{margin:0 0 8px}
+.bar{height:8px;background:#e1e6ef;border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--g);width:0;transition:width .3s}
+.qopts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.qopts .btn{margin:0;text-align:center}
+@media(max-width:520px){.qopts{grid-template-columns:1fr}}
+.verse{font-family:Georgia,'Times New Roman',serif;font-size:1.25rem;line-height:1.6;color:var(--n);border-left:5px solid var(--g);padding:6px 0 6px 16px;margin:12px 0}
+.streak{display:inline-flex;align-items:center;gap:6px;background:#fff3d6;color:#7a5c00;border-radius:999px;padding:5px 14px;font-weight:700;font-size:.9rem}
+.devo{background:#f7f9fc;border-radius:14px;padding:18px 20px;margin-top:18px}
+.devo h4{font-size:1.1rem;color:var(--n);margin-bottom:2px}
+.devo p{margin:0 0 10px;font-size:.97rem}
+.decl{font-style:italic;background:#fff8e1;border-radius:10px;padding:12px 14px}
+.explorer{grid-column:1/-1;color:#fff;padding:8px 12px 12px;border-bottom:1px solid rgba(255,255,255,.15);margin-bottom:6px;font-size:.9rem}
+.explorer .bar{background:rgba(255,255,255,.22);margin:6px 0 4px}
+.tool .note{color:var(--m)}
+
 /* Cookie notice */
 #cookie{position:fixed;left:12px;bottom:12px;right:84px;max-width:520px;z-index:1050;background:#fff;color:#222;border:2px solid var(--g);border-radius:12px;padding:12px 14px;box-shadow:0 8px 28px rgba(0,0,0,.3);font-size:.85rem;line-height:1.45}
 #cookie .acts{margin-top:10px;display:flex;flex-wrap:wrap;gap:4px}
@@ -252,7 +284,8 @@ html.js .rv.in{opacity:1;transform:none}
   </div>
   <div id="menu">
     <a href="#about"><span class="ic" aria-hidden="true">🏢</span>About</a>
-    <a href="#services"><span class="ic" aria-hidden="true">🛠️</span>Services</a>
+    <a href="#tools"><span class="ic" aria-hidden="true">🧰</span>Free Tools</a>
+  <a href="#services"><span class="ic" aria-hidden="true">🛠️</span>Services</a>
     <a href="#research"><span class="ic" aria-hidden="true">🎓</span>Research</a>
     <a href="#gallery"><span class="ic" aria-hidden="true">🖼️</span>Gallery</a>
     <a href="#sdgs"><span class="ic" aria-hidden="true">🌍</span>SDGs</a>
@@ -274,6 +307,7 @@ html.js .rv.in{opacity:1;transform:none}
   <a href="https://wa.me/2347035749180" class="btn">Book a Consultation</a>
   <a href="#training" class="btn alt">Explore Training</a>
   <a href="#research" class="btn alt">Read Our Research</a>
+  <p style="margin-top:10px"><a href="#tools" style="color:var(--g);font-weight:700;text-decoration:none">🧰 Try our free tools: Daily Word, IEP Goal Builder and more</a></p>
   <div class="stats" aria-label="Key facts">
     <div class="stat"><b>BN 9903940</b><span>CAC registered</span></div>
     <div class="stat"><b>407</b><span>respondents in our PhD study</span></div>
@@ -301,6 +335,123 @@ html.js .rv.in{opacity:1;transform:none}
       <p class="note">Drawn from our Buguma City study (2026) and field experience.</p>
     </div>
   </div>
+</div></section>
+
+<section id="tools" class="s-tools dark"><div class="wrap">
+  <span class="kicker">Free tools</span>
+  <h2>Daily Tools for Faith, Church and Classroom</h2>
+  <p class="intro">Free, private and instant. What you type stays in your browser and is never sent to us.</p>
+
+  <div class="tabs" role="tablist" aria-label="Free tools">
+    <button type="button" role="tab" id="tab-word" aria-selected="true" aria-controls="pane-word">🙏 Daily Word</button>
+    <button type="button" role="tab" id="tab-pray" aria-selected="false" aria-controls="pane-pray" tabindex="-1">📿 Prayer Points</button>
+    <button type="button" role="tab" id="tab-check" aria-selected="false" aria-controls="pane-check" tabindex="-1">🧭 Counseling Check</button>
+    <button type="button" role="tab" id="tab-iep" aria-selected="false" aria-controls="pane-iep" tabindex="-1">🎯 IEP Goal Builder</button>
+    <button type="button" role="tab" id="tab-ev" aria-selected="false" aria-controls="pane-ev" tabindex="-1">🔌 EV Business Estimator</button>
+    <button type="button" role="tab" id="tab-course" aria-selected="false" aria-controls="pane-course" tabindex="-1">🎓 EV Course Finder</button>
+    <button type="button" role="tab" id="tab-web" aria-selected="false" aria-controls="pane-web" tabindex="-1">💻 Website Chooser</button>
+  </div>
+
+  <!-- DAILY WORD -->
+  <div class="tool" id="pane-word" role="tabpanel" aria-labelledby="tab-word">
+    <h3>Daily Word</h3>
+    <p class="lead">A verse for today and the latest Word Encounter. Come back each day to build your reading streak.</p>
+    <span class="streak" id="streak">🔥 Start your streak today</span>
+    <div class="verse" id="vtext"></div>
+    <p class="note" id="vref" style="margin-top:-4px"></p>
+    <div id="arch-wrap" hidden><label for="arch" style="display:block;font-weight:600;margin-top:14px;color:var(--n)">Browse past Word Encounters</label><select id="arch" style="width:100%;padding:12px;margin:6px 0;border:1px solid #767676;border-radius:8px;font-size:1rem;font-family:inherit;background:#fff"></select></div>
+    <div class="devo" id="devo"></div>
+    <p style="margin-top:14px">
+      <button class="btn" id="read-btn" type="button" style="margin-left:0">✔ I read this today</button>
+      <a class="btn alt" id="share-btn" href="#" target="_blank" rel="noopener">Share on WhatsApp</a>
+      <a class="btn wa" href="https://wa.me/2347035749180?text=Please%20add%20me%20to%20the%20Daily%20Word%20Encounter" target="_blank" rel="noopener">Get Daily Word Encounter on WhatsApp</a>
+    </p>
+  </div>
+
+  <!-- PRAYER POINTS -->
+  <div class="tool" id="pane-pray" role="tabpanel" aria-labelledby="tab-pray" hidden>
+    <h3>Prayer Points Generator</h3>
+    <p class="lead">Choose what you want to pray about and get a Scripture and four focused prayer points to copy or share.</p>
+    <div class="f2">
+      <div><label for="pr-topic">I want to pray about</label>
+        <select id="pr-topic"><option value="family">My family</option><option value="health">Health and healing</option><option value="provision">Provision and finances</option><option value="studies">Studies and wisdom</option><option value="work">Work and business</option><option value="church">My church</option><option value="nation">My nation</option><option value="protection">Protection</option><option value="peace">Peace and anxiety</option></select></div>
+      <div><label for="pr-name">Name or situation (optional)</label><input id="pr-name" type="text" placeholder="e.g. my sister, my exam" autocomplete="off"></div>
+    </div>
+    <p><button class="btn" id="pr-make" type="button" style="margin-left:0">Create prayer points</button></p>
+    <div class="out" id="pr-out" hidden></div>
+  </div>
+
+  <!-- COUNSELING CHECK -->
+  <div class="tool" id="pane-check" role="tabpanel" aria-labelledby="tab-check" hidden>
+    <h3>Church Counseling Readiness Check</h3>
+    <p class="lead">Eight quick questions for pastors, counselors and church leaders. It is based on the recommendations of our Buguma City study. It is a reflection tool, not a clinical assessment.</p>
+    <div id="quiz"></div>
+  </div>
+
+  <!-- IEP GOAL BUILDER -->
+  <div class="tool" id="pane-iep" role="tabpanel" aria-labelledby="tab-iep" hidden>
+    <h3>IEP Goal Builder</h3>
+    <p class="lead">Turn your notes into a clear, measurable SMART goal. Use initials or a first name only, never a child's full name.</p>
+    <div class="f2">
+      <div><label for="iep-domain">Learning area</label>
+        <select id="iep-domain"><option value="read">Reading</option><option value="math">Mathematics</option><option value="comm">Communication</option><option value="social">Social and behaviour</option><option value="life">Daily living skills</option></select></div>
+      <div><label for="iep-name">Learner (initials or first name)</label><input id="iep-name" type="text" placeholder="e.g. A.B." autocomplete="off"></div>
+    </div>
+    <label for="iep-skill">Skill the learner will show</label>
+    <input id="iep-skill" type="text" placeholder="e.g. read grade-level words aloud" autocomplete="off">
+    <div class="f2">
+      <div><label for="iep-cond">Support or conditions (optional)</label><input id="iep-cond" type="text" placeholder="e.g. when given a picture prompt" autocomplete="off"></div>
+      <div><label for="iep-target">Success level</label><input id="iep-target" type="text" placeholder="e.g. 80% accuracy over 3 trials" autocomplete="off"></div>
+    </div>
+    <div class="f2">
+      <div><label for="iep-time">Timeframe</label>
+        <select id="iep-time"><option>the end of this term</option><option>12 weeks</option><option>24 weeks</option><option>the end of the school year</option></select></div>
+      <div><label for="iep-measure">How it will be measured</label>
+        <select id="iep-measure"><option>teacher observation</option><option>work samples</option><option>a progress checklist</option><option>a short weekly check</option></select></div>
+    </div>
+    <label for="iep-base">Current level (optional)</label>
+    <input id="iep-base" type="text" placeholder="e.g. reads 5 of 20 words correctly" autocomplete="off">
+    <p><button class="btn" id="iep-make" type="button" style="margin-left:0">Build my goal</button><button class="btn alt" id="iep-example" type="button">Use an example</button></p>
+    <div class="out" id="iep-out" hidden>
+      <p id="iep-text"></p>
+      <button class="btn" id="iep-copy" type="button" style="margin-left:0">Copy goal</button>
+      <a class="btn wa" href="https://wa.me/2347035749180?text=I%20would%20like%20the%20IEP%20Goals%20E-book" target="_blank" rel="noopener">Want 50 more? Get the IEP Goals E-book</a>
+    </div>
+  </div>
+
+  <!-- EV COURSE FINDER -->
+  <div class="tool" id="pane-course" role="tabpanel" aria-labelledby="tab-course" hidden>
+    <h3>Which EV Course Is Right for You?</h3>
+    <p class="lead">Three quick questions to find the course that fits where you are now.</p>
+    <div id="cf-box"></div>
+  </div>
+
+  <!-- WEBSITE CHOOSER -->
+  <div class="tool" id="pane-web" role="tabpanel" aria-labelledby="tab-web" hidden>
+    <h3>Which Website Package Do You Need?</h3>
+    <p class="lead">Answer three questions and see the package that matches. Each package price is shown on its payment page.</p>
+    <div id="wp-box"></div>
+  </div>
+
+  <!-- EV ESTIMATOR -->
+  <div class="tool" id="pane-ev" role="tabpanel" aria-labelledby="tab-ev" hidden>
+    <h3>EV Charging Business Estimator</h3>
+    <p class="lead">Try your own numbers to see how a charging station might perform. Enter real quotes and prices from your area. Results are only estimates, and no income is guaranteed.</p>
+    <div class="f2">
+      <div><label for="ev-ch">Number of chargers</label><input id="ev-ch" type="number" min="0" inputmode="decimal"></div>
+      <div><label for="ev-ses">Sessions per charger per day</label><input id="ev-ses" type="number" min="0" inputmode="decimal"></div>
+      <div><label for="ev-kwh">Energy per session (kWh)</label><input id="ev-kwh" type="number" min="0" inputmode="decimal"></div>
+      <div><label for="ev-days">Days open per month</label><input id="ev-days" type="number" min="0" max="31" inputmode="decimal"></div>
+      <div><label for="ev-cost">Your electricity cost per kWh (₦)</label><input id="ev-cost" type="number" min="0" inputmode="decimal"></div>
+      <div><label for="ev-price">Price you charge per kWh (₦)</label><input id="ev-price" type="number" min="0" inputmode="decimal"></div>
+      <div><label for="ev-fixed">Monthly fixed costs (₦)</label><input id="ev-fixed" type="number" min="0" inputmode="decimal"></div>
+      <div><label for="ev-start">Startup cost (₦)</label><input id="ev-start" type="number" min="0" inputmode="decimal"></div>
+    </div>
+    <p><button class="btn" id="ev-calc" type="button" style="margin-left:0">Calculate</button><button class="btn alt" id="ev-example" type="button">Load practice numbers</button></p>
+    <div class="out" id="ev-out" hidden></div>
+    <p class="note">Practice numbers are made up for learning only and are not real prices. Check your electricity tariff and supplier quotes. <a href="#training">See the EV courses</a>.</p>
+  </div>
+  <p style="text-align:center;margin-top:24px"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text=Free%20tools%20for%20faith%2C%20church%20and%20classroom%3A%20daily%20verse%2C%20prayer%20points%2C%20IEP%20goal%20builder%20and%20more.%20https%3A%2F%2Fobugheni-polyman.com.ng%2F%23tools">Share these free tools on WhatsApp</a></p>
 </div></section>
 
 <section id="services" class="s-services dark"><div class="wrap">
@@ -655,7 +806,7 @@ html.js .rv.in{opacity:1;transform:none}
 <footer>
   <div class="fg">
     <div><h4>Obugheni-Polyman Consulting</h4><p style="color:#cfd7e6;font-size:.92rem">Obugheni-Polyman Consulting Services<br>CAC registered micro enterprise, BN 9903940<br>Abua/Odual, Rivers State, Nigeria</p></div>
-    <div><h4>Quick Links</h4><ul><li><a href="#research">PhD Thesis</a></li><li><a href="#resources">Resources</a></li><li><a href="#training">Training Academy</a></li><li><a href="#websites">Website Setup</a></li><li><a href="#terms">Terms and Refunds</a></li><li><a href="#privacy">Privacy</a></li><li><button class="lnk" id="cookie-settings" type="button">Cookie settings</button></li></ul></div>
+    <div><h4>Quick Links</h4><ul><li><a href="#tools">Free Tools</a></li><li><a href="#research">PhD Thesis</a></li><li><a href="#resources">Resources</a></li><li><a href="#training">Training Academy</a></li><li><a href="#websites">Website Setup</a></li><li><a href="#terms">Terms and Refunds</a></li><li><a href="#privacy">Privacy</a></li><li><button class="lnk" id="cookie-settings" type="button">Cookie settings</button></li></ul></div>
     <div><h4>Follow</h4><ul><li><a href="https://www.facebook.com/share/1CDrdcnAJz/" target="_blank" rel="noopener">Facebook</a></li><li><a href="https://www.linkedin.com/in/ukwoma-obugheni-7a7434150?trk=contact-info" target="_blank" rel="noopener">LinkedIn</a></li><li><a href="https://selar.com/n11961h5g1" target="_blank" rel="noopener">Safety Handbook</a></li><li><a href="https://selar.com/5ad0051590" target="_blank" rel="noopener">Empowering Growth</a></li><li><a href="https://selar.com/09r0o2101d" target="_blank" rel="noopener">Green Mobility 2026</a></li><li><a href="https://paystack.shop/pay/cacstandard30k" target="_blank" rel="noopener">CAC Registration</a></li></ul></div>
     <div><h4>Reach Us</h4><ul><li><a href="mailto:InfoOPCww@obugheni-polyman.com.ng">InfoOPCww@obugheni-polyman.com.ng</a></li><li><a href="https://wa.me/2347035749180">WhatsApp: +234 703 574 9180</a></li></ul></div>
   </div>
@@ -681,7 +832,8 @@ html.js .rv.in{opacity:1;transform:none}
 </div></div>
 
 <div id="church-popup" class="modal" role="dialog" aria-modal="true" aria-labelledby="church-title"><div class="box" style="max-width:560px">
-  <h3 id="church-title">LFC Buguma 2: General Fund for Projects</h3>
+  <h3 id="church-title">Church Giving</h3>
+  <p class="note" style="margin-top:4px">Gifts go to Living Faith Church, Buguma 2.</p>
   <div id="church-widget" style="margin:12px 0"></div>
   <p class="note">Secure payment by Donorbox. If the form does not load, <a href="https://donorbox.org/lfc-buguma-2-general-fund-for-projects-worship" target="_blank" rel="noopener">open it on Donorbox</a>.</p>
   <button class="btn cancel" type="button" data-close="church-popup" style="width:100%;margin-left:0">Close</button>
@@ -742,6 +894,331 @@ html.js .rv.in{opacity:1;transform:none}
     const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }), {rootMargin: '0px 0px -8% 0px'});
     els.forEach(e => io.observe(e));
     setTimeout(() => els.forEach(e => e.classList.add('in')), 4000);
+  })();
+
+  // ===== Free tools =====
+  (function () {
+    const tabs = [...document.querySelectorAll('.tabs [role=tab]')];
+    function show(tab) {
+      tabs.forEach(t => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        $(t.getAttribute('aria-controls')).hidden = !on;
+      });
+    }
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => show(t));
+      t.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+          show(n); n.focus();
+        }
+      });
+    });
+
+    const num = id => parseFloat($(id).value);
+    const naira = n => '₦' + Math.round(n).toLocaleString('en-NG');
+    function copyText(text, okMsg) {
+      const fail = () => toast('Could not copy. Select the text and copy it.', 'error');
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(() => toast(okMsg, 'success'), fail); else fail();
+    }
+    function ymd(d) { return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
+
+    // ---- Daily Word ----
+    const VERSES = [
+      ['1 John 5:4', 'For whatsoever is born of God overcometh the world: and this is the victory that overcometh the world, even our faith.'],
+      ['Romans 8:37', 'Nay, in all these things we are more than conquerors through him that loved us.'],
+      ['Philippians 4:13', 'I can do all things through Christ which strengtheneth me.'],
+      ['Isaiah 41:10', 'Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee; yea, I will uphold thee with the right hand of my righteousness.'],
+      ['Joshua 1:9', 'Have not I commanded thee? Be strong and of a good courage; be not afraid, neither be thou dismayed: for the LORD thy God is with thee whithersoever thou goest.'],
+      ['Proverbs 3:5-6', 'Trust in the LORD with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.'],
+      ['Psalm 119:105', 'Thy word is a lamp unto my feet, and a light unto my path.'],
+      ['Romans 8:28', 'And we know that all things work together for good to them that love God, to them who are the called according to his purpose.'],
+      ['Psalm 46:1', 'God is our refuge and strength, a very present help in trouble.'],
+      ['Matthew 11:28', 'Come unto me, all ye that labour and are heavy laden, and I will give you rest.'],
+      ['Galatians 6:9', 'And let us not be weary in well doing: for in due season we shall reap, if we faint not.'],
+      ['Psalm 27:1', 'The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?'],
+      ['Proverbs 4:18', 'But the path of the just is as the shining light, that shineth more and more unto the perfect day.'],
+      ['Hebrews 11:1', 'Now faith is the substance of things hoped for, the evidence of things not seen.']
+    ];
+    // Add a new entry here each day, using the date as the key (YYYY-MM-DD).
+    const DEVO = {
+      '2026-10-30': {
+        label: 'Thursday 30 October 2026', title: "Overcomer's Mentality", ref: '1 John 5:4',
+        body: [
+          'To be a survivor is to escape with wounds, but to be an overcomer is to conquer with victory. God did not redeem you to manage defeat, He redeemed you to dominate it. In Christ, you are not trying to overcome, you HAVE overcome!',
+          '1. He refuses victim mentality and chooses victor mentality. A victim asks "Why me?" but an overcomer asks "What is God teaching me here? How is God making me stronger through this?" (Romans 8:28).',
+          '2. He lives by faith and not by feelings. Feelings change, faith remains. An overcomer does not deny the battle, he denies defeat in the battle.',
+          'Stop managing your problem and start overcoming it! Stop surviving the day and start conquering the day!'
+        ],
+        decl: "I decree today, I refuse survival mentality, I receive overcomer's mentality. I am not a victim, I am a victor. I do not survive, I overcome. My faith overcomes sickness, sin, failure and every attack in Jesus name. Amen and Amen.",
+        quote: 'Survivors count what they lost in the battle, overcomers count what God built in them through the battle.',
+        by: 'Ukwoma Obugheni P., Word Encounter Devotional'
+      }
+    };
+    const now = new Date();
+    const dayNo = Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000);
+    const v = VERSES[dayNo % VERSES.length];
+    $('vtext').textContent = '“' + v[1] + '”';
+    $('vref').textContent = v[0] + ' (KJV), verse of the day';
+    const keys = Object.keys(DEVO).sort();
+    function renderDevo(dk) {
+      const d = DEVO[dk], box = $('devo'); box.textContent = '';
+      const h = document.createElement('h4'); h.textContent = 'Word Encounter: ' + d.title + ' (' + d.ref + ')'; box.appendChild(h);
+      const dt = document.createElement('p'); dt.className = 'note'; dt.style.marginTop = '0'; dt.textContent = (dk === ymd(now) ? 'Today, ' : dk === keys[keys.length - 1] ? 'Latest: ' : '') + d.label; box.appendChild(dt);
+      d.body.forEach(t => { const p = document.createElement('p'); p.textContent = t; box.appendChild(p); });
+      const dc = document.createElement('p'); dc.className = 'decl'; dc.textContent = 'Prophetic declaration: ' + d.decl; box.appendChild(dc);
+      const q = document.createElement('p'); q.innerHTML = '<b>Empowerment:</b> '; q.appendChild(document.createTextNode('“' + d.quote + '”')); box.appendChild(q);
+      const by = document.createElement('p'); by.className = 'note'; by.textContent = d.by; box.appendChild(by);
+      $('share-btn').href = 'https://wa.me/?text=' + encodeURIComponent(d.title + ' (' + d.ref + ')\n“' + v[1] + '” (' + v[0] + ')\n\nMore at https://obugheni-polyman.com.ng/#tools');
+    }
+    renderDevo(DEVO[ymd(now)] ? ymd(now) : keys[keys.length - 1]);
+    if (keys.length > 1) {
+      const sel = $('arch');
+      keys.slice().reverse().forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = DEVO[k].label + ': ' + DEVO[k].title; sel.appendChild(o); });
+      sel.addEventListener('change', () => renderDevo(sel.value));
+      $('arch-wrap').hidden = false;
+    }
+
+    const SK = 'opc_streak';
+    function getStreak() { try { return JSON.parse(localStorage.getItem(SK)) || {last: '', n: 0}; } catch (e) { return {last: '', n: 0}; } }
+    function drawStreak() {
+      const s = getStreak(), y = new Date(now); y.setDate(y.getDate() - 1);
+      const alive = s.last === ymd(now) || s.last === ymd(y);
+      $('streak').textContent = alive && s.n ? '🔥 ' + s.n + '-day streak' + (s.last === ymd(now) ? ' · read today ✔' : ' · read today to keep it') : '🔥 Start your streak today';
+      if (s.last === ymd(now)) { $('read-btn').textContent = '✔ Read today'; $('read-btn').disabled = true; }
+    }
+    $('read-btn').addEventListener('click', () => {
+      const s = getStreak(), y = new Date(now); y.setDate(y.getDate() - 1);
+      if (s.last === ymd(now)) return;
+      const n = s.last === ymd(y) ? s.n + 1 : 1;
+      try { localStorage.setItem(SK, JSON.stringify({last: ymd(now), n: n})); } catch (e) {}
+      drawStreak();
+      toast(n === 1 ? 'Great start! Come back tomorrow to build your streak.' : n + ' days in a row. Keep going!', 'success');
+    });
+    drawStreak();
+
+    // ---- Mini quiz helper ----
+    function mini(el, Qs, done) {
+      let i = 0, a = [];
+      function restart() { i = 0; a = []; r(); }
+      function r() {
+        el.textContent = '';
+        if (i >= Qs.length) { done(a, el, restart); return; }
+        const pr = document.createElement('p'); pr.className = 'note'; pr.textContent = 'Question ' + (i + 1) + ' of ' + Qs.length; el.appendChild(pr);
+        const bar = document.createElement('div'); bar.className = 'bar'; const f = document.createElement('i'); f.style.width = (i / Qs.length * 100) + '%'; bar.appendChild(f); el.appendChild(bar);
+        const q = document.createElement('p'); q.style.cssText = 'font-size:1.15rem;margin:16px 0 0;font-weight:600;color:var(--n)'; q.textContent = Qs[i].q; el.appendChild(q);
+        const o = document.createElement('div'); o.style.cssText = 'display:grid;gap:10px;margin-top:14px';
+        Qs[i].o.forEach((t, k) => {
+          const b = document.createElement('button'); b.type = 'button'; b.className = 'btn alt'; b.style.cssText = 'margin:0;text-align:left'; b.textContent = t;
+          b.addEventListener('click', () => { a[i] = k; i++; r(); });
+          o.appendChild(b);
+        });
+        el.appendChild(o);
+        if (i > 0) { const bk = document.createElement('button'); bk.type = 'button'; bk.className = 'btn cancel'; bk.style.marginLeft = '0'; bk.textContent = 'Back'; bk.addEventListener('click', () => { i--; r(); }); el.appendChild(bk); }
+      }
+      r();
+    }
+    function resultBox(el, title, lines, listItems, actions, restart) {
+      const out = document.createElement('div'); out.className = 'out';
+      const t = document.createElement('p'); const b = document.createElement('b'); b.textContent = title; t.appendChild(b); out.appendChild(t);
+      lines.forEach(x => { const p = document.createElement('p'); p.textContent = x; out.appendChild(p); });
+      if (listItems.length) { const ul = document.createElement('ul'); ul.className = 'l'; listItems.forEach(x => { const li = document.createElement('li'); li.textContent = x; ul.appendChild(li); }); out.appendChild(ul); }
+      el.appendChild(out);
+      actions.forEach(x => { const a = document.createElement('a'); a.className = 'btn ' + x[2]; a.href = x[1]; a.textContent = x[0]; if (x[1].indexOf('http') === 0) { a.target = '_blank'; a.rel = 'noopener'; } else a.addEventListener('click', () => {}); el.appendChild(a); });
+      const again = document.createElement('button'); again.type = 'button'; again.className = 'btn cancel'; again.textContent = 'Start again'; again.addEventListener('click', restart); el.appendChild(again);
+    }
+
+    // ---- Prayer points ----
+    const PRAY = {
+      family: ['My family', 'Joshua 24:15', 'And if it seem evil unto you to serve the LORD, choose you this day whom ye will serve; but as for me and my house, we will serve the LORD.', ['Father, thank You for {who}. Let Your love rule in every heart and every home.', 'Heal every wound, misunderstanding and division, and restore peace and forgiveness.', 'Give {who} unity, wisdom and the fear of the Lord.', 'Let {who} serve You together and walk in Your purpose.'], 'my family'],
+      health: ['Health and healing', 'Jeremiah 17:14', 'Heal me, O LORD, and I shall be healed; save me, and I shall be saved: for thou art my praise.', ['Lord, I thank You that You are the Healer. I bring {who} before You.', 'Let Your healing power flow through {who}, body, soul and spirit.', 'Give strength, patience and peace in every hospital visit and every treatment.', 'Guide doctors and caregivers with wisdom for {who}.'], 'those I love'],
+      provision: ['Provision and finances', 'Philippians 4:19', 'But my God shall supply all your need according to his riches in glory by Christ Jesus.', ['Father, You are my Provider. I trust You for {who}.', 'Open doors of honest work, favour and fair opportunities.', 'Teach me to steward well what You give, and to give generously.', 'Remove lack, debt and anxiety, and let Your peace guard my heart.'], 'my household'],
+      studies: ['Studies and wisdom', 'James 1:5', 'If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.', ['Lord, give {who} wisdom, understanding and a sound mind.', 'Help {who} to focus, remember and learn with joy.', 'Remove fear and confusion before every lesson and examination.', 'Let knowledge be used to serve You and bless others.'], 'me'],
+      work: ['Work and business', 'Psalm 90:17', 'And let the beauty of the LORD our God be upon us: and establish thou the work of our hands upon us; yea, the work of our hands establish thou it.', ['Father, bless {who} and establish it.', 'Give creative ideas, integrity and good relationships with customers and colleagues.', 'Protect {who} from loss, dishonesty and unfair dealings.', 'Let this work glorify You and bless the community.'], 'my work'],
+      church: ['My church', 'Matthew 16:18', 'And I say also unto thee, That thou art Peter, and upon this rock I will build my church; and the gates of hell shall not prevail against it.', ['Lord, build {who} on Your Word and keep it strong.', 'Give our leaders wisdom, humility and a shepherd heart.', 'Let unity, love and holiness flow among Your people.', 'Send new people into the church and let every member grow in faith.'], 'our church'],
+      nation: ['My nation', '1 Timothy 2:1-2', 'I exhort therefore, that, first of all, supplications, prayers, intercessions, and giving of thanks, be made for all men; For kings, and for all that are in authority; that we may lead a quiet and peaceable life in all godliness and honesty.', ['Father, we pray for {who} and for all who lead.', 'Give leaders wisdom, honesty and a heart for justice.', 'Bring peace, safety and fairness to every community.', 'Raise a generation that fears You and builds the nation.'], 'our nation'],
+      protection: ['Protection', 'Psalm 91:1', 'He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty.', ['Lord, cover {who} under Your shadow today.', 'Guard coming and going, at home, on the road and at work.', 'Keep away danger, accidents and every evil plan.', 'Let angels watch over {who} and bring us safely home.'], 'my family and me'],
+      peace: ['Peace and anxiety', 'Philippians 4:6-7', 'Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God. And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.', ['Father, I give You every worry about {who}.', 'Let Your peace guard my heart and mind today.', 'Quiet racing thoughts and bring restful sleep.', 'Remind me that You are near and You are in control.'], 'my loved ones']
+    };
+    let prText = '';
+    $('pr-make').addEventListener('click', () => {
+      const t = PRAY[$('pr-topic').value], nm = $('pr-name').value.trim() || t[4];
+      const who = nm;
+      const out = $('pr-out'); out.textContent = '';
+      const h = document.createElement('p'); const hb = document.createElement('b'); hb.textContent = 'Prayer points: ' + t[0]; h.appendChild(hb); out.appendChild(h);
+      const v = document.createElement('p'); v.style.fontStyle = 'italic'; v.textContent = '“' + t[2] + '” (' + t[1] + ', KJV)'; out.appendChild(v);
+      const ol = document.createElement('ol'); ol.className = 'l'; ol.style.marginBottom = '10px';
+      const pts = t[3].map(x => x.replace(/\{who\}/g, who));
+      pts.forEach(x => { const li = document.createElement('li'); li.textContent = x; ol.appendChild(li); });
+      out.appendChild(ol);
+      const am = document.createElement('p'); am.textContent = 'In Jesus’ name, Amen.'; out.appendChild(am);
+      prText = 'Prayer points: ' + t[0] + '\n' + t[1] + ': ' + t[2] + '\n\n' + pts.map((x, i) => (i + 1) + '. ' + x).join('\n') + '\n\nIn Jesus’ name, Amen.';
+      const cp = document.createElement('button'); cp.type = 'button'; cp.className = 'btn'; cp.style.marginLeft = '0'; cp.textContent = 'Copy prayer points'; cp.addEventListener('click', () => copyText(prText, 'Prayer points copied.')); out.appendChild(cp);
+      const sh = document.createElement('a'); sh.className = 'btn wa'; sh.target = '_blank'; sh.rel = 'noopener'; sh.href = 'https://wa.me/?text=' + encodeURIComponent(prText + '\n\nhttps://obugheni-polyman.com.ng/#tools'); sh.textContent = 'Share on WhatsApp'; out.appendChild(sh);
+      out.hidden = false;
+    });
+
+    // ---- EV course finder ----
+    const COURSES = [
+      ['Course 1: EV Charging Station Business', 'Best if you are new to EVs and want to plan and run a charging business.', 'EV Charging Station Business'],
+      ['Course 2: EV Battery and Tyre Service', 'Best if you already work with vehicles or batteries and want to offer EV battery checks and tyre services.', 'EV Battery and Tyre Service'],
+      ['Course 3: Train the Trainers, OPC EV Academy', 'Best if you teach or train others and want to bring EV skills to your community.', 'Train the Trainers Academy']
+    ];
+    mini($('cf-box'), [
+      {q: 'Where are you starting from?', o: ['I am new to electric vehicles', 'I already repair vehicles or batteries', 'I teach or train others']},
+      {q: 'What do you want to do?', o: ['Run a charging station business', 'Offer battery and tyre services', 'Teach EV skills in my community']},
+      {q: 'How much hands-on electrical experience do you have?', o: ['None yet', 'Some', 'A lot, and I want to teach it']}
+    ], (a, el, restart) => {
+      const sc = [0, 0, 0]; a.forEach(x => sc[x]++);
+      const mx = Math.max(...sc); const tied = [0, 1, 2].filter(i => sc[i] === mx);
+      const pick = tied.indexOf(a[1]) !== -1 ? a[1] : tied[0];
+      const c = COURSES[pick];
+      resultBox(el, 'Your best fit: ' + c[0], [c[1], 'Every course includes business foundations, safety guidance and a certificate of completion (not a government licence). High-voltage safety training is required, and no income is guaranteed.'], [], [['See the course', '#training', 'alt'], ['Enroll on WhatsApp', 'https://wa.me/2347035749180?text=' + encodeURIComponent('I want to enroll for the ' + c[2] + ' course'), 'wa']], restart);
+    });
+
+    // ---- Website package chooser ----
+    const PKG = [
+      ['Basic', '1 page', ['One-page professional website', '.com.ng domain in your name (first year included)', 'WhatsApp chat button', 'Free SSL security']],
+      ['Standard', '4 pages', ['Home, About, Services and Contact pages', '.com domain in your name (first year included)', 'Contact form and WhatsApp button', 'Basic SEO setup and free SSL']],
+      ['Premium', '6 to 8 pages with an online store', ['Online store with Paystack payments', 'Premium .com domain in your name (first year included)', 'SEO and Google Business Profile setup', 'Free SSL security']]
+    ];
+    const lv = [[0, 2], [0, 1, 2], [0, 1, 2]];
+    mini($('wp-box'), [
+      {q: 'Will you sell products or take payments on your website?', o: ['No, it is for information only', 'Yes, I want an online store']},
+      {q: 'How many pages do you need?', o: ['Just one page', 'About four pages (Home, About, Services, Contact)', 'Six to eight pages']},
+      {q: 'Which extras do you want?', o: ['None, keep it simple', 'A contact form and basic SEO', 'SEO and Google Business Profile setup']}
+    ], (a, el, restart) => {
+      const level = Math.max(...a.map((x, i) => lv[i][x]));
+      const p = PKG[level];
+      resultBox(el, 'Recommended: ' + p[0] + ' (' + p[1] + ')', ['This package covers what you described:'], p[2], [['See packages', '#websites', 'alt'], ['Order on WhatsApp', 'https://wa.me/2347035749180?text=' + encodeURIComponent('Hello, I want the ' + p[0] + ' website package'), 'wa']], restart);
+    });
+
+    // ---- Counseling check ----
+    const QS = [
+      ['Our counselors can speak or understand the heart language of the people they counsel.', 'Train counselors in the language and culture of the people you serve. In our study, this strategy was ranked first.'],
+      ['People can switch to their heart language when they share deep feelings.', 'Let people move into their heart language for deep feelings. Disclosure tends to be easier there.'],
+      ['We have a private space where counseling cannot be overheard.', 'Set aside a private space for counseling so people feel safe to speak.'],
+      ['We teach openly that seeking counseling is wisdom, not weak faith.', 'Teach regularly that seeking help is wisdom. This reduces the stigma that stops people from coming.'],
+      ['We explain confidentiality at the start of counseling.', 'Explain clearly what stays private, and keep that promise.'],
+      ['Respected elders are involved as partners, not as replacements for counseling.', 'Involve elders respectfully as bridge-builders, while keeping counseling confidential and skilled.'],
+      ['Our counseling joins biblical principles with an understanding of local culture.', 'Contextualize your counseling: keep the Word central and understand local culture (1 Corinthians 9:22).'],
+      ['We know where to refer people who need clinical or professional help.', 'Build referral links between pastoral care and clinical services for cases beyond pastoral counseling.']
+    ];
+    let qi = 0, qa = [];
+    const quiz = $('quiz');
+    function qRender() {
+      quiz.textContent = '';
+      if (qi >= QS.length) return qResult();
+      const pr = document.createElement('p'); pr.className = 'note'; pr.textContent = 'Question ' + (qi + 1) + ' of ' + QS.length; quiz.appendChild(pr);
+      const bar = document.createElement('div'); bar.className = 'bar'; const fill = document.createElement('i'); fill.style.width = (qi / QS.length * 100) + '%'; bar.appendChild(fill); quiz.appendChild(bar);
+      const qq = document.createElement('p'); qq.style.cssText = 'font-size:1.15rem;margin:16px 0 0;font-weight:600;color:var(--n)'; qq.textContent = QS[qi][0]; quiz.appendChild(qq);
+      const o = document.createElement('div'); o.className = 'qopts';
+      [['Yes', 2], ['Sometimes', 1], ['Not yet', 0]].forEach(a => {
+        const b = document.createElement('button'); b.type = 'button'; b.className = 'btn' + (a[1] === 2 ? '' : ' alt'); b.textContent = a[0];
+        b.addEventListener('click', () => { qa[qi] = a[1]; qi++; qRender(); });
+        o.appendChild(b);
+      });
+      quiz.appendChild(o);
+      if (qi > 0) { const back = document.createElement('button'); back.type = 'button'; back.className = 'btn cancel'; back.style.marginLeft = '0'; back.textContent = 'Back'; back.addEventListener('click', () => { qi--; qRender(); }); quiz.appendChild(back); }
+    }
+    function qResult() {
+      const total = qa.reduce((a, b) => a + b, 0), max = QS.length * 2;
+      const tier = total >= 13 ? 'Strong foundation' : total >= 8 ? 'Growing well' : 'Getting started';
+      const msg = total >= 13 ? 'Your church already practises most of what our study recommends. Keep strengthening it.' : total >= 8 ? 'You have good foundations. A few focused steps below will make a real difference.' : 'Every church starts somewhere. The steps below are a practical place to begin.';
+      const out = document.createElement('div'); out.className = 'out';
+      const t = document.createElement('p'); t.innerHTML = '<b></b>'; t.firstChild.textContent = tier + ': ' + total + ' out of ' + max; out.appendChild(t);
+      const bar = document.createElement('div'); bar.className = 'bar'; const f = document.createElement('i'); f.style.width = (total / max * 100) + '%'; bar.appendChild(f); out.appendChild(bar);
+      const m = document.createElement('p'); m.style.marginTop = '10px'; m.textContent = msg; out.appendChild(m);
+      const gaps = QS.filter((x, i) => qa[i] < 2);
+      if (gaps.length) {
+        const g = document.createElement('p'); g.innerHTML = '<b>Your next steps</b>'; out.appendChild(g);
+        const ul = document.createElement('ul'); ul.className = 'l';
+        gaps.forEach(x => { const li = document.createElement('li'); li.textContent = x[1]; ul.appendChild(li); });
+        out.appendChild(ul);
+      }
+      quiz.appendChild(out);
+      const again = document.createElement('button'); again.type = 'button'; again.className = 'btn'; again.style.marginLeft = '0'; again.textContent = 'Retake the check'; again.addEventListener('click', () => { qi = 0; qa = []; qRender(); }); quiz.appendChild(again);
+      const a1 = document.createElement('a'); a1.className = 'btn alt'; a1.href = '#research'; a1.textContent = 'Read the research'; quiz.appendChild(a1);
+      const a2 = document.createElement('a'); a2.className = 'btn wa'; a2.target = '_blank'; a2.rel = 'noopener'; a2.href = 'https://wa.me/2347035749180?text=' + encodeURIComponent('I took the Counseling Readiness Check (' + total + '/' + max + ') and would like to talk.'); a2.textContent = 'Talk to us on WhatsApp'; quiz.appendChild(a2);
+      const nt = document.createElement('p'); nt.className = 'note'; nt.textContent = 'A reflection tool based on recommendations from our Buguma City study. It is not a clinical assessment.'; quiz.appendChild(nt);
+    }
+    qRender();
+
+    // ---- IEP goal builder ----
+    const EX = {
+      read: ['read grade-level words aloud', 'when given a picture prompt', '80% accuracy over 3 trials', 'reads 5 of 20 words correctly'],
+      math: ['solve two-digit addition problems', 'using counters if needed', '8 out of 10 correct on 3 trials', 'solves 4 of 10 problems correctly'],
+      comm: ['ask for help using a full sentence', 'when a task is difficult', '4 out of 5 opportunities', 'asks for help with a gesture only'],
+      social: ['wait for a turn during group activities', 'with one visual reminder', 'in 4 out of 5 activities', 'waits for a turn in 1 of 5 activities'],
+      life: ['wash and dry hands independently', 'following a picture checklist', 'with no adult prompt on 4 of 5 days', 'needs full adult help']
+    };
+    let iepText = '';
+    $('iep-example').addEventListener('click', () => {
+      const e = EX[$('iep-domain').value];
+      $('iep-name').value = $('iep-name').value || 'A.B.';
+      $('iep-skill').value = e[0]; $('iep-cond').value = e[1]; $('iep-target').value = e[2]; $('iep-base').value = e[3];
+    });
+    $('iep-make').addEventListener('click', () => {
+      const name = $('iep-name').value.trim(), skill = $('iep-skill').value.trim(), target = $('iep-target').value.trim(), cond = $('iep-cond').value.trim(), base = $('iep-base').value.trim();
+      const out = $('iep-out');
+      if (!name || !skill || !target) { toast('Please fill in the learner, the skill and the success level.', 'error'); return; }
+      const time = $('iep-time').value;
+      iepText = 'By ' + time + ', ' + name + ' will ' + skill + (cond ? ' ' + cond : '') + ' with ' + target + ', as measured by ' + $('iep-measure').value + '.' + (base ? ' Current level: ' + base + '.' : '');
+      $('iep-text').textContent = iepText; out.hidden = false;
+    });
+    $('iep-copy').addEventListener('click', () => copyText(iepText, 'Goal copied.'));
+
+    // ---- EV estimator ----
+    $('ev-example').addEventListener('click', () => {
+      const ex = {ch: 2, ses: 4, kwh: 15, days: 26, cost: 200, price: 300, fixed: 150000, start: 2500000};
+      Object.keys(ex).forEach(k => { $('ev-' + k).value = ex[k]; });
+      $('ev-calc').click();
+    });
+    $('ev-calc').addEventListener('click', () => {
+      const ids = ['ch', 'ses', 'kwh', 'days', 'cost', 'price', 'fixed', 'start'];
+      const val = ids.map(k => num('ev-' + k));
+      const out = $('ev-out');
+      if (val.some(x => isNaN(x) || x < 0)) { toast('Please fill in every box with a number.', 'error'); return; }
+      const [ch, ses, kwh, days, cost, price, fixed, start] = val;
+      const units = ch * ses * kwh * days, rev = units * price, ecost = units * cost, net = rev - ecost - fixed;
+      out.textContent = '';
+      const rows = [['Energy sold per month', Math.round(units).toLocaleString('en-NG') + ' kWh'], ['Charging income', naira(rev)], ['Electricity cost', naira(ecost)], ['Fixed costs', naira(fixed)], ['Estimated monthly result', (net < 0 ? '-' : '') + naira(Math.abs(net))]];
+      rows.forEach((r, i) => { const p = document.createElement('p'); const b = document.createElement('b'); b.textContent = r[0] + ': '; p.appendChild(b); p.appendChild(document.createTextNode(r[1])); if (i === rows.length - 1) p.style.fontSize = '1.1rem'; out.appendChild(p); });
+      const pb = document.createElement('p');
+      pb.textContent = net > 0 && start > 0 ? 'At this level, your startup cost would be recovered in about ' + (start / net).toFixed(1) + ' months.' : net > 0 ? 'Enter your startup cost to see the recovery time.' : 'At these numbers the station does not cover its costs. Try a higher price, more sessions or lower costs.';
+      out.appendChild(pb);
+      const nt = document.createElement('p'); nt.className = 'note'; nt.textContent = 'Estimate only. Real results depend on demand, tariffs and equipment. No income is guaranteed.'; out.appendChild(nt);
+      out.hidden = false;
+    });
+  })();
+
+  // ===== Explorer progress =====
+  (function () {
+    const ids = ['about', 'tools', 'services', 'research', 'gallery', 'sdgs', 'resources', 'training', 'websites', 'faq', 'support', 'contact'];
+    const EK = 'opc_seen';
+    let seen = [];
+    try { seen = JSON.parse(localStorage.getItem(EK)) || []; } catch (e) {}
+    const el = document.createElement('div'); el.className = 'explorer';
+    el.innerHTML = '<b>🧭 Explorer</b> <span id="ex-count"></span><div class="bar"><i id="ex-fill"></i></div><small id="ex-msg"></small>';
+    $('menu').insertBefore(el, $('menu').firstChild);
+    function draw() {
+      $('ex-count').textContent = seen.length + ' of ' + ids.length + ' sections';
+      $('ex-fill').style.width = (seen.length / ids.length * 100) + '%';
+      $('ex-msg').textContent = seen.length >= ids.length ? '🏅 Explorer badge unlocked. Thank you for visiting every section!' : 'Visit every section to unlock your Explorer badge.';
+    }
+    function mark(id) {
+      if (seen.indexOf(id) !== -1) return;
+      seen.push(id);
+      try { localStorage.setItem(EK, JSON.stringify(seen)); } catch (e) {}
+      draw();
+      if (seen.length === ids.length) toast('🏅 Explorer badge unlocked! Thank you for exploring every section.', 'success');
+    }
+    draw();
+    if (!('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) { mark(en.target.id); io.unobserve(en.target); } }), {rootMargin: '-45% 0px -45% 0px'});
+    ids.forEach(id => { const s = $(id); if (s && seen.indexOf(id) === -1) io.observe(s); });
   })();
 
   // Menu dropdown
