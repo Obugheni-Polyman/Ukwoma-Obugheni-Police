@@ -944,7 +944,7 @@ html.js .rv.in{opacity:1;transform:none}
     ];
     // Add a new entry here each day, using the date as the key (YYYY-MM-DD).
     const DEVO = {
-      '2026-10-30': {
+      '2026-10-29': {
         title: "Overcomer's Mentality", ref: '1 John 5:4',
         verse: `For whatsoever is born of God overcometh the world: and this is the victory that overcometh the world, even our faith.`,
         body: [
@@ -959,7 +959,7 @@ html.js .rv.in{opacity:1;transform:none}
         quote: `Survivors count what they lost in the battle, overcomers count what God built in them through the battle.`,
         by: 'Ukwoma Obugheni P., Word Encounter Devotional'
       },
-      '2026-11-03': {
+      '2026-11-02': {
         title: 'A Spirit Being in the Likeness of Flesh', ref: 'Acts 14:11; John 3:8',
         verse: `The gods are come down to us in the likeness of men.`,
         body: [
@@ -982,12 +982,12 @@ html.js .rv.in{opacity:1;transform:none}
     $('vtext').textContent = '“' + v[1] + '”';
     $('vref').textContent = v[0] + ' (KJV), verse of the day';
     function fmt(k) { const a = k.split('-').map(Number); return new Date(a[0], a[1] - 1, a[2]).toLocaleDateString('en-GB', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}); }
-    const keys = Object.keys(DEVO).sort().filter(k => k <= ymd(now));
+    const keys = Object.keys(DEVO).sort().filter(k => (DEVO[k].from || k) <= ymd(now));
     if (!keys.length) keys.push(Object.keys(DEVO).sort()[0]);
     function renderDevo(dk) {
       const d = DEVO[dk], box = $('devo'); box.textContent = '';
       const h = document.createElement('h4'); h.textContent = 'Word Encounter: ' + d.title + ' (' + d.ref + ')'; box.appendChild(h);
-      const dt = document.createElement('p'); dt.className = 'note'; dt.style.marginTop = '0'; dt.textContent = (dk === ymd(now) ? 'Today, ' : dk === keys[keys.length - 1] ? 'Latest: ' : '') + fmt(dk); box.appendChild(dt);
+      const dt = document.createElement('p'); dt.className = 'note'; dt.style.marginTop = '0'; dt.textContent = (dk === ymd(now) ? 'Today, ' : dk > ymd(now) ? 'Early release: ' : dk === keys[keys.length - 1] ? 'Latest: ' : '') + fmt(dk); box.appendChild(dt);
       if (d.verse) { const vv = document.createElement('p'); vv.style.cssText = 'font-style:italic;font-weight:600;color:var(--n)'; vv.textContent = d.ref + ' – “' + d.verse + '”'; box.appendChild(vv); }
       d.body.forEach(t => { const p = document.createElement('p'); p.textContent = t; box.appendChild(p); });
       const dc = document.createElement('p'); dc.className = 'decl'; dc.textContent = 'Prophetic declaration: ' + d.decl; box.appendChild(dc);
