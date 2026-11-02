@@ -945,7 +945,7 @@ html.js .rv.in{opacity:1;transform:none}
     // Add a new entry here each day, using the date as the key (YYYY-MM-DD).
     const DEVO = {
       '2026-10-30': {
-        label: 'Thursday 30 October 2026', title: "Overcomer's Mentality", ref: '1 John 5:4',
+        title: "Overcomer's Mentality", ref: '1 John 5:4',
         body: [
           'To be a survivor is to escape with wounds, but to be an overcomer is to conquer with victory. God did not redeem you to manage defeat, He redeemed you to dominate it. In Christ, you are not trying to overcome, you HAVE overcome!',
           '1. He refuses victim mentality and chooses victor mentality. A victim asks "Why me?" but an overcomer asks "What is God teaching me here? How is God making me stronger through this?" (Romans 8:28).',
@@ -954,6 +954,18 @@ html.js .rv.in{opacity:1;transform:none}
         ],
         decl: "I decree today, I refuse survival mentality, I receive overcomer's mentality. I am not a victim, I am a victor. I do not survive, I overcome. My faith overcomes sickness, sin, failure and every attack in Jesus name. Amen and Amen.",
         quote: 'Survivors count what they lost in the battle, overcomers count what God built in them through the battle.',
+        by: 'Ukwoma Obugheni P., Word Encounter Devotional'      },
+      '2026-11-03': {
+        title: 'A Spirit Being in the Likeness of Flesh', ref: 'Acts 14:11; John 3:8',
+        body: [
+          'To be flesh is to be seen, but to be spirit is to be real. Your flesh is not you, it is your address. Your spirit is the real you, wearing flesh to operate on earth. God did not make you a body with a spirit, He made you a spirit with a body!',
+          'When the people of Lystra saw Paul heal a man crippled from birth, they shouted "The gods are come down to us in the likeness of men!" They misread what they saw. Paul corrected them: "We also are men of like passions" (Acts 14:15). Yet the power at work through him was real. He was a man filled with the Spirit, living in a body.',
+          '1. Know that flesh is your tabernacle, not your identity. Your body is your earthly tabernacle (2 Cor 5:1). Honour it, for it is the temple of the Holy Spirit (1 Cor 6:19), but do not mistake it for who you are. Your height, your complexion and your tribe are your likeness, not your limit! Jesus came in the likeness of men (Phil 2:7) but was not limited by men.',
+          '2. Live like wind, not like wood. "The wind bloweth where it listeth... so is every one that is born of the Spirit" (John 3:8). Wood is visible, heavy and stuck in one place. Wind is invisible, powerful and moves where it wills! People may not see your spirit, but they must hear the sound: the sound of your wisdom, your results and your faith.',
+          'Beloved, you are not a god that visited, you are a son that was raised! Creation is waiting for the manifestation of the sons of God (Rom 8:19).'
+        ],
+        decl: 'I decree today, I am a spirit being in the likeness of flesh. My flesh is my tabernacle, not my identity. I live from spirit to flesh. I move like wind, I cannot be caged, I cannot be stopped. I manifest as son on earth in Jesus name. Amen and Amen.',
+        quote: 'Flesh is what men see, but spirit is who you are. Let your spirit lead your flesh, not your flesh lead your spirit.',
         by: 'Ukwoma Obugheni P., Word Encounter Devotional'
       }
     };
@@ -962,11 +974,13 @@ html.js .rv.in{opacity:1;transform:none}
     const v = VERSES[dayNo % VERSES.length];
     $('vtext').textContent = '“' + v[1] + '”';
     $('vref').textContent = v[0] + ' (KJV), verse of the day';
-    const keys = Object.keys(DEVO).sort();
+    function fmt(k) { const a = k.split('-').map(Number); return new Date(a[0], a[1] - 1, a[2]).toLocaleDateString('en-GB', {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'}); }
+    const keys = Object.keys(DEVO).sort().filter(k => k <= ymd(now));
+    if (!keys.length) keys.push(Object.keys(DEVO).sort()[0]);
     function renderDevo(dk) {
       const d = DEVO[dk], box = $('devo'); box.textContent = '';
       const h = document.createElement('h4'); h.textContent = 'Word Encounter: ' + d.title + ' (' + d.ref + ')'; box.appendChild(h);
-      const dt = document.createElement('p'); dt.className = 'note'; dt.style.marginTop = '0'; dt.textContent = (dk === ymd(now) ? 'Today, ' : dk === keys[keys.length - 1] ? 'Latest: ' : '') + d.label; box.appendChild(dt);
+      const dt = document.createElement('p'); dt.className = 'note'; dt.style.marginTop = '0'; dt.textContent = (dk === ymd(now) ? 'Today, ' : dk === keys[keys.length - 1] ? 'Latest: ' : '') + fmt(dk); box.appendChild(dt);
       d.body.forEach(t => { const p = document.createElement('p'); p.textContent = t; box.appendChild(p); });
       const dc = document.createElement('p'); dc.className = 'decl'; dc.textContent = 'Prophetic declaration: ' + d.decl; box.appendChild(dc);
       const q = document.createElement('p'); q.innerHTML = '<b>Empowerment:</b> '; q.appendChild(document.createTextNode('“' + d.quote + '”')); box.appendChild(q);
@@ -976,7 +990,7 @@ html.js .rv.in{opacity:1;transform:none}
     renderDevo(DEVO[ymd(now)] ? ymd(now) : keys[keys.length - 1]);
     if (keys.length > 1) {
       const sel = $('arch');
-      keys.slice().reverse().forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = DEVO[k].label + ': ' + DEVO[k].title; sel.appendChild(o); });
+      keys.slice().reverse().forEach(k => { const o = document.createElement('option'); o.value = k; o.textContent = fmt(k) + ': ' + DEVO[k].title; sel.appendChild(o); });
       sel.addEventListener('change', () => renderDevo(sel.value));
       $('arch-wrap').hidden = false;
     }
