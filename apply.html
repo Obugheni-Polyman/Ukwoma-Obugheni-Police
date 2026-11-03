@@ -217,8 +217,22 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     var waText="Hello, I have registered for "+course.options[course.selectedIndex].text+". Name: "+$("opc-name").value.trim()+". Payment reference: "+$("opc-ref").value.trim()+". My payment receipt is attached.";
     var waLink="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(waText);
     fetch(FORM_ENDPOINT,{method:"POST",body:fd,headers:{Accept:"application/json"}})
-      .then(function(r){if(!r.ok)throw 0;form.querySelectorAll("fieldset").forEach(function(s){s.hidden=true});show("ok","<strong>Registration received!</strong> One last step: send your payment receipt on WhatsApp so we can confirm your payment. We will then send your class link to WhatsApp within 24 hours.<a class=\"wabtn\" href=\""+waLink+"\" target=\"_blank\" rel=\"noopener\">Send my receipt on WhatsApp</a>");})
-      .catch(function(){btn.disabled=false;btn.textContent="Submit registration";show("no","We could not send your registration. Check your connection and try again, or message us on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");});
+      .then(function(r){
+        if(r.ok){
+          form.querySelectorAll("fieldset").forEach(function(s){s.hidden=true});
+          show("ok","<strong>Registration received!</strong> One last step: send your payment receipt on WhatsApp so we can confirm your payment. We will then send your class link to WhatsApp within 24 hours.<a class=\"wabtn\" href=\""+waLink+"\" target=\"_blank\" rel=\"noopener\">Send my receipt on WhatsApp</a>");
+          return;
+        }
+        return r.json().catch(function(){return {}}).then(function(d){
+          var detail=(d.errors&&d.errors.map(function(x){return x.message}).join("; "))||d.error||("HTTP "+r.status);
+          throw new Error(detail);
+        });
+      })
+      .catch(function(err){
+        console.error("Formspree error:",err);
+        btn.disabled=false;btn.textContent="Submit registration";
+        show("no","We could not send your registration. Check your connection and try again, or message us on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.<br><small>Details: "+String(err.message).replace(/</g,"&lt;")+"</small>");
+      });
   });
 })();
 </script>
