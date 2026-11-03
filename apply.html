@@ -58,7 +58,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
 </style>
 
 <h2>OPC Green Mobility Training Academy</h2>
-<p class="sub">100% online, 2 weeks per course. Choose your course, pay, then register below. Your class link arrives on WhatsApp within 24 hours.</p>
+<p class="sub">2 weeks per course. Theory is taught online. Practical sessions are in person in Buguma or Port Harcourt, and international students get arrangements confirmed on WhatsApp. Choose your course, pay, then register below. Your class link arrives on WhatsApp within 24 hours.</p>
 
 <form id="opc-form" novalidate>
   <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
@@ -67,6 +67,11 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     <label for="opc-country">Country of residence *</label>
     <select id="opc-country" name="country" required></select>
     <div class="err">Select your country.</div>
+    <div id="opc-other" hidden>
+      <label for="opc-othertxt">Type your country *</label>
+      <input id="opc-othertxt" name="country_other" autocomplete="country-name" placeholder="e.g. Zambia">
+      <div class="err">Enter your country.</div>
+    </div>
     <label for="opc-course">Course *</label>
     <select id="opc-course" name="course" required>
       <option value="">Select a course</option>
@@ -143,7 +148,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
 
 <script>
 (function(){
-  var FORM_ENDPOINT = "https://formspree.io/f/xbdnyvpb";
+  var FORM_ENDPOINT = "https://formspree.io/f/xbggpelv";
   var WHATSAPP = "2347035749180";
   var FEES = {1:{ng:{train:35000,cac:30000},intl:27},2:{ng:{train:55000,cac:30000},intl:42},3:{ng:{train:70000,cac:30000},intl:53}};
   var COUNTRIES = ["Nigeria","Ghana","Kenya","South Africa","Cameroon","Uganda","Tanzania","Benin","Togo","Senegal","Ethiopia","Rwanda","United Kingdom","United States","Canada","United Arab Emirates","India","Other country"];
@@ -154,6 +159,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
   country.innerHTML='<option value="">Select your country</option>'+COUNTRIES.map(function(c){return "<option>"+c+"</option>"}).join("");
   function isNG(){return country.value==="Nigeria"}
   function update(){
+    $("opc-other").hidden=country.value!=="Other country";
     var c=course.value,k=country.value,ready=c&&k;
     ["opc-pay-set","opc-details","opc-proof"].forEach(function(id){$(id).hidden=!ready});
     $("opc-fee").hidden=!ready;
@@ -170,6 +176,8 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     $("opc-pay").innerHTML=html;
     $("opc-method").innerHTML='<option value="">Select one</option>'+(ng?"<option>Bank transfer (Nigeria)</option>":"<option>Dollar transfer (UBA)</option><option>PayPal</option><option>Payoneer</option>");
   }
+  var pre=new URLSearchParams(location.search).get("course");
+  if(pre&&FEES[pre])course.value=pre;
   country.addEventListener("change",update);course.addEventListener("change",update);
   $("opc-pay").addEventListener("click",function(e){
     var v=e.target.getAttribute&&e.target.getAttribute("data-v");if(!v)return;
@@ -185,7 +193,9 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
   function validate(){
     var ok=true,first=null;
     function chk(el,test){var bad=!test;flag(el,bad);if(bad){ok=false;first=first||el}}
-    chk(country,country.value);chk(course,course.value);
+    chk(country,country.value);
+    if(country.value==="Other country")chk($("opc-othertxt"),$("opc-othertxt").value.trim().length>=2);
+    chk(course,course.value);
     chk($("opc-name"),$("opc-name").value.trim().length>=3);
     chk($("opc-wa"),/^\+\d{7,15}$/.test($("opc-wa").value.replace(/[\s()-]/g,"")));
     chk($("opc-email"),/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test($("opc-email").value.trim()));
@@ -204,6 +214,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     e.preventDefault();if(!validate())return;
     var btn=$("opc-go");btn.disabled=true;btn.textContent="Submitting...";
     var fd=new FormData(form);
+    if(country.value==="Other country")fd.set("country",$("opc-othertxt").value.trim()+" (not in list)");
     fd.append("_subject","New OPC registration: "+$("opc-name").value.trim());
     fetch(FORM_ENDPOINT,{method:"POST",body:fd,headers:{Accept:"application/json"}})
       .then(function(r){if(!r.ok)throw 0;form.querySelectorAll("fieldset").forEach(function(s){s.hidden=true});show("ok","<strong>Registration received!</strong> We will confirm payment and send your class link to WhatsApp within 24 hours. Questions? <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">Chat with us</a>.");})
