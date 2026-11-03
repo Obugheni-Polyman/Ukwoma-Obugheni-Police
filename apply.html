@@ -141,6 +141,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     <div class="err">Please confirm before submitting.</div>
     <button class="go" type="submit" id="opc-go">Submit registration</button>
     <p class="hint">We use your details only to process your registration and contact you about your course.</p>
+    <p class="hint">Trouble submitting? Use our <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMd8_kw9sGrpMBT80pWx9HRr22o7JllzkxmsR0lSkyAQIlpw/viewform" target="_blank" rel="noopener">backup registration form</a>.</p>
     <div class="msg" id="opc-msg" role="status" aria-live="polite"></div>
   </fieldset>
 </form>
@@ -149,6 +150,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
 (function(){
   var FORM_ENDPOINT = "https://formspree.io/f/xbggpelv";
   var WHATSAPP = "2347035749180";
+  var BACKUP_FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdMd8_kw9sGrpMBT80pWx9HRr22o7JllzkxmsR0lSkyAQIlpw/viewform";
   var FEES = {1:{ng:{train:35000,cac:30000},intl:27},2:{ng:{train:55000,cac:30000},intl:42},3:{ng:{train:70000,cac:30000},intl:53}};
   var COUNTRIES = ["Nigeria","Ghana","Kenya","South Africa","Cameroon","Uganda","Tanzania","Benin","Togo","Senegal","Ethiopia","Rwanda","United Kingdom","United States","Canada","United Arab Emirates","India","Other country"];
   var BANK = {ng:{title:"Pay by bank transfer (Nigeria)",rows:[["Bank","UBA"],["Account number","2057359672"],["Account name","Ukwoma Obugheni Police"]]},intl:{title:"Pay by dollar transfer (international)",rows:[["Bank","UBA Dollar"],["Account number","3004077375"],["Account name","Ukwoma Obugheni Police"]]}};
@@ -214,6 +216,8 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     var fd=new FormData(form);
     if(country.value==="Other country")fd.set("country",$("opc-othertxt").value.trim()+" (not in list)");
     fd.append("_subject","New OPC registration: "+$("opc-name").value.trim());
+    fd.set("name",$("opc-name").value.trim());
+    fd.set("message","Course: "+course.options[course.selectedIndex].text+" | Fee: "+$("opc-pkg").value+" | Country: "+fd.get("country")+" | Payment: "+$("opc-method").value+" | Ref: "+$("opc-ref").value.trim());
     var waText="Hello, I have registered for "+course.options[course.selectedIndex].text+". Name: "+$("opc-name").value.trim()+". Payment reference: "+$("opc-ref").value.trim()+". My payment receipt is attached.";
     var waLink="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(waText);
     fetch(FORM_ENDPOINT,{method:"POST",body:fd,headers:{Accept:"application/json"}})
@@ -224,14 +228,14 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
           return;
         }
         return r.json().catch(function(){return {}}).then(function(d){
-          var detail=(d.errors&&d.errors.map(function(x){return x.message}).join("; "))||d.error||("HTTP "+r.status);
+          var detail=(d.errors&&d.errors.map(function(x){return (x.field?x.field+" ":"")+(x.message||x.code||"error")}).join("; "))||d.error||("HTTP "+r.status);
           throw new Error(detail);
         });
       })
       .catch(function(err){
         console.error("Formspree error:",err);
         btn.disabled=false;btn.textContent="Submit registration";
-        show("no","We could not send your registration. Check your connection and try again, or message us on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.<br><small>Details: "+String(err.message).replace(/</g,"&lt;")+"</small>");
+        show("no","We could not send your registration. Check your connection and try again, or use our <a href=\""+BACKUP_FORM+"\" target=\"_blank\" rel=\"noopener\"><strong>backup registration form</strong></a>, or message us on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.<br><small>Details: "+String(err.message).replace(/</g,"&lt;")+"</small>");
       });
   });
 })();
