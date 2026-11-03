@@ -49,8 +49,10 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
 #opc-reg .inc{margin:10px 0 0;padding-left:18px;font-size:.9rem;color:var(--mut)}
 #opc-reg .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;margin-top:14px}
 #opc-reg .chk input{width:auto;margin-top:3px}
+#opc-reg .next{background:#fff8e1;border-left:5px solid var(--amb);border-radius:10px;padding:12px 14px;margin-top:14px;font-size:.92rem}
 #opc-reg button.go{width:100%;margin-top:10px;padding:15px;font-weight:800;font-size:1.05rem;background:var(--g);color:#fff;border:0;border-radius:10px;cursor:pointer}
 #opc-reg button.go:disabled{opacity:.6;cursor:wait}
+#opc-reg .wabtn{display:block;text-align:center;margin-top:12px;padding:14px;background:#25D366;color:#000;font-weight:800;border-radius:10px;text-decoration:none}
 #opc-reg .msg{margin-top:14px;padding:14px;border-radius:8px;display:none;font-size:.95rem}
 #opc-reg .msg.ok{display:block;background:var(--g2);border:1px solid var(--g)}
 #opc-reg .msg.no{display:block;background:#fdecea;border:1px solid var(--warn)}
@@ -58,7 +60,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
 </style>
 
 <h2>OPC Green Mobility Training Academy</h2>
-<p class="sub">2 weeks per course. Theory is taught online. Practical sessions are in person in Buguma or Port Harcourt, and international students get arrangements confirmed on WhatsApp. Choose your course, pay, then register below. Your class link arrives on WhatsApp within 24 hours.</p>
+<p class="sub">2 weeks per course. All sessions are taught online. Students get arrangements confirmed on WhatsApp. Choose your course, pay, then register below. Your class link arrives on WhatsApp within 24 hours.</p>
 
 <form id="opc-form" novalidate>
   <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
@@ -98,7 +100,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
   <fieldset id="opc-pay-set" hidden>
     <legend>2. Make your payment</legend>
     <div class="pay" id="opc-pay"></div>
-    <p class="hint">Pay the exact amount shown, keep your receipt, then complete the details below.</p>
+    <p class="hint">Pay the exact amount shown and keep your receipt, then complete the details below.</p>
   </fieldset>
 
   <fieldset id="opc-details" hidden>
@@ -126,17 +128,14 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
   </fieldset>
 
   <fieldset id="opc-proof" hidden>
-    <legend>4. Payment proof</legend>
+    <legend>4. Payment details</legend>
     <label for="opc-method">Payment method used *</label>
     <select id="opc-method" name="payment_method" required></select>
     <div class="err">Select how you paid.</div>
     <label for="opc-ref">Transaction reference or transfer ID *</label>
     <input id="opc-ref" name="payment_reference" required>
     <div class="err">Enter your transaction reference.</div>
-    <label for="opc-file">Upload payment receipt *</label>
-    <input id="opc-file" name="receipt" type="file" accept="image/*,.pdf" required>
-    <div class="hint">One file: image or PDF, maximum 10 MB.</div>
-    <div class="err">Upload your receipt (image or PDF, up to 10 MB).</div>
+    <div class="next"><strong>Next step:</strong> after you submit, send your payment receipt on WhatsApp so we can confirm your payment and send your class link.</div>
     <label class="chk"><input type="checkbox" id="opc-agree" required>
       <span>I confirm the details above are correct and that I have paid the amount shown to the account listed in step 2.</span></label>
     <div class="err">Please confirm before submitting.</div>
@@ -179,6 +178,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
   var pre=new URLSearchParams(location.search).get("course");
   if(pre&&FEES[pre])course.value=pre;
   country.addEventListener("change",update);course.addEventListener("change",update);
+  update();
   $("opc-pay").addEventListener("click",function(e){
     var v=e.target.getAttribute&&e.target.getAttribute("data-v");if(!v)return;
     var t=e.target;
@@ -203,8 +203,6 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     if(isNG())chk($("opc-biz"),$("opc-biz").value.trim());
     chk($("opc-method"),$("opc-method").value);
     chk($("opc-ref"),$("opc-ref").value.trim().length>=4);
-    var f=$("opc-file").files[0];
-    chk($("opc-file"),f&&f.size<=10*1024*1024&&/^(image\/|application\/pdf)/.test(f.type));
     chk($("opc-agree"),$("opc-agree").checked);
     if(first)first.focus();
     return ok;
@@ -216,9 +214,11 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     var fd=new FormData(form);
     if(country.value==="Other country")fd.set("country",$("opc-othertxt").value.trim()+" (not in list)");
     fd.append("_subject","New OPC registration: "+$("opc-name").value.trim());
+    var waText="Hello, I have registered for "+course.options[course.selectedIndex].text+". Name: "+$("opc-name").value.trim()+". Payment reference: "+$("opc-ref").value.trim()+". My payment receipt is attached.";
+    var waLink="https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(waText);
     fetch(FORM_ENDPOINT,{method:"POST",body:fd,headers:{Accept:"application/json"}})
-      .then(function(r){if(!r.ok)throw 0;form.querySelectorAll("fieldset").forEach(function(s){s.hidden=true});show("ok","<strong>Registration received!</strong> We will confirm payment and send your class link to WhatsApp within 24 hours. Questions? <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">Chat with us</a>.");})
-      .catch(function(){btn.disabled=false;btn.textContent="Submit registration";show("no","We could not send your registration. Check your connection and try again, or send your receipt on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");});
+      .then(function(r){if(!r.ok)throw 0;form.querySelectorAll("fieldset").forEach(function(s){s.hidden=true});show("ok","<strong>Registration received!</strong> One last step: send your payment receipt on WhatsApp so we can confirm your payment. We will then send your class link to WhatsApp within 24 hours.<a class=\"wabtn\" href=\""+waLink+"\" target=\"_blank\" rel=\"noopener\">Send my receipt on WhatsApp</a>");})
+      .catch(function(){btn.disabled=false;btn.textContent="Submit registration";show("no","We could not send your registration. Check your connection and try again, or message us on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");});
   });
 })();
 </script>
