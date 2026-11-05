@@ -1034,7 +1034,8 @@ html.js .rv.in{opacity:1;transform:none}
     renderDevo(0); buildArchive();
     // Daily updates: add a devotional to devotionals.txt in the site folder. No change to index.html is needed.
     fetch('devotionals.txt', {cache: 'no-store'}).then(r => r.ok ? r.text() : Promise.reject()).then(txt => {
-      const es = txt.split(/^\s*={3,}\s*$/m).map(parseDevo).filter(Boolean);
+      const today = ymd(now);
+      const es = txt.split(/^\s*={3,}\s*$/m).map(parseDevo).filter(Boolean).filter(e => e.key <= today);
       if (!es.length) return;
       es.sort((a, b) => a.key < b.key ? 1 : a.key > b.key ? -1 : 0);
       ENTRIES = es; renderDevo(0); buildArchive();
