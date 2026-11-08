@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://obugheni-polyman.com.ng/sitemap.xml
