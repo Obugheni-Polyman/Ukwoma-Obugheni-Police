@@ -1,0 +1,28 @@
+name: Build site
+on:
+  push:
+    paths:
+      - 'devotionals.txt'
+      - 'article-*.txt'
+      - 'build.py'
+  schedule:
+    - cron: '5 23 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python build.py
+      - name: Save generated pages
+        run: |
+          git config user.name "opc-build-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Build site pages"
+          git push
