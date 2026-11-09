@@ -1,0 +1,54 @@
+title: Thinking of an EV Charging Station Business? 10 Things To Check Before You Invest
+date: 2026-11-20
+topic: gm
+minutes: 7
+audience: For entrepreneurs, church and school leaders, and market owners
+description: A practical checklist before you start an electric vehicle charging business in Nigeria: demand, power supply, safety, rules, pricing and how to start small.
+related: how-to-design-a-good-questionnaire, 5-signs-your-child-needs-learning-support
+cta: Our OPC Green Mobility Training Academy teaches EV charging, battery care and tyre services in three two-week online courses. Course 1 covers how to plan and run a charging station business.
+---
+Electric vehicles are becoming more common, and many people ask whether an EV charging station could be a good business, especially at places where vehicles stay parked for a while, such as churches, schools and markets.
+
+It may be, but it is not automatic. Many ideas fail because the basics were never checked. Use this checklist before you spend money. No income is guaranteed, and conditions differ from place to place.
+
+## 1. Is there real demand near you?
+Count the electric vehicles, e-tricycles or e-bikes in your area today, and talk to their owners. Ask where they charge now, what problems they have and what they would pay. If you cannot find users, start by studying the market, not by buying equipment.
+
+## 2. Which vehicles will you serve?
+Different vehicles use different plugs, voltages and charging speeds. Find out what your likely customers drive before you choose equipment, so your chargers actually fit their vehicles.
+
+## 3. How reliable is your power supply?
+Chargers need stable electricity. Check your grid supply (for example, how often it is cut and whether your connection can carry the load) and ask the power company what is possible. Many sites also consider solar with an inverter and battery backup. Get written quotes and compare the full cost, not just the equipment price.
+
+## 4. Start with the right type of charger
+Slower AC chargers are cheaper and simpler. Faster DC chargers cost much more and need stronger power. For a first site, many people start small with AC charging and learn from real use before expanding.
+
+## 5. Is the site right?
+A good site has enough space, easy access, lighting, shelter, security and a reason for vehicles to stay a while. Think about where drivers will wait, and whether you can add services such as water or snacks.
+
+## 6. Do you have a safety plan?
+Charging involves high-voltage electricity. Use a qualified electrician, proper earthing and protection devices, and clear safety rules for attendants and customers. High-voltage safety training is essential, not optional.
+
+## 7. Have you checked the rules?
+Register your business with the Corporate Affairs Commission (CAC) and find out what approvals are needed from your power company, local authority and landlord. Ask about insurance. Rules can change, so confirm the current position with the relevant offices.
+
+## 8. How will you price and collect payment?
+Work out your real cost per kWh, including grid power, fuel or solar, equipment wear and your time, then set a price that covers it. Decide how customers will pay, and keep simple daily records.
+
+## 9. Do the numbers add up?
+List the startup cost (equipment, installation, connection, signage), the monthly running costs (power, staff, maintenance, internet, security) and a careful estimate of sessions. Then see how long it takes to recover the cost. Our free **EV Business Estimator** on the [home page](/#tools) lets you try your own numbers. Use real quotes, and be cautious with your estimates.
+
+## 10. Start small and learn
+Test the idea with one or two chargers before you invest heavily. Learn from real customers, real costs and real problems, then grow if the numbers work.
+
+## Quick checklist
+- I have found real users and spoken to them.
+- I know which chargers fit their vehicles.
+- My power supply is reliable and I have written quotes.
+- My site is safe, secure and suitable.
+- Qualified people will install and maintain the equipment.
+- My business is registered and approvals are confirmed.
+- My pricing covers my costs.
+- I have tested my numbers and can afford a slow start.
+
+If you want a structured way to learn, see Course 1 on the [training section](/#training) of our home page. This article gives general information, not financial, legal or engineering advice.
