@@ -1,0 +1,70 @@
+title: How To Write an IEP Goal That Actually Works (With Six Examples)
+date: 2026-11-10
+topic: se
+minutes: 7
+audience: For teachers, parents and school leaders
+description: A clear, step-by-step guide to writing measurable IEP goals, with six examples for reading, maths, communication, social skills, daily living and writing.
+related: 5-signs-your-child-needs-learning-support, what-is-inclusive-education-really
+cta: We provide Individualized Education Plan (IEP) development, learning needs assessment, and teacher and parent training. You can also try our free IEP Goal Builder on the home page.
+---
+An Individualized Education Plan (IEP) is only as good as its goals. A goal like "Ada will improve in reading" sounds kind, but nobody can measure it. After a term, no one can say whether Ada improved, by how much, or whether the plan worked.
+
+A good goal is clear enough that two different teachers would agree on whether it was reached. This guide shows you how to write one.
+
+## Start with SMART
+A useful goal is SMART:
+- **Specific:** it names the exact skill, not a general area.
+- **Measurable:** it says how much or how often, so progress can be counted.
+- **Achievable:** it is a realistic step for this child in this time.
+- **Relevant:** it matters for the child's learning and daily life.
+- **Time-bound:** it says by when.
+
+## A simple formula
+Use this sentence pattern:
+
+**By [when], [learner] will [do what] [under what conditions] with [how well], measured by [how].**
+
+For example: "By the end of this term, A.B. will read 20 common three-letter words aloud, when shown the word cards, with 80% accuracy over three trials, measured by a weekly teacher check."
+
+## Before you write: find the starting point
+You cannot set a good goal without knowing where the child is now. Write a short baseline, for example: "A.B. currently reads 5 of 20 words correctly." The goal should be a step up from the baseline, not a leap.
+
+Also:
+- Choose one to three priority goals per term. Too many goals means none gets done.
+- Involve the parent. They know what works at home and what matters to the family.
+- Choose goals that connect to real life, such as reading a bus sign or counting change.
+
+## Six example goals
+Names are replaced with initials. Adapt each to your learner.
+
+**Reading:** By the end of this term, A.B. will read 20 common three-letter words aloud with 80% accuracy over three trials, measured by a weekly teacher check. Current level: reads 5 of 20.
+
+**Maths:** By 12 weeks, C.D. will solve 8 out of 10 two-digit addition problems correctly, using counters if needed, on three weekly checks. Current level: solves 4 of 10.
+
+**Communication:** By the end of term, E.F. will ask for help using a full sentence in 4 out of 5 opportunities, measured by teacher observation. Current level: uses a gesture only.
+
+**Social skills:** By 12 weeks, G.H. will wait for a turn during group activities, with one visual reminder, in 4 out of 5 activities. Current level: waits in 1 of 5.
+
+**Daily living:** By the end of term, I.J. will wash and dry hands independently, following a picture checklist, with no adult prompt on 4 of 5 days. Current level: needs full adult help.
+
+**Writing:** By 24 weeks, K.L. will write three connected sentences about a picture, with capital letters and full stops, in 4 out of 5 attempts, measured by work samples.
+
+## Common mistakes
+- **Vague verbs:** "improve", "understand" and "be better at" cannot be measured. Use verbs you can see: read, write, say, solve, ask, match.
+- **No baseline:** without a starting point, you cannot show progress.
+- **Too many goals:** keep it to what can really be taught and checked.
+- **Goals about the teacher:** write what the learner will do, not what the teacher will do. Put teacher strategies in a separate section.
+- **No review:** a goal that is never checked is a wish.
+
+## How to track progress
+Keep it simple. Use a small table with the date, the score (for example 6 out of 20 words) and a short note. Check weekly or fortnightly. Share the table with the parent each term.
+
+If progress is faster than expected, raise the goal. If there is no progress after several weeks, do not blame the child. Change the teaching method, the support or the goal itself.
+
+## Protect the child's privacy
+Use initials or a first name when you use online tools or share examples. Keep full records in a safe place and share them only with people who need them to help the child.
+
+## Try it
+Our free **IEP Goal Builder** on the [home page](/#tools) turns your notes into a goal in this format. If you want more ready-made examples and templates, see the IEP resources in our [shop](/resources.html).
+
+This guide gives general information. A child who may have a disability or a medical need should also be seen by a qualified professional.
