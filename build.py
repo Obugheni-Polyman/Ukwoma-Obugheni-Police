@@ -224,9 +224,9 @@ blogbody = BLOGCSS + '<h1>Blog</h1><p class="lead">Practical guides on learning 
 page('blog.html', 'Blog: Guides on Learning, Inclusive Education, Research and Community Growth | Obugheni-Polyman Consulting', 'Practical guides on learning support, inclusive education, research and community growth for parents, teachers, school leaders and students across Nigeria.', blogbody, 'website', ldb)
 
 # ---- sitemap and robots ----
-STATIC = ['/', '/services.html', '/about.html', '/research.html', '/resources.html', '/websites.html', '/gallery.html', '/sdgs.html', '/contact.html', '/terms.html', '/privacy.html']
+STATIC = ['/', '/services.html', '/about.html', '/training.html', '/safety-training.html', '/inclusive-classroom-iep-training.html', '/research.html', '/resources.html', '/websites.html', '/gallery.html', '/sdgs.html', '/contact.html', '/terms.html', '/privacy.html']
 rows = [('/', None, '1.0'), ('/word-encounter.html', TODAY, '0.9'), ('/blog.html', TODAY, '0.9')]
-rows += [(u, None, '0.7') for u in STATIC[1:3]] + [(u, None, '0.6') for u in STATIC[3:8]] + [(u, None, '0.5') for u in STATIC[8:]]
+rows += [(u, None, '0.8') for u in STATIC[1:6]] + [(u, None, '0.6') for u in STATIC[6:11]] + [(u, None, '0.5') for u in STATIC[11:]]
 rows += [('/' + e['file'], e['key'], '0.8') for e in ents] + [('/' + a['file'], a['date'], '0.8') for a in arts]
 def row(u, d, p): return '<url><loc>%s%s</loc>%s<priority>%s</priority></url>\n' % (SITE, u, ('<lastmod>%s</lastmod>' % d) if d else '', p)
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(row(*r) for r in rows) + '</urlset>\n')
