@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apply Now | OPC Green Mobility Training Academy</title>
-<meta name="description" content="Apply to OPC Green Mobility Training Academy. Learn EV and e-tricycle skills online. Certificate, CAC support and alumni group included.">
+<title>Apply Now | OPC Training Academy</title>
+<meta name="description" content="Apply to OPC Training Academy. Online courses in EV business and technical skills, safety and emergency preparedness, and inclusive education. Certificate included.">
 <meta name="author" content="Ukwoma Obugheni Police - OPC Academy">
-<meta property="og:title" content="Apply - OPC Green Mobility Training Academy">
-<meta property="og:description" content="Start your EV career online with OPC Green Mobility Training Academy.">
+<meta property="og:title" content="Apply - OPC Training Academy">
+<meta property="og:description" content="Learn online with OPC Training Academy: EV, safety and inclusive education courses.">
 <meta property="og:url" content="https://obugheni-polyman.com.ng/apply.html">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://obugheni-polyman.com.ng/apply.html">
@@ -19,7 +19,8 @@ body{margin:0;background:#f3f6f3;font-family:Arial,sans-serif}
 </head>
 <body>
 <div class="topbar">
-<h1 style="margin:0">OPC GREEN MOBILITY TRAINING ACADEMY</h1>
+<h1 style="margin:0">OPC TRAINING ACADEMY</h1>
+<p>EV, Safety and Education Courses | All Online</p>
 <p>obugheni-polyman.com.ng | Online Worldwide | Founder: Ukwoma Obugheni Police</p>
 <p><a href="/">← HOME</a> &nbsp; | &nbsp; <a href="https://wa.me/2347035749180">WHATSAPP: +2347035749180</a></p>
 </div>
@@ -57,8 +58,8 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
 #opc-reg [hidden]{display:none!important}
 </style>
 
-<h2>OPC Green Mobility Training Academy</h2>
-<p class="sub">All courses are taught online. Choose your course, pay, then register below. Your class link arrives on WhatsApp within 24 hours.</p>
+<h2>OPC Training Academy</h2>
+<p class="sub">All courses are taught online. Choose your course, pay, then register below. Your class link arrives on WhatsApp within 24 hours. Having trouble with this page? Use our <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMd8_kw9sGrpMBT80pWx9HRr22o7JllzkxmsR0lSkyAQIlpw/viewform?usp=header" target="_blank" rel="noopener">backup registration form</a>.</p>
 
 <form id="opc-form" novalidate>
   <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
@@ -139,6 +140,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     <button class="go" type="submit" id="opc-go">Submit registration</button>
     <p class="hint">We use your details only to process your registration and contact you about your course.</p>
     <div class="msg" id="opc-msg" role="status" aria-live="polite"></div>
+    <p class="hint">Trouble submitting or uploading your receipt? Use our <a href="https://docs.google.com/forms/d/e/1FAIpQLSdMd8_kw9sGrpMBT80pWx9HRr22o7JllzkxmsR0lSkyAQIlpw/viewform?usp=header" target="_blank" rel="noopener">backup registration form</a> instead.</p>
   </fieldset>
 </form>
 
@@ -216,7 +218,7 @@ font-family:"Segoe UI",system-ui,-apple-system,Arial,sans-serif;color:var(--ink)
     fd.append("_subject","New OPC registration: "+$("opc-name").value.trim());
     fetch(FORM_ENDPOINT,{method:"POST",body:fd,headers:{Accept:"application/json"}})
       .then(function(r){if(!r.ok)throw 0;form.querySelectorAll("fieldset").forEach(function(s){s.hidden=true});show("ok","<strong>Registration received!</strong> We will confirm payment and send your class link to WhatsApp within 24 hours. Questions? <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">Chat with us</a>.");})
-      .catch(function(){btn.disabled=false;btn.textContent="Submit registration";show("no","We could not send your registration. Check your connection and try again, or send your receipt on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");});
+      .catch(function(){btn.disabled=false;btn.textContent="Submit registration";show("no","We could not send your registration. Check your connection and try again, use our <a href=\"https://docs.google.com/forms/d/e/1FAIpQLSdMd8_kw9sGrpMBT80pWx9HRr22o7JllzkxmsR0lSkyAQIlpw/viewform?usp=header\" target=\"_blank\" rel=\"noopener\">backup registration form</a>, or send your receipt on <a href=\"https://wa.me/"+WHATSAPP+"\" target=\"_blank\" rel=\"noopener\">WhatsApp</a>.");});
   });
 })();
 </script>
