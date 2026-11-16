@@ -35,7 +35,7 @@ gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user
 FOOT = '''</main>
 <footer class="foot"><div class="cols">
 <div><h4>Obugheni-Polyman Consulting</h4><p>CAC registered micro enterprise, BN 9903940<br>Abua/Odual, Rivers State, Nigeria</p></div>
-<div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/word-encounter.html">Word Encounters</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/research.html">Research</a></li><li><a href="/websites.html">Website Setup</a></li><li><a href="/#training">Training Academy</a></li></ul></div>
+<div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/word-encounter.html">Word Encounters</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/research.html">PhD Thesis</a></li><li><a href="/research-deforestation.html">B.Sc. Research: Deforestation in Ikwerre</a></li><li><a href="/websites.html">Website Setup</a></li><li><a href="/#training">Training Academy</a></li></ul></div>
 <div><h4>Information</h4><ul><li><a href="/about.html">About</a></li><li><a href="/gallery.html">Our Work in Pictures</a></li><li><a href="/sdgs.html">Sustainable Development Goals</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/terms.html">Terms and Refunds</a></li><li><a href="/privacy.html">Privacy</a></li><li><button type="button" id="cookie-settings" class="lnk">Cookie settings</button></li></ul></div>
 </div><p class="copy">&copy; 2026 Obugheni-Polyman Consulting Services (BN 9903940). All rights reserved.</p></footer>
 <div id="cookie" role="region" aria-label="Cookie notice" hidden><p><b>Cookies.</b> Google cookies for ads and visit counts stay off unless you accept. <a href="/privacy.html">Privacy Notice</a></p>
@@ -109,7 +109,7 @@ gtag('consent','default',{ad_storage:'denied',analytics_storage:'denied',ad_user
 FOOT = '''</main>
 <footer class="foot"><div class="cols">
 <div><h4>Obugheni-Polyman Consulting</h4><p>CAC registered micro enterprise, BN 9903940<br>Abua/Odual, Rivers State, Nigeria</p></div>
-<div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/word-encounter.html">Word Encounters</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/research.html">Research</a></li><li><a href="/websites.html">Website Setup</a></li><li><a href="/#training">Training Academy</a></li></ul></div>
+<div><h4>Explore</h4><ul><li><a href="/">Home</a></li><li><a href="/services.html">Services</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/word-encounter.html">Word Encounters</a></li><li><a href="/resources.html">Resources</a></li><li><a href="/research.html">PhD Thesis</a></li><li><a href="/research-deforestation.html">B.Sc. Research: Deforestation in Ikwerre</a></li><li><a href="/websites.html">Website Setup</a></li><li><a href="/#training">Training Academy</a></li></ul></div>
 <div><h4>Information</h4><ul><li><a href="/about.html">About</a></li><li><a href="/gallery.html">Our Work in Pictures</a></li><li><a href="/sdgs.html">Sustainable Development Goals</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/terms.html">Terms and Refunds</a></li><li><a href="/privacy.html">Privacy</a></li><li><button type="button" id="cookie-settings" class="lnk">Cookie settings</button></li></ul></div>
 </div><p class="copy">&copy; 2026 Obugheni-Polyman Consulting Services (BN 9903940). All rights reserved.</p></footer>
 <div id="cookie" role="region" aria-label="Cookie notice" hidden><p><b>Cookies.</b> Google cookies for ads and visit counts stay off unless you accept. <a href="/privacy.html">Privacy Notice</a></p>
@@ -227,6 +227,7 @@ page('blog.html', 'Blog: Guides on Learning, Inclusive Education, Research and C
 STATIC = ['/', '/services.html', '/about.html', '/training.html', '/safety-training.html', '/inclusive-classroom-iep-training.html', '/research.html', '/resources.html', '/websites.html', '/gallery.html', '/sdgs.html', '/contact.html', '/terms.html', '/privacy.html']
 rows = [('/', None, '1.0'), ('/word-encounter.html', TODAY, '0.9'), ('/blog.html', TODAY, '0.9')]
 rows += [(u, None, '0.8') for u in STATIC[1:6]] + [(u, None, '0.6') for u in STATIC[6:11]] + [(u, None, '0.5') for u in STATIC[11:]]
+rows += [('/research-deforestation.html', None, '0.7')]
 rows += [('/' + e['file'], e['key'], '0.8') for e in ents] + [('/' + a['file'], a['date'], '0.8') for a in arts]
 def row(u, d, p): return '<url><loc>%s%s</loc>%s<priority>%s</priority></url>\n' % (SITE, u, ('<lastmod>%s</lastmod>' % d) if d else '', p)
 open(os.path.join(OUT, 'sitemap.xml'), 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + ''.join(row(*r) for r in rows) + '</urlset>\n')
