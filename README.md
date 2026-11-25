@@ -70,7 +70,7 @@ Gifts for the church project campaigns (solar power for worship and the general 
 
 ## Contact
 
-- **Email:** [InfoOPCww@obugheni-polyman.com.ng](mailto:InfoOPCww@obugheni-polyman.com.ng)
+- **Email:** [InfoOPCww@obugheni-polyman.com.ng](mailto:InfoOPCww@obugheni-polyman.com.ng) or [ukwomao@gmail.com](mailto:ukwomao@gmail.com)
 - **WhatsApp:** [+234 703 574 9180](https://wa.me/2347035749180)
 - **Facebook:** <https://www.facebook.com/share/1CDrdcnAJz/>
 - **LinkedIn:** <https://www.linkedin.com/in/ukwoma-obugheni-7a7434150>
