@@ -44,7 +44,7 @@ Ukwoma, O. P. (2026). *A Psychological Study of the Impact of Cultural Barriers 
 
 ## OPC Green Mobility Training Academy
 
-Faith, skill and green jobs. Online theory, supervised in-person practicals, and a certificate of completion from Obugheni-Polyman Consulting Services.
+Faith, skill and green jobs. Every session is taught online, with guided online practical exercises, and a certificate of completion from Obugheni-Polyman Consulting Services.
 
 1. **EV Charging Station Business** (beginner, 2 weeks)
 2. **EV Battery and Tyre Service** (technician, 2 weeks)
@@ -81,12 +81,47 @@ We collect names, emails and phone numbers only to process orders and enrollment
 
 ## Repository Contents
 
+**Website pages**
+
 | File | Purpose |
 |---|---|
-| `index.html` | The website, served with GitHub Pages |
-| `thesis-preview.pdf` | Free preview of the thesis (title page, abstract and contents) |
+| `index.html` | Home page, served with GitHub Pages (free tools, training, FAQ, donations, contact) |
+| `about.html` | About the enterprise and founder |
+| `services.html` | Full service details |
+| `training.html` | Training course catalog (all courses online) |
+| `safety-training.html` | Occupational Safety and Emergency Preparedness course |
+| `inclusive-classroom-iep-training.html` | Inclusive Classroom Management and Practical IEPs course |
+| `apply.html` | Course registration form |
+| `consult.html` | Online consultation booking form with a token payment |
+| `resources.html` | Shop for digital resources, downloads and services |
+| `hub.html` | Membership, partner deals and advertising |
+| `websites.html` | Website and domain setup packages |
+| `research.html` | Featured PhD research |
+| `research-deforestation.html` | B.Sc. study on deforestation and rural development in Ikwerre |
+| `blog.html` and `blog-*.html` | Blog and articles |
+| `word-encounter.html` | Daily Word Encounter devotionals |
+| `gallery.html` | Our work in pictures |
+| `sdgs.html` | Sustainable Development Goals |
+| `contact.html` | Contact page and form |
+| `terms.html` | Terms and Refunds |
+| `privacy.html` | Privacy Notice |
+
+**Site code and data**
+
+| File | Purpose |
+|---|---|
+| `site.css` | Shared styles for the inner pages |
+| `site.js` | Shared script for the inner pages (cookie notice and menus) |
+| `shop.js` | Payment links, filters and bank transfer details for the Resources page |
+| `devotionals.txt` | Daily devotionals read by the home page |
+
+**Files for search, sharing and the domain**
+
+| File | Purpose |
+|---|---|
 | `ads.txt` | Google AdSense authorisation file |
 | `CNAME` | Custom domain for GitHub Pages |
+| `thesis-preview.pdf` | Free preview of the thesis (title page, abstract and contents) |
 | `qr.png` | QR code linking to the website |
 | `gallery-poster.jpg`, `gallery-training.jpg`, `gallery-youth.jpg`, `gallery-women.jpg` | Gallery photos |
 | `og-image.jpg` | Preview image shown when the link is shared on WhatsApp and social media |
